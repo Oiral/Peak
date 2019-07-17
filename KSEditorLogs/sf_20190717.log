@@ -335,3 +335,8 @@ UnityEngine.GUIUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nati
 2019-07-17 16:38:04.5086 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-17 16:38:04.7849 [DEBUG] Play mode: True, sync in play mode: True
 2019-07-17 16:39:57.8565 [DEBUG] Play mode: False
+2019-07-17 20:24:56.6173 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 20:39:18.4400 [DEBUG] Refresh token (IijDCgwjlEQQK1Xx5jP4Ntn8t6ZyzFmKBJtxNCilERiDaT6e5zQT9BzjaOuSFr3Wbo9xETmIelWBmuQXsZ0pszNeC9Lca0ba1UzS4n5wRqDm4oawcxUjBZBNiwGdUrprAu8oyZ7KUqPcZd91kaa9zehCwNNX6sp24UkoDHyp9X84EJuPdJBieu6xrw9iPk1TchsnmQTmdJA1fO7FZu8Agrs7T8p57XiwkIJazOXerlw9F6ScgmgSUG7R4rdd4tQ) error: {"err":"Error: NameResolutionFailure"}
+2019-07-17 21:59:44.7907 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 21:59:45.0750 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 22:04:42.3723 [DEBUG] Play mode: False
