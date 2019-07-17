@@ -1,0 +1,401 @@
+2019-07-18 06:17:05.6932 [DEBUG] Validating model...
+2019-07-18 06:17:05.8713 [DEBUG] Model updated
+2019-07-18 06:17:05.8718 [DEBUG] Authenticating with server...
+2019-07-18 06:17:06.3722 [DEBUG] Connected to room. (99893:SceneFusion:SceneFusion)
+2019-07-18 06:17:06.3802 [INFO] Connected to server.
+2019-07-18 06:17:06.3802 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 06:17:06.3807 [DEBUG] Unity Version : 2019.1.10f1
+2019-07-18 06:17:06.3807 [DEBUG] Pro License : False
+2019-07-18 06:17:06.3807 [DEBUG] Platform : WindowsEditor
+2019-07-18 06:17:06.3807 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 06:17:06.3807 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 06:17:06.3817 [DEBUG] Scene Fusion client build : 3
+2019-07-18 06:17:06.3817 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 06:17:06.3817 [DEBUG] Waiting for server response
+2019-07-18 06:17:06.4918 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 06:17:06.4918 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 06:17:07.0805 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 06:17:07.0805 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 06:17:07.0805 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 06:17:07.0805 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 06:17:07.0805 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 06:17:07.3866 [DEBUG] Uploading scene 'Greece Scene'
+2019-07-18 06:17:07.9217 [WARNING] Cannot sync 'Sprites/Default' (Material) because it is not in Unity's asset database.
+2019-07-18 06:17:23.1894 [DEBUG] Compressing scene data
+2019-07-18 06:17:25.7091 [DEBUG] Spawn request. (Objects: 416)
+2019-07-18 06:17:25.7151 [DEBUG] Entity RPC. (Id: 1, Size: 55946, Reporting Threshold: 10000)
+2019-07-18 06:17:25.7260 [DEBUG] batch size: 55952
+2019-07-18 06:17:26.5826 [DEBUG] Loading complete
+2019-07-18 06:25:27.1791 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:26:19.3938 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:26:38.9977 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:30:28.9523 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:30:53.9914 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:31:01.5191 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:31:05.8006 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:31:36.5521 [DEBUG] Spawn request. (Objects: 16)
+2019-07-18 06:31:57.9252 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:33:43.1218 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:34:39.1901 [DEBUG] batch size: 109070
+2019-07-18 06:35:45.1097 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:35:50.2567 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:35:57.1194 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:38:18.6021 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:44:58.9750 [DEBUG] Spawn request. (Objects: 24)
+2019-07-18 06:45:41.4329 [DEBUG] Spawn request. (Objects: 24)
+2019-07-18 06:48:39.2845 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:51:19.3758 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:52:07.0483 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:53:28.5852 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:53:32.0300 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:53:33.2829 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:53:36.7043 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:56:02.7640 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 06:57:00.6123 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:10:26.2353 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:12:29.2537 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:13:56.4822 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:14:08.5276 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:14:57.3096 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:15:02.5548 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:15:07.5595 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:15:11.1342 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:15:24.0182 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 07:17:03.7252 [DEBUG] Disconnecting temporarily to enter play mode.
+2019-07-18 07:17:03.7267 [DEBUG] Disconnecting from room (99893:SceneFusion:SceneFusion)
+2019-07-18 07:17:03.7391 [INFO] Disconnected from server.
+2019-07-18 07:17:03.7391 [DEBUG] Disconnect. (Duration: 3597)
+2019-07-18 07:17:03.8273 [INFO] Static batching in play mode is not supported in a Scene Fusion session and will be temporarily disabled.
+2019-07-18 07:17:11.4286 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 07:17:13.0690 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 07:17:13.2327 [DEBUG] Connecting
+2019-07-18 07:17:13.2590 [DEBUG] Connecting to room (99893:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 07:17:13.3234 [DEBUG] Host connection. (Session: 99893)
+2019-07-18 07:17:13.4970 [DEBUG] Validating model...
+2019-07-18 07:17:13.6811 [DEBUG] Model updated
+2019-07-18 07:17:13.6811 [DEBUG] Authenticating with server...
+2019-07-18 07:17:13.8909 [DEBUG] Connected to room. (99893:SceneFusion:SceneFusion)
+2019-07-18 07:17:13.9003 [INFO] Connected to server.
+2019-07-18 07:17:13.9008 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 07:17:13.9008 [DEBUG] Unity Version : 2019.1.10f1
+2019-07-18 07:17:13.9008 [DEBUG] Pro License : False
+2019-07-18 07:17:13.9013 [DEBUG] Platform : WindowsEditor
+2019-07-18 07:17:13.9013 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 07:17:13.9013 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 07:17:13.9013 [DEBUG] Scene Fusion client build : 3
+2019-07-18 07:17:13.9013 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 07:17:13.9013 [DEBUG] Waiting for server response
+2019-07-18 07:17:16.3481 [DEBUG] frame size: 77931
+2019-07-18 07:17:16.3545 [DEBUG] Download
+2019-07-18 07:17:18.2458 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 07:17:18.2458 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 07:17:19.4868 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 07:17:19.4868 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 07:17:19.4868 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 07:17:19.4868 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 07:17:19.4873 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 07:17:19.7581 [DEBUG] Loading complete
+2019-07-18 07:17:33.1076 [DEBUG] Play mode: False
+2019-07-18 07:17:33.2961 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (1)'.
+2019-07-18 07:17:33.6864 [WARNING] Failed to restore deleted prefab component at index 3 on '2X2 House'.
+2019-07-18 07:17:33.7276 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:17:33.9711 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower'.
+2019-07-18 07:17:34.0113 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:17:34.1115 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (4)'.
+2019-07-18 07:17:34.5544 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:17:34.7756 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:17:34.7801 [WARNING] Failed to restore deleted prefab component at index 3 on 'Mesh'.
+2019-07-18 07:17:34.7836 [WARNING] Failed to restore deleted prefab component at index 3 on 'Mesh'.
+2019-07-18 07:17:34.8466 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:17:34.8922 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:17:34.9081 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 House'.
+2019-07-18 07:17:34.9175 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:34.9264 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 House (1)'.
+2019-07-18 07:17:34.9349 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:34.9443 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.0048 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.0137 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.0227 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.0311 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.2121 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:35.2210 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.2295 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.2925 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.3019 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.3113 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.3272 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.4090 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.4185 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:35.4279 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.4373 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.5023 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.5117 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.5206 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.7810 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.7905 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.8679 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:35.8877 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.8971 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.9428 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.9512 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.9596 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.9680 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:35.9844 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:36.0648 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:36.0737 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.0826 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.1441 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.1525 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.1615 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.1704 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.1863 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.2607 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.3256 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:17:36.3633 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:17:36.3762 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:17:36.4591 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:17:36.5042 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:17:36.5171 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:17:36.5290 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:17:36.5766 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:17:36.7562 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:17:36.7646 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.8762 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.9213 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.9308 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.9392 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.9481 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:36.9575 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:37.0503 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:37.0974 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:17:37.1446 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.1708 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:17:37.2150 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.2244 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.2804 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.2899 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.3067 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.3171 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.4024 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.4114 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:17:37.4203 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.4362 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.4823 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.4912 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.4997 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.5086 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.5171 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:37.6083 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:38.4093 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:17:38.4733 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:17:38.5200 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:17:38.8280 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (2)'.
+2019-07-18 07:17:39.0685 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:17:39.0799 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:17:39.1028 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:17:39.6320 [WARNING] Unable to load PhysicMaterial 'Assets/Slippy.physicMaterial'.
+2019-07-18 07:17:40.1349 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:17:40.1582 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:17:40.1711 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:17:40.2093 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:17:40.4191 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:17:40.5719 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:17:40.5848 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:17:40.6195 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:17:40.6528 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:17:40.6652 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:17:40.7217 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (6)'.
+2019-07-18 07:17:40.7430 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:17:40.8134 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (5)'.
+2019-07-18 07:17:40.8670 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:17:41.0510 [DEBUG] Loading complete
+2019-07-18 07:18:02.9033 [DEBUG] Disconnecting temporarily to enter play mode.
+2019-07-18 07:18:02.9038 [DEBUG] Disconnecting from room (99893:SceneFusion:SceneFusion)
+2019-07-18 07:18:02.9102 [INFO] Disconnected from server.
+2019-07-18 07:18:02.9102 [DEBUG] Disconnect. (Duration: -309)
+2019-07-18 07:18:02.9950 [INFO] Static batching in play mode is not supported in a Scene Fusion session and will be temporarily disabled.
+2019-07-18 07:18:06.1481 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 07:18:06.3034 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 07:18:06.4547 [DEBUG] Connecting
+2019-07-18 07:18:06.4765 [DEBUG] Connecting to room (99893:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 07:18:06.4809 [DEBUG] Host connection. (Session: 99893)
+2019-07-18 07:18:06.6724 [DEBUG] Validating model...
+2019-07-18 07:18:06.8559 [DEBUG] Model updated
+2019-07-18 07:18:06.8564 [DEBUG] Authenticating with server...
+2019-07-18 07:18:07.0712 [DEBUG] Connected to room. (99893:SceneFusion:SceneFusion)
+2019-07-18 07:18:07.0796 [INFO] Connected to server.
+2019-07-18 07:18:07.0801 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 07:18:07.0801 [DEBUG] Unity Version : 2019.1.10f1
+2019-07-18 07:18:07.0801 [DEBUG] Pro License : False
+2019-07-18 07:18:07.0801 [DEBUG] Platform : WindowsEditor
+2019-07-18 07:18:07.0801 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 07:18:07.0806 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 07:18:07.0806 [DEBUG] Scene Fusion client build : 3
+2019-07-18 07:18:07.0806 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 07:18:07.0806 [DEBUG] Waiting for server response
+2019-07-18 07:18:09.5308 [DEBUG] frame size: 77939
+2019-07-18 07:18:09.5353 [DEBUG] Download
+2019-07-18 07:18:11.9816 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 07:18:11.9821 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 07:18:12.2231 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 07:18:12.2231 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 07:18:12.2231 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 07:18:12.2231 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 07:18:12.2231 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 07:18:12.4860 [DEBUG] Loading complete
+2019-07-18 07:18:18.3348 [DEBUG] Play mode: False
+2019-07-18 07:18:18.4836 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (1)'.
+2019-07-18 07:18:18.8681 [WARNING] Failed to restore deleted prefab component at index 3 on '2X2 House'.
+2019-07-18 07:18:18.9082 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:18:19.1512 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower'.
+2019-07-18 07:18:19.1924 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:18:19.2946 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (4)'.
+2019-07-18 07:18:19.3367 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:18:19.6919 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:18:19.6963 [WARNING] Failed to restore deleted prefab component at index 3 on 'Mesh'.
+2019-07-18 07:18:19.6988 [WARNING] Failed to restore deleted prefab component at index 3 on 'Mesh'.
+2019-07-18 07:18:19.7638 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:18:19.8095 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:18:19.8268 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 House'.
+2019-07-18 07:18:19.8362 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.8452 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 House (1)'.
+2019-07-18 07:18:19.8546 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.8640 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.9270 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.9354 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.9448 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:19.9553 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:20.1383 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:20.1472 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.1557 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.2171 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.2261 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.2345 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.2519 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.3327 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.3426 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:20.3521 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.3610 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.4245 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.4334 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.4428 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.4592 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.4681 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.6338 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:20.6501 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.6625 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.7107 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.7196 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.7280 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.7365 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.7543 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.8391 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:20.8481 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.8575 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.9239 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.9324 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.9413 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.9507 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:20.9686 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:21.0450 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:21.1070 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 07:18:21.1412 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:18:21.1536 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:18:21.2350 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:18:21.2811 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:18:21.2935 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:18:21.3059 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (1)'.
+2019-07-18 07:18:21.3515 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:18:21.5311 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 07:18:21.5400 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.5559 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.6932 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.7022 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.7116 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.7210 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.7294 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.8262 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.8743 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 07:18:21.9224 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:21.9467 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window'.
+2019-07-18 07:18:21.9849 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:21.9933 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.0479 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.0563 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.0737 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.0831 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.1674 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.1763 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 07:18:22.1853 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2026 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2502 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2592 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2681 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2776 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.2865 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:22.3787 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:23.1664 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 07:18:23.2303 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 07:18:23.2775 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 07:18:23.5939 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (2)'.
+2019-07-18 07:18:23.8399 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:18:23.8519 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:18:23.8746 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 07:18:24.4049 [WARNING] Unable to load PhysicMaterial 'Assets/Slippy.physicMaterial'.
+2019-07-18 07:18:24.9296 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 07:18:24.9534 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:18:24.9663 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:18:24.9996 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 07:18:25.3021 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door'.
+2019-07-18 07:18:25.3249 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:18:25.3368 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:18:25.3740 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 07:18:25.4103 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:18:25.4236 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:18:25.4827 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (6)'.
+2019-07-18 07:18:25.5030 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 07:18:25.5749 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (5)'.
+2019-07-18 07:18:25.6300 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 07:18:25.8145 [DEBUG] Loading complete
+2019-07-18 07:19:54.4819 [DEBUG] Disconnecting temporarily to enter play mode.
+2019-07-18 07:19:54.4824 [DEBUG] Disconnecting from room (99893:SceneFusion:SceneFusion)
+2019-07-18 07:19:54.4913 [INFO] Disconnected from server.
+2019-07-18 07:19:54.4913 [DEBUG] Disconnect. (Duration: -243)
+2019-07-18 07:19:54.5737 [INFO] Static batching in play mode is not supported in a Scene Fusion session and will be temporarily disabled.
+2019-07-18 07:19:57.8140 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 07:19:57.9752 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 07:19:58.1364 [DEBUG] Connecting
+2019-07-18 07:19:58.1622 [DEBUG] Connecting to room (99893:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 07:19:58.1672 [DEBUG] Host connection. (Session: 99893)
+2019-07-18 07:19:58.3547 [DEBUG] Validating model...
+2019-07-18 07:19:58.5382 [DEBUG] Model updated
+2019-07-18 07:19:58.5387 [DEBUG] Authenticating with server...
+2019-07-18 07:19:58.7802 [DEBUG] Connected to room. (99893:SceneFusion:SceneFusion)
+2019-07-18 07:19:58.7897 [INFO] Connected to server.
+2019-07-18 07:19:58.7902 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 07:19:58.7902 [DEBUG] Unity Version : 2019.1.10f1
+2019-07-18 07:19:58.7902 [DEBUG] Pro License : False
+2019-07-18 07:19:58.7902 [DEBUG] Platform : WindowsEditor
+2019-07-18 07:19:58.7902 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 07:19:58.7907 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 07:19:58.7907 [DEBUG] Scene Fusion client build : 3
+2019-07-18 07:19:58.7907 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 07:19:58.7907 [DEBUG] Waiting for server response
+2019-07-18 07:20:01.2563 [DEBUG] frame size: 77767
+2019-07-18 07:20:01.2593 [DEBUG] Download
+2019-07-18 07:20:04.8275 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 07:20:04.8275 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 07:20:04.8984 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 07:20:04.8984 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 07:20:04.8984 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 07:20:04.8989 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 07:20:04.8989 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 07:20:05.2039 [DEBUG] Download finished
+2019-07-18 07:20:05.6617 [DEBUG] Loading
+2019-07-18 07:20:08.4488 [DEBUG] Loading complete
+2019-07-18 07:21:16.4052 [DEBUG] Play mode: False
+2019-07-18 07:21:23.9464 [WARNING] Unable to load PhysicMaterial 'Assets/Slippy.physicMaterial'.
+2019-07-18 07:21:25.4021 [DEBUG] Loading complete
+2019-07-18 07:23:02.9140 [DEBUG] Disconnecting from room (99893:SceneFusion:SceneFusion)
+2019-07-18 07:23:02.9214 [INFO] Disconnected from server.
+2019-07-18 07:23:02.9214 [DEBUG] Disconnect. (Duration: -232)
