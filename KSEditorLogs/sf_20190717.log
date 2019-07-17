@@ -48,3 +48,259 @@
 2019-07-17 02:22:42.9592 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-17 02:22:43.2115 [DEBUG] Play mode: True, sync in play mode: True
 2019-07-17 02:26:30.2628 [DEBUG] Play mode: False
+2019-07-17 17:10:58.3477 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:11:45.9813 [DEBUG] Invalid token sent as part of a web request token. Token = 5ay2wNJktguKmCDYX1qlfmHXqTuQlo7NYiYXfth7h0mwZ9bn7zLBpBNh44ZUF7l8WIoxpjXSGDRJt3eIct0hYytzuHLafQH0i88pQiwkgha0hYFhSuhSMpj8WEliDkPUckaE3Kch5I20jgDSdWz0m4uygqiWfk9KPOmpzZG4oMSG3GqgKjw7jdweP8JyA1EQWCAmrRqw21RyEUrTyB2j6LufWywbYd61gBegLJWcQ6ihFMnEpZ9a26gzSx5Elhi
+2019-07-17 17:27:01.6307 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:27:27.8467 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:27:50.7638 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:278)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+2019-07-17 17:27:50.7718 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:295)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent (UnityEngine.Event e, UnityEngine.Matrix4x4 worldTransform, UnityEngine.Rect clippingRect) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:481)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent () (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:455)
+UnityEngine.UIElements.UIR.ImmediateRenderer.Draw (UnityEngine.UIElements.UIR.DrawChainState dcs) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderers.cs:447)
+UnityEngine.UIElements.UIR.UIRenderDevice.ContinueChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.UIElements.UIR.DrawChainState dcs, System.Boolean outerChainsWithMeshRenderer) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:865)
+UnityEngine.UIElements.UIR.UIRenderDevice.DrawChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.Rect viewport, UnityEngine.Matrix4x4 projection, UnityEngine.Texture atlas) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:848)
+UnityEngine.UIElements.UIRRepaintUpdater.DrawChain (UnityEngine.Rect topRect, UnityEngine.Matrix4x4 projection) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:218)
+UnityEngine.UIElements.UIRRepaintUpdater.Update () (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:190)
+UnityEngine.UIElements.VisualTreeUpdater.UpdateVisualTree () (at C:/buildslave/unity/build/Modules/UIElements/VisualTreeUpdater.cs:70)
+UnityEngine.UIElements.Panel.Repaint (UnityEngine.Event e) (at C:/buildslave/unity/build/Modules/UIElements/Panel.cs:589)
+UnityEngine.UIElements.UIElementsUtility.DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:240)
+UnityEngine.UIElements.UIElementsUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:78)
+UnityEngine.GUIUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/IMGUI/GUIUtility.cs:179)
+
+2019-07-17 17:27:50.7777 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:278)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+2019-07-17 17:27:50.7846 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:295)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent (UnityEngine.Event e, UnityEngine.Matrix4x4 worldTransform, UnityEngine.Rect clippingRect) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:481)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent (UnityEngine.Event e) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:464)
+UnityEngine.UIElements.EventDispatchUtilities.PropagateToIMGUIContainer (UnityEngine.UIElements.VisualElement root, UnityEngine.UIElements.EventBase evt) (at C:/buildslave/unity/build/Modules/UIElements/Events/IEventDispatchingStrategy.cs:119)
+UnityEngine.UIElements.EventDispatchUtilities.PropagateToIMGUIContainer (UnityEngine.UIElements.VisualElement root, UnityEngine.UIElements.EventBase evt) (at C:/buildslave/unity/build/Modules/UIElements/Events/IEventDispatchingStrategy.cs:134)
+UnityEngine.UIElements.MouseEventDispatchingStrategy.DispatchEvent (UnityEngine.UIElements.EventBase evt, UnityEngine.UIElements.IPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/Events/MouseEventDispatchingStrategy.cs:69)
+UnityEngine.UIElements.EventDispatcher.ProcessEvent (UnityEngine.UIElements.EventBase evt, UnityEngine.UIElements.IPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/EventDispatcher.cs:280)
+UnityEngine.UIElements.EventDispatcher.Dispatch (UnityEngine.UIElements.EventBase evt, UnityEngine.UIElements.IPanel panel, UnityEngine.UIElements.DispatchMode dispatchMode) (at C:/buildslave/unity/build/Modules/UIElements/EventDispatcher.cs:156)
+UnityEngine.UIElements.BaseVisualElementPanel.SendEvent (UnityEngine.UIElements.EventBase e, UnityEngine.UIElements.DispatchMode dispatchMode) (at C:/buildslave/unity/build/Modules/UIElements/Panel.cs:189)
+UnityEngine.UIElements.UIElementsUtility.DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:255)
+UnityEngine.UIElements.UIElementsUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:78)
+UnityEngine.GUIUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/IMGUI/GUIUtility.cs:179)
+
+2019-07-17 17:27:50.7956 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:278)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+2019-07-17 17:27:50.8025 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:295)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent (UnityEngine.Event e, UnityEngine.Matrix4x4 worldTransform, UnityEngine.Rect clippingRect) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:481)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent () (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:455)
+UnityEngine.UIElements.UIR.ImmediateRenderer.Draw (UnityEngine.UIElements.UIR.DrawChainState dcs) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderers.cs:447)
+UnityEngine.UIElements.UIR.UIRenderDevice.ContinueChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.UIElements.UIR.DrawChainState dcs, System.Boolean outerChainsWithMeshRenderer) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:865)
+UnityEngine.UIElements.UIR.UIRenderDevice.DrawChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.Rect viewport, UnityEngine.Matrix4x4 projection, UnityEngine.Texture atlas) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:848)
+UnityEngine.UIElements.UIRRepaintUpdater.DrawChain (UnityEngine.Rect topRect, UnityEngine.Matrix4x4 projection) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:218)
+UnityEngine.UIElements.UIRRepaintUpdater.Update () (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:190)
+UnityEngine.UIElements.VisualTreeUpdater.UpdateVisualTree () (at C:/buildslave/unity/build/Modules/UIElements/VisualTreeUpdater.cs:70)
+UnityEngine.UIElements.Panel.Repaint (UnityEngine.Event e) (at C:/buildslave/unity/build/Modules/UIElements/Panel.cs:589)
+UnityEngine.UIElements.UIElementsUtility.DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:240)
+UnityEngine.UIElements.UIElementsUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:78)
+UnityEngine.GUIUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/IMGUI/GUIUtility.cs:179)
+
+2019-07-17 17:27:50.8169 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:278)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr)
+
+2019-07-17 17:27:50.8233 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.IMGUI.Controls.TreeViewController.IsItemDragSelectedOrSelected (UnityEditor.IMGUI.Controls.TreeViewItem item) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:468)
+UnityEditor.IMGUI.Controls.TreeViewController.DoItemGUI (UnityEditor.IMGUI.Controls.TreeViewItem item, System.Int32 row, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:482)
+UnityEditor.IMGUI.Controls.TreeViewController.IterateVisibleItems (System.Int32 firstRow, System.Int32 numVisibleRows, System.Single rowWidth, System.Boolean hasFocus) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:691)
+UnityEditor.IMGUI.Controls.TreeViewController.OnGUI (UnityEngine.Rect rect, System.Int32 keyboardControlID) (at C:/buildslave/unity/build/Editor/Mono/GUI/TreeView/TreeViewController.cs:594)
+UnityEditor.SceneHierarchy.DoTreeView (System.Single searchPathHeight) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:783)
+UnityEditor.SceneHierarchy.OnGUI (UnityEngine.Rect rect) (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchy.cs:581)
+UnityEditor.SceneHierarchyWindow.DoSceneHierarchy () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:150)
+UnityEditor.SceneHierarchyWindow.OnGUI () (at C:/buildslave/unity/build/Editor/Mono/SceneHierarchyWindow.cs:133)
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) (at <7d97106330684add86d080ecf65bfe69>:0)
+System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) (at <7d97106330684add86d080ecf65bfe69>:0)
+UnityEditor.HostView.Invoke (System.String methodName, System.Object obj) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:340)
+UnityEditor.HostView.Invoke (System.String methodName) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:334)
+UnityEditor.HostView.InvokeOnGUI (UnityEngine.Rect onGUIPosition, UnityEngine.Rect viewRect) (at C:/buildslave/unity/build/Editor/Mono/HostView.cs:310)
+UnityEditor.DockArea.DrawView (UnityEngine.Rect viewRect, UnityEngine.Rect dockAreaRect, System.Boolean floatingWindow, System.Boolean isBottomTab) (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:373)
+UnityEditor.DockArea.OldOnGUI () (at C:/buildslave/unity/build/Editor/Mono/GUI/DockArea.cs:340)
+UnityEngine.UIElements.IMGUIContainer.DoOnGUI (UnityEngine.Event evt, UnityEngine.Matrix4x4 parentTransform, UnityEngine.Rect clippingRect, System.Boolean isComputingLayout, UnityEngine.Rect layoutSize) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:295)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent (UnityEngine.Event e, UnityEngine.Matrix4x4 worldTransform, UnityEngine.Rect clippingRect) (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:481)
+UnityEngine.UIElements.IMGUIContainer.HandleIMGUIEvent () (at C:/buildslave/unity/build/Modules/UIElements/IMGUIContainer.cs:455)
+UnityEngine.UIElements.UIR.ImmediateRenderer.Draw (UnityEngine.UIElements.UIR.DrawChainState dcs) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderers.cs:447)
+UnityEngine.UIElements.UIR.UIRenderDevice.ContinueChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.UIElements.UIR.DrawChainState dcs, System.Boolean outerChainsWithMeshRenderer) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:865)
+UnityEngine.UIElements.UIR.UIRenderDevice.DrawChain (UnityEngine.UIElements.UIR.RendererBase head, UnityEngine.Rect viewport, UnityEngine.Matrix4x4 projection, UnityEngine.Texture atlas) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRenderer/UIRenderDevice.cs:848)
+UnityEngine.UIElements.UIRRepaintUpdater.DrawChain (UnityEngine.Rect topRect, UnityEngine.Matrix4x4 projection) (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:218)
+UnityEngine.UIElements.UIRRepaintUpdater.Update () (at C:/buildslave/unity/build/Modules/UIElements/Renderer/UIRRepaintUpdater.cs:190)
+UnityEngine.UIElements.VisualTreeUpdater.UpdateVisualTree () (at C:/buildslave/unity/build/Modules/UIElements/VisualTreeUpdater.cs:70)
+UnityEngine.UIElements.Panel.Repaint (UnityEngine.Event e) (at C:/buildslave/unity/build/Modules/UIElements/Panel.cs:589)
+UnityEngine.UIElements.UIElementsUtility.DoDispatch (UnityEngine.UIElements.BaseVisualElementPanel panel) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:240)
+UnityEngine.UIElements.UIElementsUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/UIElements/UIElementsUtility.cs:78)
+UnityEngine.GUIUtility.ProcessEvent (System.Int32 instanceID, System.IntPtr nativeEventPtr) (at C:/buildslave/unity/build/Modules/IMGUI/GUIUtility.cs:179)
+
+2019-07-17 17:29:28.1695 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:29:28.2940 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:37:16.4524 [DEBUG] Play mode: False
+2019-07-17 17:38:06.4874 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:38:06.6218 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:42:15.0273 [DEBUG] Play mode: False
+2019-07-17 17:44:12.9335 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:44:13.1284 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:45:12.0150 [DEBUG] Play mode: False
+2019-07-17 17:45:24.5814 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:45:24.7352 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:45:58.3386 [DEBUG] Play mode: False
+2019-07-17 17:46:21.3571 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:46:21.5119 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:46:33.4205 [DEBUG] Play mode: False
+2019-07-17 17:46:43.9094 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:46:44.0940 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:46:47.7302 [DEBUG] Play mode: False
+2019-07-17 17:46:52.1882 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:46:52.3831 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:47:01.8870 [DEBUG] Play mode: False
+2019-07-17 17:47:07.1125 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:47:07.2538 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:48:09.8076 [DEBUG] Play mode: False
+2019-07-17 17:48:17.0410 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:48:17.1848 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:48:53.8105 [DEBUG] Play mode: False
+2019-07-17 17:49:23.2741 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:49:23.4284 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:49:33.0545 [DEBUG] Play mode: False
+2019-07-17 17:49:43.5303 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:49:43.6855 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:50:00.8244 [DEBUG] Play mode: False
+2019-07-17 17:50:12.5869 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 17:50:12.7347 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 17:51:15.4226 [DEBUG] Play mode: False
+2019-07-17 17:52:58.7405 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 18:06:21.7793 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-17 18:06:21.9058 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-17 18:12:02.2799 [DEBUG] Play mode: False
+2019-07-17 18:53:46.8364 [DEBUG] Scene Fusion version 1.8.2-3
