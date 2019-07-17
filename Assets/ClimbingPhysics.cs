@@ -11,8 +11,8 @@ public class ClimbingPhysics : MonoBehaviour
     public Transform LeftTrackedHand;
     public Transform RightTrackedHand;
 
-    public float Strength = 900;
-    public float Damnping = 30;
+    public float Strength = 1300;
+    public float Damnping = 40;
 
     Vector3 Avp; //Average physics hand position
     Vector3 Avt; //average tracked hand position
