@@ -35,3 +35,19 @@
 2019-07-18 19:00:03.0266 [INFO] Launching Session: Greece Scene
 2019-07-18 19:00:06.0937 [DEBUG] Connecting
 2019-07-18 19:00:06.1040 [DEBUG] Connecting to room (99950:SceneFusion:SceneFusion) via TCP at roommanager-vps230018.kinematicsoup.com:21312
+2019-07-18 19:10:45.9147 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:30:02.9855 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:30:03.1402 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 19:30:05.8702 [DEBUG] Play mode: False
+2019-07-18 19:30:17.8987 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:30:18.0495 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 19:30:20.2522 [DEBUG] Play mode: False
+2019-07-18 19:30:27.1362 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:30:27.2999 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 19:30:59.6971 [DEBUG] Play mode: False
+2019-07-18 19:33:03.0729 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:33:03.2252 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 19:33:45.9259 [DEBUG] Play mode: False
+2019-07-18 19:35:28.9716 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 19:35:29.1179 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 19:37:03.8454 [DEBUG] Play mode: False
