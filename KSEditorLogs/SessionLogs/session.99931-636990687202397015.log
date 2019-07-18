@@ -1,0 +1,38 @@
+2019-07-18 17:45:20.5635 [DEBUG] Validating model...
+2019-07-18 17:45:20.8934 [DEBUG] Model updated
+2019-07-18 17:45:20.8939 [DEBUG] Authenticating with server...
+2019-07-18 17:45:24.8024 [DEBUG] Connected to room. (99931:SceneFusion:SceneFusion)
+2019-07-18 17:45:24.8187 [INFO] Connected to server.
+2019-07-18 17:45:24.8192 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 17:45:24.8192 [DEBUG] Unity Version : 2019.1.10f1
+2019-07-18 17:45:24.8192 [DEBUG] Pro License : False
+2019-07-18 17:45:24.8192 [DEBUG] Platform : WindowsEditor
+2019-07-18 17:45:24.8197 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 17:45:24.8197 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 17:45:24.8202 [DEBUG] Scene Fusion client build : 3
+2019-07-18 17:45:24.8202 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 17:45:24.8202 [DEBUG] Waiting for server response
+2019-07-18 17:45:24.9259 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 17:45:24.9259 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 17:45:25.1555 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 17:45:25.1555 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 17:45:25.1555 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 17:45:25.1555 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 17:45:25.1555 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 17:45:25.6927 [DEBUG] Uploading scene 'Greece Scene'
+2019-07-18 17:45:26.5319 [WARNING] Cannot sync 'Sprites/Default' (Material) because it is not in Unity's asset database.
+2019-07-18 17:45:31.1755 [DEBUG] Encoding objects for Greece Scene.unity
+2019-07-18 17:45:36.9935 [DEBUG] Compressing scene data
+2019-07-18 17:45:40.3673 [DEBUG] Spawn request. (Objects: 518)
+2019-07-18 17:45:40.3703 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 17:45:40.3718 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 17:45:40.3737 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 17:45:40.3866 [DEBUG] batch size: 66758
+2019-07-18 17:45:40.7581 [DEBUG] Upload
+2019-07-18 17:45:41.1505 [DEBUG] Waitng for server to process scene data
+2019-07-18 17:45:41.6971 [DEBUG] Loading complete
+2019-07-18 17:46:03.1096 [DEBUG] Spawn request. (Objects: 14)
+2019-07-18 17:49:18.5700 [DEBUG] Spawn request. (Objects: 9)
+2019-07-18 17:52:24.2848 [DEBUG] Disconnecting from room (99931:SceneFusion:SceneFusion)
+2019-07-18 17:52:24.2888 [INFO] Disconnected from server.
+2019-07-18 17:52:24.2893 [DEBUG] Disconnect. (Duration: 419)
