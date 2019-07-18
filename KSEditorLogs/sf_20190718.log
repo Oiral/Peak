@@ -51,3 +51,7 @@
 2019-07-18 19:35:28.9716 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-18 19:35:29.1179 [DEBUG] Play mode: True, sync in play mode: True
 2019-07-18 19:37:03.8454 [DEBUG] Play mode: False
+2019-07-18 21:32:34.9202 [INFO] Launching Session: Greece Scene
+2019-07-18 21:32:35.7876 [DEBUG] Connecting
+2019-07-18 21:32:35.8108 [DEBUG] Connecting to room (99957:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 22:07:29.3856 [DEBUG] Sent D:/Git/Unity/Peak/KSEditorLogs/SessionLogs/session.99957-636990823558679284.log
