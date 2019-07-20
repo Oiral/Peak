@@ -7,6 +7,10 @@ TagManager:
   - Pickupable
   - projectile
   - FxTemporaire
+  - Head
+  - Level End
+  - Level Start
+  - Level Transition
   layers:
   - Default
   - TransparentFX

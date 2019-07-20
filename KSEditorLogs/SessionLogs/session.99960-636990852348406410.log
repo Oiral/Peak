@@ -1,0 +1,154 @@
+2019-07-18 22:20:35.0157 [DEBUG] Validating model...
+2019-07-18 22:20:35.1932 [DEBUG] Model updated
+2019-07-18 22:20:35.1937 [DEBUG] Authenticating with server...
+2019-07-18 22:20:35.6754 [DEBUG] Connected to room. (99960:SceneFusion:SceneFusion)
+2019-07-18 22:20:35.6818 [INFO] Connected to server.
+2019-07-18 22:20:35.6818 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 22:20:35.6818 [DEBUG] Unity Version : 2019.1.8f1
+2019-07-18 22:20:35.6818 [DEBUG] Pro License : False
+2019-07-18 22:20:35.6818 [DEBUG] Platform : WindowsEditor
+2019-07-18 22:20:35.6818 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 22:20:35.6818 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 22:20:35.6828 [DEBUG] Scene Fusion client build : 3
+2019-07-18 22:20:35.6828 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 22:20:35.6828 [DEBUG] Waiting for server response
+2019-07-18 22:20:35.7517 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 22:20:35.7522 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 22:20:35.7542 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 22:20:35.7542 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 22:20:35.7547 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 22:20:35.7547 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 22:20:35.7547 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 22:20:36.0543 [DEBUG] Uploading scene 'Greece Scene'
+2019-07-18 22:20:36.6922 [WARNING] Cannot sync 'Sprites/Default' (Material) because it is not in Unity's asset database.
+2019-07-18 22:20:39.8270 [DEBUG] Encoding objects for Greece Scene.unity
+2019-07-18 22:20:46.4188 [DEBUG] Compressing scene data
+2019-07-18 22:20:50.1948 [DEBUG] Spawn request. (Objects: 565)
+2019-07-18 22:20:50.1968 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 22:20:50.1988 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 22:20:50.2003 [DEBUG] Room RPC. (Id: 75, Size: 20006, Reporting Threshold: 10000)
+2019-07-18 22:20:50.2092 [DEBUG] batch size: 65789
+2019-07-18 22:20:50.4433 [DEBUG] Upload
+2019-07-18 22:20:50.6393 [DEBUG] Waitng for server to process scene data
+2019-07-18 22:20:51.0901 [DEBUG] Loading complete
+2019-07-18 22:21:26.9976 [DEBUG] Spawn request. (Objects: 24)
+2019-07-18 22:21:55.7652 [DEBUG] Disconnecting temporarily to enter play mode.
+2019-07-18 22:21:55.7657 [DEBUG] Disconnecting from room (99960:SceneFusion:SceneFusion)
+2019-07-18 22:21:55.7801 [INFO] Disconnected from server.
+2019-07-18 22:21:55.7801 [DEBUG] Disconnect. (Duration: 80)
+2019-07-18 22:21:55.8649 [INFO] Static batching in play mode is not supported in a Scene Fusion session and will be temporarily disabled.
+2019-07-18 22:22:05.0662 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 22:22:06.8835 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 22:22:07.0451 [DEBUG] Connecting
+2019-07-18 22:22:07.0694 [DEBUG] Connecting to room (99960:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 22:22:07.0744 [DEBUG] Host connection. (Session: 99960)
+2019-07-18 22:22:07.2475 [DEBUG] Validating model...
+2019-07-18 22:22:07.4266 [DEBUG] Model updated
+2019-07-18 22:22:07.4271 [DEBUG] Authenticating with server...
+2019-07-18 22:22:07.7142 [DEBUG] Connected to room. (99960:SceneFusion:SceneFusion)
+2019-07-18 22:22:07.7207 [INFO] Connected to server.
+2019-07-18 22:22:07.7207 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 22:22:07.7207 [DEBUG] Unity Version : 2019.1.8f1
+2019-07-18 22:22:07.7207 [DEBUG] Pro License : False
+2019-07-18 22:22:07.7212 [DEBUG] Platform : WindowsEditor
+2019-07-18 22:22:07.7212 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 22:22:07.7212 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 22:22:07.7212 [DEBUG] Scene Fusion client build : 3
+2019-07-18 22:22:07.7212 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 22:22:07.7212 [DEBUG] Waiting for server response
+2019-07-18 22:22:10.6615 [DEBUG] frame size: 80248
+2019-07-18 22:22:10.6669 [DEBUG] Download
+2019-07-18 22:22:12.5557 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 22:22:12.5562 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 22:22:12.7769 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 22:22:12.7774 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 22:22:12.7774 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 22:22:12.7774 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 22:22:12.7774 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 22:22:13.0819 [DEBUG] Loading complete
+2019-07-18 22:22:14.9662 [DEBUG] Play mode: False
+2019-07-18 22:22:16.6030 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (1)'.
+2019-07-18 22:22:16.6442 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 22:22:19.9997 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 22:22:20.0086 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 22:22:20.0433 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 22:22:20.0522 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 22:22:20.1033 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 22:22:20.1202 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 22:22:20.1286 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 22:22:20.1380 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 22:22:20.1713 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 22:22:20.1802 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 22:22:20.2119 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 22:22:20.2209 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 22:22:20.2620 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 22:22:20.2710 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 22:22:20.3022 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 22:22:20.3106 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 22:22:22.2669 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 22:22:24.0381 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 22:22:24.0614 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 22:22:24.8019 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 22:22:24.8694 [DEBUG] Loading complete
+2019-07-18 22:26:07.0673 [DEBUG] Disconnecting temporarily to enter play mode.
+2019-07-18 22:26:07.0678 [DEBUG] Disconnecting from room (99960:SceneFusion:SceneFusion)
+2019-07-18 22:26:07.0802 [INFO] Disconnected from server.
+2019-07-18 22:26:07.0802 [DEBUG] Disconnect. (Duration: -9579)
+2019-07-18 22:26:07.1685 [INFO] Static batching in play mode is not supported in a Scene Fusion session and will be temporarily disabled.
+2019-07-18 22:26:10.9197 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 22:26:11.0784 [DEBUG] Play mode: True, sync in play mode: True
+2019-07-18 22:26:11.2342 [DEBUG] Connecting
+2019-07-18 22:26:11.2570 [DEBUG] Connecting to room (99960:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+2019-07-18 22:26:11.3126 [DEBUG] Host connection. (Session: 99960)
+2019-07-18 22:26:11.4911 [DEBUG] Validating model...
+2019-07-18 22:26:11.6731 [DEBUG] Model updated
+2019-07-18 22:26:11.6731 [DEBUG] Authenticating with server...
+2019-07-18 22:26:11.8995 [DEBUG] Connected to room. (99960:SceneFusion:SceneFusion)
+2019-07-18 22:26:11.9040 [INFO] Connected to server.
+2019-07-18 22:26:11.9045 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 22:26:11.9045 [DEBUG] Unity Version : 2019.1.8f1
+2019-07-18 22:26:11.9050 [DEBUG] Pro License : False
+2019-07-18 22:26:11.9050 [DEBUG] Platform : WindowsEditor
+2019-07-18 22:26:11.9050 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 22:26:11.9050 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 22:26:11.9050 [DEBUG] Scene Fusion client build : 3
+2019-07-18 22:26:11.9050 [DEBUG] User : hamish@pageland.co.nz
+2019-07-18 22:26:11.9050 [DEBUG] Waiting for server response
+2019-07-18 22:26:14.7773 [DEBUG] frame size: 82700
+2019-07-18 22:26:14.7952 [DEBUG] Download
+2019-07-18 22:26:16.6393 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 22:26:16.6393 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 22:26:16.7241 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 22:26:16.7241 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 22:26:16.7241 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 22:26:16.7241 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 22:26:16.7241 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 22:26:17.0331 [DEBUG] Loading complete
+2019-07-18 22:26:18.3282 [DEBUG] Play mode: False
+2019-07-18 22:26:18.9254 [WARNING] Failed to restore deleted prefab component at index 3 on '3X3 Tall Tower (5)'.
+2019-07-18 22:26:20.0344 [WARNING] Failed to restore deleted prefab component at index 3 on 'Circular Window (1)'.
+2019-07-18 22:26:21.1459 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 22:26:23.2351 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 22:26:23.2440 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (8)'.
+2019-07-18 22:26:23.2783 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 22:26:23.2867 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (14)'.
+2019-07-18 22:26:23.3328 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 22:26:23.3492 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 22:26:23.3586 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (11)'.
+2019-07-18 22:26:23.3676 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (12)'.
+2019-07-18 22:26:23.3988 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 22:26:23.4077 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (10)'.
+2019-07-18 22:26:23.4399 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 22:26:23.4489 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (13)'.
+2019-07-18 22:26:23.4881 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 22:26:23.4970 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (15)'.
+2019-07-18 22:26:23.5282 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 22:26:23.5372 [WARNING] Failed to restore deleted prefab component at index 3 on 'Cube (9)'.
+2019-07-18 22:26:25.4448 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (3)'.
+2019-07-18 22:26:27.7889 [WARNING] Failed to restore deleted prefab component at index 3 on 'Door (1)'.
+2019-07-18 22:26:27.8737 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (4)'.
+2019-07-18 22:26:27.8866 [WARNING] Failed to restore deleted prefab component at index 3 on 'Window (5)'.
+2019-07-18 22:26:28.0433 [DEBUG] Loading complete
+2019-07-18 22:31:21.1922 [DEBUG] Disconnecting from room (99960:SceneFusion:SceneFusion)
+2019-07-18 22:31:21.1947 [INFO] Disconnected from server.
+2019-07-18 22:31:21.1947 [DEBUG] Disconnect. (Duration: -9811)
