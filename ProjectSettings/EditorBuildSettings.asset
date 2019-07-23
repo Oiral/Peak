@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Greece Scene.unity
     guid: de48c17926789f846a27e516f4e8ba4e
+  - enabled: 1
+    path: Assets/Mountain.unity
+    guid: 5e36e54b101ff6d4da07f6a4838e7f23
   m_configObjects: {}
