@@ -1,0 +1,25 @@
+2019-07-31 11:37:21.2145 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-31 11:37:29.0049 [DEBUG] Invalid token sent as part of a web request token. Token = mBJbUftyUOeIdFwpU31aLLxbJlb53iHAUNUEHuObsGfofdnob5RT3078ipEbn6jNKiiqQOhZx1WCxR3GkPQAp9asZBH9HKgJqkKug9um9idsxlklBLc9I9fBXxY06q1YhGPz9hMO6tfSARNGlnLuCG6c7U7OuChCFcGMO5BRg2B3UjJG35jc2P3UdWINJtNgA0Cd0AiG2qEnHBwD5GzJQCMeiHipSOx3JlGGKSPXpDQ88nL7KQDlx9nhtXKH1HN
+2019-07-31 12:14:19.7544 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-31 12:34:03.4745 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-31 12:34:03.5454 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.SettingsManagement.ProjectSettingsRepository.ContainsKey[T] (System.String key) (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/ProjectSettingsRepository.cs:109)
+UnityEditor.SettingsManagement.Settings.ContainsKey[T] (System.String key, UnityEditor.SettingsScope scope) (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/Settings.cs:125)
+UnityEditor.SettingsManagement.UserSetting`1[T].Init () (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/UserSetting.cs:300)
+UnityEditor.SettingsManagement.UserSetting`1[T].get_value () (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/UserSetting.cs:326)
+UnityEditor.ProBuilder.Pref`1[T].op_Implicit (UnityEditor.ProBuilder.Pref`1[T] pref) (at Library/PackageCache/com.unity.probuilder@4.0.5/Editor/EditorCore/Pref.cs:17)
+UnityEditor.ProBuilder.LogPreferences+<>c.<SetLogPreferences>b__1_0 () (at Library/PackageCache/com.unity.probuilder@4.0.5/Editor/EditorCore/LogEditor.cs:27)
+UnityEditor.EditorApplication.Internal_CallDelayFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:209)
+
+2019-07-31 12:37:35.7727 [ERROR] NullReferenceException: Object reference not set to an instance of an object
+UnityEditor.SettingsManagement.ProjectSettingsRepository.ContainsKey[T] (System.String key) (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/ProjectSettingsRepository.cs:109)
+UnityEditor.SettingsManagement.Settings.ContainsKey[T] (System.String key, UnityEditor.SettingsScope scope) (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/Settings.cs:125)
+UnityEditor.SettingsManagement.UserSetting`1[T].Init () (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/UserSetting.cs:300)
+UnityEditor.SettingsManagement.UserSetting`1[T].get_value () (at Library/PackageCache/com.unity.probuilder@4.0.5/Settings/Editor/UserSetting.cs:326)
+UnityEditor.ProBuilder.Pref`1[T].op_Implicit (UnityEditor.ProBuilder.Pref`1[T] pref) (at Library/PackageCache/com.unity.probuilder@4.0.5/Editor/EditorCore/Pref.cs:17)
+UnityEditor.ProBuilder.Lightmapping.get_autoUnwrapLightmapUV () (at Library/PackageCache/com.unity.probuilder@4.0.5/Editor/EditorCore/Lightmapping.cs:103)
+UnityEditor.ProBuilder.Lightmapping.PostprocessModifications (UnityEditor.UndoPropertyModification[] modifications) (at Library/PackageCache/com.unity.probuilder@4.0.5/Editor/EditorCore/Lightmapping.cs:140)
+UnityEditor.Undo.InvokePostprocessModifications (UnityEditor.UndoPropertyModification[] modifications) (at C:/buildslave/unity/build/Editor/Mono/Undo/Undo.bindings.cs:189)
+
+2019-07-31 12:40:31.4370 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-31 13:27:44.7665 [DEBUG] Scene Fusion version 1.8.2-3

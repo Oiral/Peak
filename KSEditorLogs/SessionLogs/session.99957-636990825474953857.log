@@ -1,0 +1,404 @@
+2019-07-18 21:35:47.6968 [DEBUG] Validating model...
+2019-07-18 21:35:47.9013 [DEBUG] Model updated
+2019-07-18 21:35:47.9022 [DEBUG] Authenticating with server...
+2019-07-18 21:35:48.2364 [DEBUG] Connected to room. (99957:SceneFusion:SceneFusion)
+2019-07-18 21:35:48.2543 [INFO] Connected to server.
+2019-07-18 21:35:48.2553 [DEBUG] OS : Microsoft Windows NT 10.0.17763.0
+2019-07-18 21:35:48.2553 [DEBUG] Unity Version : 2019.1.8f1
+2019-07-18 21:35:48.2553 [DEBUG] Pro License : False
+2019-07-18 21:35:48.2553 [DEBUG] Platform : WindowsEditor
+2019-07-18 21:35:48.2553 [DEBUG] Build Target : StandaloneWindows64
+2019-07-18 21:35:48.2553 [DEBUG] Scene Fusion version : 1.8.2
+2019-07-18 21:35:48.2553 [DEBUG] Scene Fusion client build : 3
+2019-07-18 21:35:48.2563 [DEBUG] User : jbcrothers@gmail.com
+2019-07-18 21:35:48.2563 [DEBUG] Waiting for server response
+2019-07-18 21:35:50.6188 [DEBUG] frame size: 72521
+2019-07-18 21:35:50.6197 [DEBUG] Download
+2019-07-18 21:35:52.4781 [DEBUG] Tier: Scene Fusion - Free, Permissions: 00006402
+2019-07-18 21:35:52.4781 [DEBUG] User Permissions: FFFFFFFF
+2019-07-18 21:35:52.9089 [DEBUG] No stand-in for UnityEngine.LocalizationAsset
+2019-07-18 21:35:52.9089 [DEBUG] No stand-in for UnityEngine.ProceduralMaterial
+2019-07-18 21:35:52.9089 [DEBUG] No stand-in for UnityEngine.ProceduralTexture
+2019-07-18 21:35:52.9089 [DEBUG] No stand-in for UnityEngine.TerrainLayer
+2019-07-18 21:35:52.9089 [DEBUG] No stand-in for UnityEngine.Experimental.VFX.VisualEffectAsset
+2019-07-18 21:35:53.7287 [DEBUG] Download finished
+2019-07-18 21:35:53.8564 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Player.prefab-1-1-0-0' but found 3.
+2019-07-18 21:35:53.8604 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Player.prefab-1-3-0-0' but found 3.
+2019-07-18 21:35:54.2160 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-0' but found 3.
+2019-07-18 21:35:54.2260 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-1' but found 3.
+2019-07-18 21:35:54.2360 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-2' but found 3.
+2019-07-18 21:35:54.2459 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-3' but found 3.
+2019-07-18 21:35:54.2559 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-4' but found 3.
+2019-07-18 21:35:54.2669 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-5' but found 3.
+2019-07-18 21:35:54.2769 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-6' but found 3.
+2019-07-18 21:35:54.2878 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-0-7' but found 3.
+2019-07-18 21:35:54.2988 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-0' but found 3.
+2019-07-18 21:35:54.3088 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-1' but found 3.
+2019-07-18 21:35:54.3197 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-2' but found 3.
+2019-07-18 21:35:54.3297 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-3' but found 3.
+2019-07-18 21:35:54.3397 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-4' but found 3.
+2019-07-18 21:35:54.3497 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-5' but found 3.
+2019-07-18 21:35:54.3607 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-6' but found 3.
+2019-07-18 21:35:54.3706 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-1-7' but found 3.
+2019-07-18 21:35:54.3846 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-2' but found 3.
+2019-07-18 21:35:54.3986 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-3' but found 3.
+2019-07-18 21:35:54.4155 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-4' but found 3.
+2019-07-18 21:35:54.4295 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-5' but found 3.
+2019-07-18 21:35:54.4783 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 Tall Tower.prefab-6' but found 3.
+2019-07-18 21:35:57.8974 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-0' but found 3.
+2019-07-18 21:35:57.9084 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-1' but found 3.
+2019-07-18 21:35:57.9183 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-2' but found 3.
+2019-07-18 21:35:57.9283 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-3' but found 3.
+2019-07-18 21:35:57.9373 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-4' but found 3.
+2019-07-18 21:35:57.9473 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-5' but found 3.
+2019-07-18 21:35:57.9582 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-6' but found 3.
+2019-07-18 21:35:57.9682 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-0-7' but found 3.
+2019-07-18 21:35:58.0141 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-1' but found 3.
+2019-07-18 21:35:58.1358 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-2' but found 3.
+2019-07-18 21:35:58.1507 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-3' but found 3.
+2019-07-18 21:35:58.1607 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Stairs.prefab-4' but found 3.
+2019-07-18 21:35:58.2196 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-0' but found 3.
+2019-07-18 21:35:58.2305 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-0' but found 3.
+2019-07-18 21:35:58.2401 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-1' but found 3.
+2019-07-18 21:35:58.2490 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-2' but found 3.
+2019-07-18 21:35:58.2590 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-3' but found 3.
+2019-07-18 21:35:58.2690 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-4' but found 3.
+2019-07-18 21:35:58.2789 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-5' but found 3.
+2019-07-18 21:35:58.2899 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-6' but found 3.
+2019-07-18 21:35:58.2999 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-1-7' but found 3.
+2019-07-18 21:35:58.3138 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-2' but found 3.
+2019-07-18 21:35:58.3288 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-3' but found 3.
+2019-07-18 21:35:58.3428 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-4' but found 3.
+2019-07-18 21:35:58.3577 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-5' but found 3.
+2019-07-18 21:35:58.5751 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/2X2 House.prefab-6' but found 3.
+2019-07-18 21:35:58.7204 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-0' but found 3.
+2019-07-18 21:35:58.7303 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-1' but found 3.
+2019-07-18 21:35:58.7413 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-2' but found 3.
+2019-07-18 21:35:58.7513 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-3' but found 3.
+2019-07-18 21:35:58.7622 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-4' but found 3.
+2019-07-18 21:35:58.7722 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-5' but found 3.
+2019-07-18 21:35:58.7822 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-6' but found 3.
+2019-07-18 21:35:58.7922 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House With Balcony.prefab-0-7' but found 3.
+2019-07-18 21:35:59.5237 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-0' but found 3.
+2019-07-18 21:35:59.5347 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-0' but found 3.
+2019-07-18 21:35:59.5457 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-1' but found 3.
+2019-07-18 21:35:59.5557 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-2' but found 3.
+2019-07-18 21:35:59.5666 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-3' but found 3.
+2019-07-18 21:35:59.5786 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-4' but found 3.
+2019-07-18 21:35:59.5896 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-5' but found 3.
+2019-07-18 21:35:59.6025 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-6' but found 3.
+2019-07-18 21:35:59.6135 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-1-7' but found 3.
+2019-07-18 21:35:59.6295 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-2' but found 3.
+2019-07-18 21:35:59.6444 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 House.prefab-3' but found 3.
+2019-07-18 21:36:03.0680 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-0' but found 3.
+2019-07-18 21:36:03.0780 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-1' but found 3.
+2019-07-18 21:36:03.0880 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-2' but found 3.
+2019-07-18 21:36:03.0979 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-3' but found 3.
+2019-07-18 21:36:03.1089 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-4' but found 3.
+2019-07-18 21:36:03.1199 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-5' but found 3.
+2019-07-18 21:36:03.1298 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-6' but found 3.
+2019-07-18 21:36:03.1408 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Small Parts/3X3 Lattice.prefab-7' but found 3.
+2019-07-18 21:36:03.4121 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-0' but found 3.
+2019-07-18 21:36:03.4230 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-1' but found 3.
+2019-07-18 21:36:03.4340 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-2' but found 3.
+2019-07-18 21:36:03.4440 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-3' but found 3.
+2019-07-18 21:36:03.4540 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-4' but found 3.
+2019-07-18 21:36:03.4639 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-5' but found 3.
+2019-07-18 21:36:03.4749 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-6' but found 3.
+2019-07-18 21:36:03.4849 [WARNING] Expected 4 prefab components on prefab 'Assets/Prefabs/Greece Prefabs/Building/3X3 open roof building.prefab-0-7' but found 3.
+2019-07-18 21:36:04.0344 [DEBUG] Loading complete
+2019-07-18 21:37:27.7048 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 21:40:36.8687 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.8906 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.9036 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.9136 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.9245 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.9365 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:36.9485 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:40:41.1309 [DEBUG] Spawn request. (Objects: 9)
+2019-07-18 21:42:30.6899 [DEBUG] Spawn request. (Objects: 9)
+2019-07-18 21:44:33.3339 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3508 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3578 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3648 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3728 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3797 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:44:33.3867 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:08.5865 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 21:46:22.0583 [ERROR] InvalidOperationException: Destroying a GameObject inside a Prefab instance is not allowed.
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.0862 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1012 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1151 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1381 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1550 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1640 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1720 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:46:22.1780 [ERROR] ArgumentException: UnpackPrefabInstance must be called with a Prefab instance.
+UnityEditor.PrefabUtility.UnpackPrefabInstance (UnityEngine.GameObject instanceRoot, UnityEditor.PrefabUnpackMode unpackMode, UnityEditor.InteractionMode action) (at C:/buildslave/unity/build/Editor/Mono/Prefabs/PrefabUtility.cs:1617)
+KS.SceneFusion.Client.Editor.ObjectEntity.Detached () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.SceneFusion.Client.Editor.Entity.Destroy () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+KS.Reactor.Client.SyncObject.Destroy () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].DestroySyncObject (System.UInt32 syncObjectId) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Secret.ServerEventList.ProcessEvents () (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksBaseRoom`2[Player,Entity].Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.Reactor.Client.ksService.Update (System.Single deltaTime) (at <cbcb5a6741fa4d85822b94ccb715a8f5>:0)
+KS.SceneFusion.Client.Editor.CoEditService.Update () (at <5bf6b5841ec74311b57bb7b6d2b0465c>:0)
+UnityEditor.EditorApplication.Internal_CallUpdateFunctions () (at C:/buildslave/unity/build/Editor/Mono/EditorApplication.cs:200)
+
+2019-07-18 21:48:31.5189 [DEBUG] Spawn request. (Objects: 24)
+2019-07-18 21:48:43.1554 [DEBUG] Spawn request. (Objects: 10)
+2019-07-18 21:48:43.9288 [WARNING] Cannot sync 'Sprites/Default' (Material) because it is not in Unity's asset database.
+2019-07-18 21:48:53.1132 [DEBUG] Spawn request. (Objects: 14)
+2019-07-18 21:49:02.8718 [DEBUG] Spawn request. (Objects: 10)
+2019-07-18 21:49:18.5627 [DEBUG] Spawn request. (Objects: 10)
+2019-07-18 21:49:24.4039 [DEBUG] Spawn request. (Objects: 20)
+2019-07-18 21:49:48.6675 [DEBUG] Spawn request. (Objects: 10)
+2019-07-18 21:56:00.6989 [DEBUG] Spawn request. (Objects: 24)
+2019-07-18 21:56:46.5950 [DEBUG] Spawn request. (Objects: 10)
+2019-07-18 21:57:06.7724 [DEBUG] Spawn request. (Objects: 1)
+2019-07-18 21:59:26.8110 [DEBUG] Spawn request. (Objects: 13)
+2019-07-18 22:00:17.1820 [DEBUG] Disconnecting temporarily to recompile.
+2019-07-18 22:00:17.1830 [DEBUG] Disconnecting from room (99957:SceneFusion:SceneFusion)
+2019-07-18 22:00:17.1860 [INFO] Disconnected from server.
+2019-07-18 22:00:17.1860 [DEBUG] Disconnect. (Duration: 1465)

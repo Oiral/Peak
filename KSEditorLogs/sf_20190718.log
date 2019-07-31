@@ -12,6 +12,7 @@
 2019-07-18 01:53:33.0976 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-18 01:53:33.3490 [DEBUG] Play mode: True, sync in play mode: True
 2019-07-18 01:56:36.6018 [DEBUG] Play mode: False
+<<<<<<< Updated upstream
 2019-07-18 17:44:28.7791 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-18 17:45:16.4301 [INFO] Launching Session: Greece Scene
 2019-07-18 17:45:20.0935 [DEBUG] Connecting
@@ -51,8 +52,23 @@
 2019-07-18 19:35:28.9716 [DEBUG] Scene Fusion version 1.8.2-3
 2019-07-18 19:35:29.1179 [DEBUG] Play mode: True, sync in play mode: True
 2019-07-18 19:37:03.8454 [DEBUG] Play mode: False
+<<<<<<< Updated upstream
 2019-07-18 21:32:34.9202 [INFO] Launching Session: Greece Scene
 2019-07-18 21:32:35.7876 [DEBUG] Connecting
 2019-07-18 21:32:35.8108 [DEBUG] Connecting to room (99957:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
 2019-07-18 22:07:29.3856 [DEBUG] Sent D:/Git/Unity/Peak/KSEditorLogs/SessionLogs/session.99957-636990823558679284.log
 2019-07-18 22:31:21.2815 [DEBUG] Sent D:/Git/Unity/Peak/KSEditorLogs/SessionLogs/session.99960-636990852348406410.log
+=======
+=======
+2019-07-18 17:45:03.6900 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 17:45:45.4357 [DEBUG] Connecting
+2019-07-18 17:45:45.4646 [DEBUG] Connecting to room (99931:SceneFusion:SceneFusion) via TCP at roommanager-ec2-18-228-191-46.kinematicsoup.com:21312
+2019-07-18 17:52:05.5077 [DEBUG] Sent C:/Users/Jason/Documents/Git/Peak/KSEditorLogs/SessionLogs/session.99931-636990687456815316.log
+2019-07-18 17:52:55.4878 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 21:29:49.0342 [DEBUG] Scene Fusion version 1.8.2-3
+>>>>>>> Stashed changes
+2019-07-18 21:35:21.6577 [DEBUG] Scene Fusion version 1.8.2-3
+2019-07-18 21:35:23.8885 [DEBUG] Invalid token sent as part of a web request token. Token = zc4T3t9E7gecUUJptDYC33wjX0KsdtiJ7t8KpTrntTE9gFwWMWabRFodxxdguueoBTPxmKgBFylDEDGWxWbWBlCY4daMg73sdY6sfHUAELXHKksdjWJeMmpaiuTcN9zXIby4a0XrHE3rRkpQmR25kampbkQfcL4bnjTrbuEHWTsdRtwYoDPGlr54gKN4LxCh6acw3x7gOl89RjhXnnS7ume2b2dOnegSsp9sgz7Zg6U4Ha0eKMb9GNyhXH1M0Bh
+2019-07-18 21:35:46.8759 [DEBUG] Connecting
+2019-07-18 21:35:46.9058 [DEBUG] Connecting to room (99957:SceneFusion:SceneFusion) via TCP at roommanager-ec2-35-164-71-216.kinematicsoup.com:21312
+>>>>>>> Stashed changes
