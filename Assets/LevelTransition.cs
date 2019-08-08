@@ -88,6 +88,8 @@ public class LevelTransition : MonoBehaviour
 
         player.transform.SetParent(null);
 
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(nextLevel));
+
         DontDestroyOnLoad(player);
     }
     /*
