@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum TransitionState {start, inside, exit };
+
 public class LevelTransition : MonoBehaviour
 {
     public LevelEnd levelEnd;
 
     public GameObject startingMarker;
     public GameObject endMarker;
+
+    public GameObject invisibleBarrierParent;
+    public GameObject insideParent;
 
     public bool assigned = false;
 
@@ -17,6 +22,8 @@ public class LevelTransition : MonoBehaviour
     public int endLevelID;
 
     public bool startLoaded = true;
+
+    public TransitionState currentState = TransitionState.start;
 
     public void SetEnd(LevelEnd levelEndObject)
     {
@@ -115,6 +122,40 @@ public class LevelTransition : MonoBehaviour
             if (scene != myScene)
             {
                 SceneManager.UnloadSceneAsync(scene);
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (currentState == TransitionState.start)
+        {
+            if (Vector3.Dot(startingMarker.transform.forward, (startingMarker.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position)) > 0)
+            {
+                //Enable Invisible barrier
+                insideParent.SetActive(true);
+                invisibleBarrierParent.SetActive(true);
+            }
+            else
+            {
+                insideParent.SetActive(false);
+            }
+        }else if (currentState == TransitionState.inside)
+        {
+            insideParent.SetActive(true);
+            invisibleBarrierParent.SetActive(false);
+        }
+        else
+        {
+            if (Vector3.Dot(endMarker.transform.forward, (endMarker.transform.position - GameObject.FindGameObjectWithTag("Player").transform.position)) > 0)
+            {
+                //Enable Invisible barrier
+                insideParent.SetActive(true);
+                invisibleBarrierParent.SetActive(true);
+            }
+            else
+            {
+                insideParent.SetActive(false);
             }
         }
     }

@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Transition.unity
     guid: 79796e6371de668419bb68f66546f5f6
+  - enabled: 0
+    path: Assets/Test Scene.unity
+    guid: fc93627e34c1f8a4baefc7e96c28fac7
+  - enabled: 1
+    path: Assets/Transition Invisible.unity
+    guid: f3bb2dcfddd1ce943a6a61b43ca20cba
   - enabled: 1
     path: Assets/Middle Scene.unity
     guid: f71bcfd834f33784da23c7fac6eed567
