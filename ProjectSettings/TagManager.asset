@@ -11,6 +11,7 @@ TagManager:
   - Level End
   - Level Start
   - Level Transition
+  - ExternalCam
   layers:
   - Default
   - TransparentFX
@@ -24,9 +25,9 @@ TagManager:
   - Player
   - Hands
   - Exclude From Post
-  - 
-  - 
-  - 
+  - PlayerOnlyInteraction
+  - Invisible To Player
+  - Invisible To External Camera
   - 
   - 
   - 

@@ -21,4 +21,20 @@ public class PlayerManager : MonoBehaviour
 
 
     }
+
+    public List<GameObject> physicsBits;
+
+    public void RespawnPlayer()
+    {
+        Vector3 startingPos = GameObject.FindGameObjectWithTag("Level Start").transform.position;
+
+        foreach (GameObject physicsObject in physicsBits)
+        {
+            physicsObject.transform.position = startingPos;
+            if (GetComponent<Rigidbody>() != null)
+            {
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
+            }
+        }
+    }
 }

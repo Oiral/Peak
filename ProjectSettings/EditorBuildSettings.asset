@@ -6,27 +6,27 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Starting Scene.unity
+    path: Assets/Scenes/Starting Scene.unity
     guid: 525d2f9d02993e94897ee975413ca11c
   - enabled: 1
-    path: Assets/Transition.unity
+    path: Assets/Scenes/Transition.unity
     guid: 79796e6371de668419bb68f66546f5f6
-  - enabled: 1
-    path: Assets/Test Scene.unity
+  - enabled: 0
+    path: Assets/Scenes/Test Scene.unity
     guid: fc93627e34c1f8a4baefc7e96c28fac7
   - enabled: 0
-    path: Assets/Transition Invisible.unity
+    path: Assets/Scenes/Transition Invisible.unity
     guid: f3bb2dcfddd1ce943a6a61b43ca20cba
   - enabled: 1
-    path: Assets/Middle Scene.unity
+    path: Assets/Scenes/Middle Scene.unity
     guid: f71bcfd834f33784da23c7fac6eed567
   - enabled: 1
-    path: Assets/Greece Scene.unity
+    path: Assets/Scenes/Greece Scene.unity
     guid: de48c17926789f846a27e516f4e8ba4e
   - enabled: 1
-    path: Assets/Tall Towers.unity
+    path: Assets/Scenes/Tall Towers.unity
     guid: b558e9a1dc7a6cc448b4aa0230a73fd3
   - enabled: 0
-    path: Assets/Mountain.unity
+    path: Assets/Scenes/Mountain.unity
     guid: 5e36e54b101ff6d4da07f6a4838e7f23
   m_configObjects: {}

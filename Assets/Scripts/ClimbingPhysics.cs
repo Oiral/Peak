@@ -79,8 +79,8 @@ public class ClimbingPhysics : MonoBehaviour
         if (transform.position.y < -10)
         {
             //Debug.Log("ghjghj");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            transform.position = Vector3.zero;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            PlayerManager.instance.RespawnPlayer();
         }
 
     }
