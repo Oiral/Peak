@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 96603867597637451}
   - component: {fileID: 96603867597637450}
   m_Layer: 0
-  m_Name: 2x1x1 Triangle
+  m_Name: Triangle 2x1x1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c22777d6e868e4f2fb421913386b154e, type: 2}
+  - {fileID: 2100000, guid: 14fb662c151f2d445acf4c662f5503e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
