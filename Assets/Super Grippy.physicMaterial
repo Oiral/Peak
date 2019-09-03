@@ -7,7 +7,7 @@ PhysicMaterial:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Super Grippy
-  dynamicFriction: 3.6
+  dynamicFriction: 4
   staticFriction: 3
   bounciness: 0
   frictionCombine: 0
