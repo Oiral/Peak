@@ -12,6 +12,7 @@ TagManager:
   - Level Start
   - Level Transition
   - ExternalCam
+  - GenerationEnd
   layers:
   - Default
   - TransparentFX
