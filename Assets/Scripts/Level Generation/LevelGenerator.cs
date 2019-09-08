@@ -42,6 +42,35 @@ public class LevelGenerator : MonoBehaviour
             
         }
     }
+    [ContextMenu("Generate Level With coroutine")]
+
+    void GenerateLevelCoroutine()
+    {
+        StartCoroutine(GenerateLevelSlowly());
+    }
+    IEnumerator GenerateLevelSlowly()
+    {
+        
+        //Destroy all children
+        ResetLevel();
+        yield return new WaitForSeconds(0.2f);
+        //Set the seed for the random generation
+        randomGenerator = new SystemRandom(seed);
+
+        for (int i = 0; i < randomGenerator.Next(1, maxHeight + 1); i++)
+        {
+            //GenerateMiddleSection
+
+            if (randomGen.baseSection.Count > 0)
+            {
+                GenerateFloorSection();
+            }
+            yield return new WaitForSeconds(0.2f);
+            GenerateMiddleSection();
+            yield return new WaitForSeconds(0.2f);
+
+        }
+    }
 
     void GenerateMiddleSection(){
         //What section are we going to work with
