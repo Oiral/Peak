@@ -119,7 +119,7 @@ Material:
     - _Wetness: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9622642, g: 0.503827, b: 0.55047077, a: 1}
     - _Color2: {r: 1, g: 1, b: 1, a: 1}
     - _DiffuseScatteringCol: {r: 0.52205884, g: 0.52205884, b: 0.52205884, a: 0}
     - _DiffuseScatteringCol2: {r: 0, g: 0, b: 0, a: 0}

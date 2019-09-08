@@ -28,9 +28,9 @@ public class ClimbingPhysics : MonoBehaviour
         LeftHandPhysics.transform.position = LeftTrackedHand.position;
         RightHandPhysics.transform.position = RightTrackedHand.position;
         LeftHandPhysics.transform.rotation = LeftTrackedHand.rotation;
-        RightHandPhysics.transform.rotation = RightTrackedHand.rotation;
-        RightHandPhysics.GetComponent<Rigidbody>().freezeRotation = true;
+        RightHandPhysics.transform.rotation = RightTrackedHand.rotation;        
         LeftHandPhysics.GetComponent<Rigidbody>().freezeRotation = true;
+        RightHandPhysics.GetComponent<Rigidbody>().freezeRotation = true;
     }
 
     private void FixedUpdate()
