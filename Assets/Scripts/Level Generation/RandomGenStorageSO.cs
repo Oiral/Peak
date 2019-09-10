@@ -9,4 +9,12 @@ public class RandomGenStorageSO : ScriptableObject
     public List<GameObject> middleSection;
     [HideInInspector]
     public List<GameObject> baseSection;
+    [HideInInspector]
+    public List<GameObject> genLvl1;
+    [HideInInspector]
+    public List<GameObject> genLvl2;
+    [HideInInspector]
+    public List<GameObject> genLvl1Vert;
+    [HideInInspector]
+    public List<GameObject> genLvl2Vert;
 }

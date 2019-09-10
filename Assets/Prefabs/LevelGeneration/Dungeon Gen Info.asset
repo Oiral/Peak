@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
+  m_Name: Dungeon Gen Info
+  m_EditorClassIdentifier: 
+  middleSection:
+  - {fileID: 3703390972599153956, guid: c548291cf0d7e104d8f831446b8f8331, type: 3}
+  baseSection: []
+  genLvl1:
+  - {fileID: 6773854277038703115, guid: 7af78869a34713e44b9422eaf02463ad, type: 3}
+  - {fileID: 6773854277038703115, guid: d9679f561a66e39478277acc6fb4f9c3, type: 3}
+  genLvl2: []

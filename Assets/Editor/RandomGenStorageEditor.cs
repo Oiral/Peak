@@ -9,9 +9,11 @@ public class RandomGenStorageEditor : Editor
 
     private bool showPreview;
 
-    private bool showMiddleSection;
+    private bool showMiddleSection = true;
 
-    private bool showBaseSection;
+    private bool showBaseSection = true;
+
+    private bool showDungeonStuff = true;
 
     public override void OnInspectorGUI()
     {
@@ -43,6 +45,14 @@ public class RandomGenStorageEditor : Editor
         //RareBuildingLayout(gen);
 
         basicPrefabDisplay(ref currentScriptable.baseSection, "Floor", ref showBaseSection);
+
+        GUILayout.Space(10);
+        basicPrefabDisplay(ref currentScriptable.genLvl1, "Size 1", ref showDungeonStuff);
+        basicPrefabDisplay(ref currentScriptable.genLvl1Vert, "Size 1 Vertical", ref showDungeonStuff);
+
+        GUILayout.Space(10);
+        basicPrefabDisplay(ref currentScriptable.genLvl2, "Size 2", ref showDungeonStuff);
+        basicPrefabDisplay(ref currentScriptable.genLvl2Vert, "Size 2 Vertical", ref showDungeonStuff);
 
         GUILayout.Space(10);
 
