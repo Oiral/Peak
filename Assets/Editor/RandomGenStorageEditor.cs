@@ -15,6 +15,11 @@ public class RandomGenStorageEditor : Editor
 
     private bool showDungeonStuff = true;
 
+    [SerializeField]
+    bool showLevel1 = false;
+    [SerializeField]
+    bool showLevel2 = false;
+
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -41,29 +46,43 @@ public class RandomGenStorageEditor : Editor
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
 
         //BasicBuildingLayout(gen);
-        basicPrefabDisplay(ref currentScriptable.middleSection, "Middle" , ref showMiddleSection);
+        //basicPrefabDisplay(ref currentScriptable.middleSection, "Middle" , ref showMiddleSection);
         //RareBuildingLayout(gen);
 
-        basicPrefabDisplay(ref currentScriptable.baseSection, "Floor", ref showBaseSection);
+        //basicPrefabDisplay(ref currentScriptable.baseSection, "Floor", ref showBaseSection);
 
-        GUILayout.Space(10);
-        basicPrefabDisplay(ref currentScriptable.genLvl1, "Size 1", ref showDungeonStuff);
-        basicPrefabDisplay(ref currentScriptable.genLvl1Vert, "Size 1 Vertical", ref showDungeonStuff);
+        if (showLevel1 = GUILayout.Toggle(showLevel1, "Show Level 1"))
+        {
+            GUILayout.Space(10);
+            basicPrefabDisplay(ref currentScriptable.genLvl1, "Size 1", "Only for things that have horizontal connectors");
 
-        GUILayout.Space(10);
-        basicPrefabDisplay(ref currentScriptable.genLvl2, "Size 2", ref showDungeonStuff);
-        basicPrefabDisplay(ref currentScriptable.genLvl2Vert, "Size 2 Vertical", ref showDungeonStuff);
+            basicPrefabDisplay(ref currentScriptable.genLvl1Vert, "Size 1 Vertical", "Only for things that have a bottom vertical connector");
+        }
+
+        if (showLevel2 = GUILayout.Toggle(showLevel2, "Show Level 2"))
+        {
+            GUILayout.Space(10);
+            basicPrefabDisplay(ref currentScriptable.genLvl2, "Size 2", "Only for things that have horizontal connectors");
+            
+            basicPrefabDisplay(ref currentScriptable.genLvl2Vert, "Size 2 Vertical", "Only for things that have a bottom vertical connector");
+        }
 
         GUILayout.Space(10);
 
 
     }
 
-    
-    public void basicPrefabDisplay(ref  List<GameObject> refList, string name, ref bool showToggle)
+
+    public void basicPrefabDisplay(ref List<GameObject> refList, string name, string comment, ref bool showToggle)
     {
         GUILayout.Space(10);
         GUILayout.Label("------" + name + "------");
+
+        if (comment != "")
+        {
+            GUILayout.Space(5);
+            GUILayout.Label(comment);
+        }
 
         if (showToggle = GUILayout.Toggle(showToggle, "Show " + name + " Prefabs")) 
         {
@@ -113,6 +132,64 @@ public class RandomGenStorageEditor : Editor
                 refList.Add(null);
             }
         }
+    }
+
+    public void basicPrefabDisplay(ref List<GameObject> refList, string name, string comment)
+    {
+        GUILayout.Space(10);
+        GUILayout.Label("------" + name + "------");
+
+        if (comment != "")
+        {
+            GUILayout.Space(5);
+            GUILayout.Label(comment);
+        }
+
+        GUILayout.BeginVertical();
+
+        for (int i = 0; i < refList.Count; i++)
+        {
+            GUILayout.BeginHorizontal();
+
+            string prefabName;
+            if (refList[i] != null)
+            {
+                prefabName = refList[i].name;
+            }
+            else
+            {
+                prefabName = "Not Assigned";
+            }
+
+            refList[i] = EditorGUILayout.ObjectField(prefabName, refList[i], typeof(GameObject), false) as GameObject;
+
+
+            if (GUILayout.Button("Remove", GUILayout.MaxWidth(70)))
+            {
+                //Remove
+                refList.RemoveAt(i);
+            }
+
+
+            GUILayout.EndHorizontal();
+
+
+            if (showPreview && refList[i] != null)
+            {
+                GUILayout.Label(AssetPreview.GetAssetPreview((Object)refList[i]), GUILayout.Height(50));
+            }
+
+        }
+
+        GUILayout.EndVertical();
+
+
+        if (GUILayout.Button("Add New"))
+        {
+            //Remove
+            refList.Add(null);
+        }
+
     }
 
     /*

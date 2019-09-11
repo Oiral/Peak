@@ -22,5 +22,10 @@ public class DungeonConnection : MonoBehaviour
         size /= 4;
 
         Gizmos.DrawWireCube(pos, size);
+
+        size.y /= 4;
+        pos.z = 0;
+        pos.y = 1f / 8f;
+        Gizmos.DrawWireCube(pos, size);
     }
 }

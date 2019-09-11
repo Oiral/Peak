@@ -149,13 +149,13 @@ public class DungeonGenerator : MonoBehaviour
             {
                 startingConnectionPointNumber = randomGenerator.Next(0, connectionsAtBottom.Count - 1);
 
+                //Give it a random rotation in increments of 90 degrees
+                spawnedObject.transform.rotation = Quaternion.Euler(0, randomGenerator.Next(0, 5) * 90, 0);
+
                 Vector3 pos = -connectionsAtBottom[startingConnectionPointNumber].gameObject.transform.position;
                 pos += connectionPoint.transform.position;
 
                 spawnedObject.transform.position = pos;
-
-                //Give it a random rotation in increments of 90 degrees
-                spawnedObject.transform.rotation = Quaternion.Euler(0, randomGenerator.Next(0, 4) * 90, 0);
 
                 spawnedVertConnections.Remove(connectionsAtBottom[startingConnectionPointNumber]);
             }
