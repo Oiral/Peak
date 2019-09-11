@@ -18,6 +18,8 @@ public class DungeonGenerator : MonoBehaviour
 
     public List<GameObject> generatedParts;
 
+    public int startingLvl = 1;
+
     [ContextMenu("Generate \"Dungeon\"")]
     void GenerateLevel()
     {
@@ -49,6 +51,19 @@ public class DungeonGenerator : MonoBehaviour
 
     void GenerateBase(List<GameObject> startingList)
     {
+        switch (startingLvl)
+        {
+            case 1:
+                startingList = storagethingy.genLvl1;
+                break;
+            case 2:
+                startingList = storagethingy.genLvl2;
+                break;
+            default:
+                startingList = storagethingy.genLvl1;
+                break;
+        }
+
         GameObject spawnedObject = PrefabUtility.InstantiatePrefab(startingList[randomGenerator.Next(0, startingList.Count - 1)], transform) as GameObject;
         DungeonSection section = spawnedObject.GetComponent<DungeonSection>();
 
