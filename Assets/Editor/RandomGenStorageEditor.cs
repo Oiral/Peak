@@ -110,6 +110,8 @@ public class RandomGenStorageEditor : Editor
                 {
                     //Remove
                     refList.RemoveAt(i);
+                    EditorUtility.SetDirty(target);
+
                 }
 
 
@@ -130,6 +132,7 @@ public class RandomGenStorageEditor : Editor
             {
                 //Remove
                 refList.Add(null);
+                EditorUtility.SetDirty(target);
             }
         }
     }
@@ -168,6 +171,7 @@ public class RandomGenStorageEditor : Editor
             {
                 //Remove
                 refList.RemoveAt(i);
+                EditorUtility.SetDirty(target);
             }
 
 
@@ -188,6 +192,7 @@ public class RandomGenStorageEditor : Editor
         {
             //Remove
             refList.Add(null);
+            EditorUtility.SetDirty(target);
         }
 
     }
