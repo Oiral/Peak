@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 85d4cb6d9fb9d4e469337d42459a22ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,7 +239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 85d4cb6d9fb9d4e469337d42459a22ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -411,7 +411,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &518325568888786389
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -639,7 +639,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &4164603400675818451
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &2435650713024623600
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -1957,7 +1957,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &7233444803849165034
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -2185,7 +2185,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &9215838824441922381
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -2386,6 +2386,16 @@ MonoBehaviour:
   - {fileID: 2794735939519366964}
   - {fileID: 2794735940647330961}
   - {fileID: 2794735939853604043}
+  - {fileID: 4285293076573603600}
+  - {fileID: 5710870140988918383}
+  - {fileID: 3132179250144745993}
+  - {fileID: 5460988318608089228}
+  - {fileID: 1099284492780457349}
+  - {fileID: 6881350191354016715}
+  - {fileID: 3176984558127291158}
+  - {fileID: 683130048222758713}
+  - {fileID: 996620750740322968}
+  - {fileID: 6591128726901768167}
 --- !u!54 &4088559649857961469
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2650,7 +2660,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &2648683307522124755
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -3238,7 +3248,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &2474614946726682033
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -3529,7 +3539,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &1010464424572829299
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -3802,7 +3812,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &1614214632247169173
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -4064,7 +4074,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!153 &7493953708813596486
 ConfigurableJoint:
   m_ObjectHideFlags: 0
