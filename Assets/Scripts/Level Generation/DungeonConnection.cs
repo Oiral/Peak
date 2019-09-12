@@ -12,20 +12,46 @@ public class DungeonConnection : MonoBehaviour
     {
         //Draw the correct Gizmos
         Gizmos.color = Color.green;
-
-        Gizmos.matrix = transform.localToWorldMatrix;
         Vector3 pos = Vector3.zero;
         Vector3 size = Vector3.one;
-        Gizmos.DrawWireSphere(pos, size.x/5f);
+        switch (type)
+        {
+            case connectionType.Vertical:
 
-        pos.z = 1f/5f;
-        size /= 4;
+                pos += transform.position;
 
-        Gizmos.DrawWireCube(pos, size);
+                Gizmos.DrawWireSphere(pos, size.x / 5f);
+                //pos.z = 1f / 5f;
+                size /= 4;
 
-        size.y /= 4;
-        pos.z = 0;
-        pos.y = 1f / 8f;
-        Gizmos.DrawWireCube(pos, size);
+                if (transform.localPosition.y >= 0)
+                {
+
+                    pos.y += 1f / 5;
+
+                }
+                else
+                {
+                    pos.y -= 1f / 5;
+                }
+
+                Gizmos.DrawWireCube(pos, size);
+                break;
+            default:
+                Gizmos.matrix = transform.localToWorldMatrix;
+                Gizmos.DrawWireSphere(pos, size.x / 5f);
+
+                pos.z = 1f / 5f;
+                size /= 4;
+
+                Gizmos.DrawWireCube(pos, size);
+
+                size.y /= 4;
+                pos.z = 0;
+                pos.y = 1f / 8f;
+                Gizmos.DrawWireCube(pos, size);
+                break;
+        }
+        
     }
 }
