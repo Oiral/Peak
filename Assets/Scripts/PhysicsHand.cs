@@ -42,11 +42,11 @@ public class PhysicsHand : MonoBehaviour
 
     private void Update()
     {
-        Thumb.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 4500 - 50;
-        FI.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 4500 - 50;
-        FM.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 4500 - 50;
-        FR.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 4500 - 50;
-        FP.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 4500 - 50;
+        Thumb.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
+        FI.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
+        FM.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
+        FR.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
+        FP.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
     }
 
     private void OnCollisionEnter(Collision collision)
