@@ -20,6 +20,47 @@ public class DungeonGenerator : MonoBehaviour
 
     public int startingLvl = 1;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(GenerateLevelSlowly());
+        }
+    }
+
+    IEnumerator GenerateLevelSlowly()
+    {
+        yield return new WaitForSeconds(0.1f);
+        ResetLevel();
+
+        if (randomiseSeed)
+        {
+            seed = randomGenerator.Next(0, 90000);
+        }
+        randomGenerator = new SystemRandom(seed);
+        Debug.Log(seed);
+
+        yield return new WaitForSeconds(0.1f);
+        //Generate the bottom structure
+        GenerateBase(storagethingy.genLvl1);
+
+        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize + 1); i++)
+        {
+            //Generate A section
+            if (connectionsToConnect.Count > 0)
+            {
+                yield return new WaitForSeconds(0);
+                //Generate a section
+                int connectionNumber = randomGenerator.Next(0, connectionsToConnect.Count - 1);
+
+                GenerateSection(connectionsToConnect[connectionNumber]);
+                connectionsToConnect.RemoveAt(connectionNumber);
+            }
+
+        }
+    }
+
     [ContextMenu("Generate \"Dungeon\"")]
     void GenerateLevel()
     {
