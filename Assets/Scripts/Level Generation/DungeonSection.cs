@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DungeonSection : MonoBehaviour
 {
+    [HideInInspector]
     public List<DungeonConnection> horizontalConnectionPoints;
+    [HideInInspector]
     public List<DungeonConnection> verticalConnectionPoints;
 
     [ContextMenu("Get Connection Points")]

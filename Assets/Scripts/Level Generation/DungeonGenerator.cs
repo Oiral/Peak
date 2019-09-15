@@ -121,6 +121,23 @@ public class DungeonGenerator : MonoBehaviour
         //Find the list to spawn from
         List<GameObject> toSpawnList;
 
+        //Check if we can acutally spawn the item
+        bool isclear = CheckIfClear(connectionPoint);
+
+        if (isclear == false)
+        {
+            //we are not clear
+
+            //Remove the current point from the list to spawn
+            connectionsToConnect.Remove(connectionPoint);
+
+            //Generate another section
+            GenerateSection(connectionsToConnect[0]);
+
+            Debug.Log("Collided with something", connectionPoint.gameObject);
+            return;
+        }
+
         bool horizontal = (connectionPoint.type == connectionType.Horizontal);
 
         if (horizontal)
@@ -164,6 +181,9 @@ public class DungeonGenerator : MonoBehaviour
 
         //Remove the connection point
         GameObject spawnedObject = PrefabUtility.InstantiatePrefab(toSpawnList[randomGenerator.Next(0, toSpawnList.Count)], transform) as GameObject;
+        //Reset the position of the prefab
+        spawnedObject.transform.position = Vector3.zero;
+
         DungeonSection section = spawnedObject.GetComponent<DungeonSection>();
         section.GetPoints();
 
@@ -281,8 +301,58 @@ public class DungeonGenerator : MonoBehaviour
         connectionsToConnect.AddRange(checkedConnections);
     }
 
+    bool CheckIfClear(DungeonConnection connection)
+    {
+        bool isClear = false;
 
-    void ResetLevel()
+        Vector3 direction;
+        Vector3 center;
+
+        center = connection.transform.position;
+
+        Vector3 size = Vector3.one;
+
+        size *= connection.level / 2;
+
+        if (connection.type == connectionType.Vertical)
+        {
+            //If it is a vertical connection point
+            //Check if it is clear either above or below
+            if (connection.transform.localPosition.y > 0)
+            {
+                //Check if above is clear
+                direction = Vector3.up;
+            }
+            else
+            {
+                //Check if below is clear
+                direction = Vector3.down;
+            }
+        }
+        else
+        {
+            //If it is a horizontal connection point
+            //Check if it is clear in the direction of forward
+            direction = connection.transform.forward;
+            center.y -= connection.level / 2;
+        }
+
+        //Lets acutally do the raycast
+        RaycastHit hit;
+        isClear = Physics.BoxCast(center, size, direction, out hit, Quaternion.identity, connection.level);
+
+        //If we hit something anwer will be true, but we want to be false
+        //If we dont hit something answer will be false, but we want to be true
+
+        //Flip the output of isClear
+        isClear = !isClear;
+
+        return isClear;
+    }
+
+    
+
+void ResetLevel()
     {
         /* 
         foreach (Transform child in transform)
