@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4d5f759b25facd641b28c253f2468963
+guid: d99a695acc957ad4c9dea60cbedb331b
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
@@ -27,8 +27,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: SharpEdges
-    second: {fileID: 2100000, guid: 12df126a9c8466a43b36da4e5d9677be, type: 2}
+      name: Wood
+    second: {fileID: 2100000, guid: 128199b0671da90428841091de7fb5af, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -56,7 +56,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
