@@ -60,6 +60,14 @@ public class DungeonGenerator : MonoBehaviour
 
         }
     }
+    [ContextMenu("Test Function")]
+    void TestFunction()
+    {
+        storagethingy.genLvl1[0].GetComponent<DungeonSection>().GetPoints();
+
+        Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().horizontalConnectionPoints.Count);
+        Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().verticalConnectionPoints.Count);
+    }
 
     [ContextMenu("Generate \"Dungeon\"")]
     void GenerateLevel()
@@ -253,8 +261,14 @@ public class DungeonGenerator : MonoBehaviour
                 spawnedVertConnections.Remove(connectionsAtBottom[startingConnectionPointNumber]);
             }
         }
-
         
+        //if we want to remove some do so now
+        if (storagethingy.enableRandomNoSpawn)
+        {
+            //Do not add some of these to the spawning tower
+            spawnedVertConnections = RemoveFromListWithChance(spawnedVertConnections);
+            spawnedConnections = RemoveFromListWithChance(spawnedConnections);
+        }
 
         //Get all vertical connection points
         //And check if they are above the current point
@@ -376,5 +390,20 @@ void ResetLevel()
 
         //Reset the current working height
         //currentWorkingHeight = 0;
+    }
+
+    public List<DungeonConnection> RemoveFromListWithChance(List<DungeonConnection> connectionPoints)
+    {
+        List<DungeonConnection> tempList = new List<DungeonConnection>();
+
+        foreach (DungeonConnection connection in connectionPoints)
+        {
+            if ((float)randomGenerator.NextDouble() > storagethingy.chanceToNotSpawn)
+            {
+                tempList.Add(connection);
+            }
+            
+        }
+        return tempList;
     }
 }

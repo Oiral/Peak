@@ -24,6 +24,8 @@ public class RandomGenStorageEditor : Editor
     {
         base.OnInspectorGUI();
 
+        
+
         GUILayout.Space(10);
         /*
         GUILayout.Label("------Settings------");
@@ -41,9 +43,19 @@ public class RandomGenStorageEditor : Editor
         */
 
 
-
+        var centeredStyle = new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter };
 
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
+
+        if (currentScriptable.enableRandomNoSpawn = GUILayout.Toggle(currentScriptable.enableRandomNoSpawn, "Random chance To spawn"))
+        {
+            GUILayout.BeginHorizontal();
+            GUILayout.Label("0");
+            currentScriptable.chanceToNotSpawn = GUILayout.HorizontalSlider(Mathf.Round(currentScriptable.chanceToNotSpawn * 100) / 100, 0f, 1f);
+            GUILayout.Label("100");
+            GUILayout.EndHorizontal();
+            GUILayout.Label((currentScriptable.chanceToNotSpawn * 100).ToString(), centeredStyle);
+        }
 
         //BasicBuildingLayout(gen);
         //basicPrefabDisplay(ref currentScriptable.middleSection, "Middle" , ref showMiddleSection);
@@ -53,18 +65,22 @@ public class RandomGenStorageEditor : Editor
 
         if (showLevel1 = GUILayout.Toggle(showLevel1, "Show Level 1"))
         {
-            GUILayout.Space(10);
+            
             basicPrefabDisplay(ref currentScriptable.genLvl1, "Size 1", "Only for things that have horizontal connectors");
 
             basicPrefabDisplay(ref currentScriptable.genLvl1Vert, "Size 1 Vertical", "Only for things that have a bottom vertical connector");
+
+            GUILayout.Space(10);
         }
 
         if (showLevel2 = GUILayout.Toggle(showLevel2, "Show Level 2"))
         {
-            GUILayout.Space(10);
+            
             basicPrefabDisplay(ref currentScriptable.genLvl2, "Size 2", "Only for things that have horizontal connectors");
             
             basicPrefabDisplay(ref currentScriptable.genLvl2Vert, "Size 2 Vertical", "Only for things that have a bottom vertical connector");
+
+            GUILayout.Space(10);
         }
 
         GUILayout.Space(10);

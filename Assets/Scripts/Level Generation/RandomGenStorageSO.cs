@@ -28,4 +28,12 @@ public class RandomGenStorageSO : ScriptableObject
     [HideInInspector]
     [SerializeField]
     public List<GameObject> genLvl2Vert;
+
+    [HideInInspector]
+    [SerializeField]
+    public float chanceToNotSpawn;
+
+    [HideInInspector]
+    [SerializeField]
+    public bool enableRandomNoSpawn;
 }
