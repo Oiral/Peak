@@ -15,12 +15,12 @@ MonoBehaviour:
   middleSection:
   - {fileID: 3703390972599153956, guid: c548291cf0d7e104d8f831446b8f8331, type: 3}
   baseSection: []
-  genLvl1: []
-  genLvl2:
-  - {fileID: 6773854277038703115, guid: 8f0150d3361b82c4983c0d201c7d043d, type: 3}
-  - {fileID: 6773854277038703115, guid: 782bb55e71b9cbd44ada3a22738ba06d, type: 3}
-  - {fileID: 6773854277038703115, guid: 8f0150d3361b82c4983c0d201c7d043d, type: 3}
+  genLvl1:
+  - {fileID: 6773854277038703115, guid: ff98efb5eea572f4d8094fa0bf74cb74, type: 3}
+  genLvl2: []
   genLvl1Vert: []
   genLvl2Vert:
   - {fileID: 6773854277038703115, guid: 95775cffe92f6b64ab82e242d746bc14, type: 3}
   - {fileID: 6773854277038703115, guid: 9b077c68f1046b7439e5319934742173, type: 3}
+  chanceToNotSpawn: 0
+  enableRandomNoSpawn: 1
