@@ -444,5 +444,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b3c53dba7b0b2d4d9b5dca7ee8c8ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectionPoints:
-  - {fileID: 0}
+  horizontalConnectionPoints: []
+  verticalConnectionPoints: []
