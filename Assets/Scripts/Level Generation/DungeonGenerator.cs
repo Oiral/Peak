@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SystemRandom = System.Random;
+
+//Only if we are using the editor
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 public class DungeonGenerator : MonoBehaviour
 {
@@ -113,7 +117,9 @@ public class DungeonGenerator : MonoBehaviour
                 break;
         }
 
-        GameObject spawnedObject = PrefabUtility.InstantiatePrefab(startingList[randomGenerator.Next(0, startingList.Count - 1)], transform) as GameObject;
+        
+
+        GameObject spawnedObject = SpawnObject(startingList[randomGenerator.Next(0, startingList.Count - 1)], transform);
         DungeonSection section = spawnedObject.GetComponent<DungeonSection>();
 
         section.GetPoints();
@@ -188,7 +194,7 @@ public class DungeonGenerator : MonoBehaviour
         //Find the correct prefab to spawn
 
         //Remove the connection point
-        GameObject spawnedObject = PrefabUtility.InstantiatePrefab(toSpawnList[randomGenerator.Next(0, toSpawnList.Count)], transform) as GameObject;
+        GameObject spawnedObject = SpawnObject(toSpawnList[randomGenerator.Next(0, toSpawnList.Count)], transform);
         //Reset the position of the prefab
         spawnedObject.transform.position = Vector3.zero;
 
@@ -405,5 +411,22 @@ void ResetLevel()
             
         }
         return tempList;
+    }
+
+    GameObject SpawnObject(GameObject toSpawn, Transform parent)
+    {
+        GameObject spawnedObject = null;
+
+        
+
+        //Only if we are using the editor
+#if UNITY_EDITOR
+        spawnedObject = PrefabUtility.InstantiatePrefab(toSpawn, parent) as GameObject;
+
+#else
+         spawnedObject = Instantiate(toSpawn, parent);
+#endif
+
+        return spawnedObject;
     }
 }

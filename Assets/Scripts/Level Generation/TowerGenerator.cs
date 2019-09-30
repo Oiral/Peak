@@ -62,7 +62,8 @@ public class TowerGenerator : MonoBehaviour
         Vector3 pos = new Vector3(0, currentWorkingHeight, 0);
 
         //Generate this section
-        GameObject spawnedObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
+        //GameObject spawnedObject = PrefabUtility.InstantiatePrefab(prefab, transform) as GameObject;
+        GameObject spawnedObject = Instantiate(prefab, transform);
 
         Section spawnedSection = spawnedObject.GetComponent<Section>();
 
