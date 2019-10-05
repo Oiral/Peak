@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 6602460236356427912}
   - component: {fileID: 518325568888786389}
   - component: {fileID: 3474346366766391412}
+  - component: {fileID: 1401301329}
   m_Layer: 10
   m_Name: LeftMid
   m_TagString: Untagged
@@ -423,7 +424,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.110800005, y: -0.0588, z: 0.002100002}
+  m_ConnectedAnchor: {x: -0.11079979, y: -0.0588, z: 0.0020999908}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -530,6 +531,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683130048222758713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &996620750740322968
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +561,7 @@ GameObject:
   - component: {fileID: 2883600407631323749}
   - component: {fileID: 4164603400675818451}
   - component: {fileID: 8059229163826158617}
+  - component: {fileID: 1401301328}
   m_Layer: 10
   m_Name: LeftRing
   m_TagString: Untagged
@@ -651,7 +668,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.1184, y: -0.0764, z: -0.051799998}
+  m_ConnectedAnchor: {x: -0.11839962, y: -0.0764, z: -0.051799774}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -758,6 +775,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996620750740322968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &1099284492780457349
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +805,7 @@ GameObject:
   - component: {fileID: 5788367129018566751}
   - component: {fileID: 2435650713024623600}
   - component: {fileID: 4873892685948249007}
+  - component: {fileID: 1401301332}
   m_Layer: 10
   m_Name: Rightpinkie
   m_TagString: Untagged
@@ -879,7 +912,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.108500004, y: -0.0867, z: -0.099700004}
+  m_ConnectedAnchor: {x: 0.10849953, y: -0.0867, z: -0.099699974}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -986,6 +1019,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099284492780457349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &2040590975342774155
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1368,8 @@ GameObject:
   - component: {fileID: 2794735939519366959}
   - component: {fileID: 1016521076}
   - component: {fileID: 4212385630631501152}
+  - component: {fileID: 1401301333}
+  - component: {fileID: 1401301339}
   m_Layer: 10
   m_Name: Right Hand Physics
   m_TagString: Untagged
@@ -1425,7 +1475,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 768954646e6bcba42a73eacc7af5e201, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 34246611f7537c54e8d387a2fc7bcc9a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1511,6 +1561,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1401301333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794735939519366964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121bbbee57fd5a540a999600edc8f595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+--- !u!114 &1401301339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794735939519366964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &2794735939853604043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1603,8 @@ GameObject:
   - component: {fileID: 2794735939853604038}
   - component: {fileID: 1730719697}
   - component: {fileID: 2558166986605507939}
+  - component: {fileID: 1401301327}
+  - component: {fileID: 1401301338}
   m_Layer: 10
   m_Name: Left Hand Physics
   m_TagString: Untagged
@@ -1630,7 +1710,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 768954646e6bcba42a73eacc7af5e201, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 34246611f7537c54e8d387a2fc7bcc9a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1716,6 +1796,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1401301327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794735939853604043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121bbbee57fd5a540a999600edc8f595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayTime: 1
+--- !u!114 &1401301338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2794735939853604043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &2794735940086677962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1863,6 +1971,7 @@ GameObject:
   - component: {fileID: 342370023175290607}
   - component: {fileID: 7233444803849165034}
   - component: {fileID: 6679920556395690530}
+  - component: {fileID: 1401301335}
   m_Layer: 10
   m_Name: RightMid
   m_TagString: Untagged
@@ -1969,7 +2078,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.110800005, y: -0.0588, z: 0.002100002}
+  m_ConnectedAnchor: {x: 0.11079979, y: -0.0588, z: 0.0020999908}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -2076,6 +2185,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3132179250144745993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &3176984558127291158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,6 +2215,7 @@ GameObject:
   - component: {fileID: 939358120200417113}
   - component: {fileID: 9215838824441922381}
   - component: {fileID: 5399702452113063565}
+  - component: {fileID: 1401301330}
   m_Layer: 10
   m_Name: LeftIndex
   m_TagString: Untagged
@@ -2197,7 +2322,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.078600004, y: -0.0297, z: 0.041800003}
+  m_ConnectedAnchor: {x: -0.07859993, y: -0.0297, z: 0.041800022}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -2304,6 +2429,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3176984558127291158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &3247165482323578523
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2753,7 @@ GameObject:
   - component: {fileID: 4339726973790191960}
   - component: {fileID: 2648683307522124755}
   - component: {fileID: 8061731307369377344}
+  - component: {fileID: 1401301337}
   m_Layer: 10
   m_Name: RightThumb
   m_TagString: Untagged
@@ -2719,7 +2860,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.0498, y: -0.0359, z: -0.0508}
+  m_ConnectedAnchor: {x: -0.04979992, y: -0.0359, z: -0.050799847}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -2826,6 +2967,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4285293076573603600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &4385554723907168486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3201,6 +3357,7 @@ GameObject:
   - component: {fileID: 7052885063015307718}
   - component: {fileID: 2474614946726682033}
   - component: {fileID: 7532030522207298291}
+  - component: {fileID: 1401301334}
   m_Layer: 10
   m_Name: RightRing
   m_TagString: Untagged
@@ -3307,7 +3464,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.1184, y: -0.0764, z: -0.051799998}
+  m_ConnectedAnchor: {x: 0.11839962, y: -0.0764, z: -0.051799774}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3414,6 +3571,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5460988318608089228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &5502809412874822166
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,6 +3664,7 @@ GameObject:
   - component: {fileID: 3157853016009211118}
   - component: {fileID: 1010464424572829299}
   - component: {fileID: 6206425241340234909}
+  - component: {fileID: 1401301336}
   m_Layer: 10
   m_Name: RightIndex
   m_TagString: Untagged
@@ -3598,7 +3771,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.078600004, y: -0.0297, z: 0.041800003}
+  m_ConnectedAnchor: {x: 0.07859993, y: -0.0297, z: 0.041800022}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -3705,6 +3878,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5710870140988918383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301333}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &6119690347521259429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3924,6 +4112,7 @@ GameObject:
   - component: {fileID: 6375596849166916971}
   - component: {fileID: 1614214632247169173}
   - component: {fileID: 1959872969619675398}
+  - component: {fileID: 1401301326}
   m_Layer: 10
   m_Name: Leftpinkie
   m_TagString: Untagged
@@ -4030,7 +4219,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.108500004, y: -0.0867, z: -0.099700004}
+  m_ConnectedAnchor: {x: -0.10849953, y: -0.0867, z: -0.099699974}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -4137,6 +4326,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6591128726901768167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &6753947339913738744
 GameObject:
   m_ObjectHideFlags: 0
@@ -4186,6 +4390,7 @@ GameObject:
   - component: {fileID: 2610670884238764060}
   - component: {fileID: 7493953708813596486}
   - component: {fileID: 8459522527762953226}
+  - component: {fileID: 1401301331}
   m_Layer: 10
   m_Name: LeftThumb
   m_TagString: Untagged
@@ -4292,7 +4497,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.0498, y: -0.0359, z: -0.0508}
+  m_ConnectedAnchor: {x: 0.04979992, y: -0.0359, z: -0.050799847}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 1
@@ -4399,6 +4604,21 @@ SpringJoint:
   m_EnablePreprocessing: 1
   m_MassScale: 1
   m_ConnectedMassScale: 1
+--- !u!114 &1401301331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881350191354016715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d52c05bd8409441aea07085be411c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMaster: {fileID: 1401301327}
+  minHit: 2
+  maxHit: 20
 --- !u!1 &6975165728520090225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4938,29 +5158,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
-      propertyPath: m_TagString
-      value: Head
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
-        type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 7991
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
-        type: 3}
-      propertyPath: m_RenderingPath
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
-        type: 3}
-      propertyPath: m_TargetDisplay
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 11489174, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: size
       value: 1
@@ -5037,13 +5234,13 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 2348914, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
+    - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
-      propertyPath: m_Mesh
-      value: 
+    - target: {fileID: 1000014254142504, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_TagString
+      value: Head
       objectReference: {fileID: 0}
     - target: {fileID: 147176, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Layer
@@ -5060,21 +5257,19 @@ PrefabInstance:
     - target: {fileID: 192944, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 7991
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
+        type: 3}
+      propertyPath: m_RenderingPath
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
---- !u!4 &4088559649857502521 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 458974, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4088559649857961447}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4088559649857540555 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 4088559649857961447}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4085695784010120657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000013889601590, guid: 4d293c8e162f3874b982baadd71153d2,
@@ -5087,15 +5282,27 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4088559649857961447}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4088559649857559013 stripped
+--- !u!4 &4088559649857502521 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 402434, guid: 4d293c8e162f3874b982baadd71153d2,
+  m_CorrespondingSourceObject: {fileID: 458974, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4088559649857961447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4088559649857540555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 420908, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
   m_PrefabInstance: {fileID: 4088559649857961447}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4088559649857814579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 146900, guid: 4d293c8e162f3874b982baadd71153d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4088559649857961447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4088559649857559013 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 402434, guid: 4d293c8e162f3874b982baadd71153d2,
     type: 3}
   m_PrefabInstance: {fileID: 4088559649857961447}
   m_PrefabAsset: {fileID: 0}
