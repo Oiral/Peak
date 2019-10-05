@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  middleSection: []
+  baseSection: []
+  genLvl1:
+  - {fileID: 2015890009699818358, guid: c702732286e70ba4194da284c8e3f5aa, type: 3}
+  - {fileID: 205281166423885042, guid: 838ebc1a839b3194aaa1b5d1339dced8, type: 3}
+  - {fileID: 7558297462295938336, guid: de9d6818023213f48ba5ed8b678644a7, type: 3}
+  - {fileID: 1233412410621223220, guid: 8e769cb83e6bb254c82181b85a4cd3a7, type: 3}
+  - {fileID: 8437308890428111858, guid: c8913d3c86f1ea3469b0f6648815338c, type: 3}
+  genLvl2:
+  - {fileID: 1652393574233306272, guid: 77741283d5afd5142971af4159f46e03, type: 3}
+  - {fileID: 2015890009699818358, guid: c702732286e70ba4194da284c8e3f5aa, type: 3}
+  - {fileID: 7558297462295938336, guid: de9d6818023213f48ba5ed8b678644a7, type: 3}
+  - {fileID: 1233412410621223220, guid: 8e769cb83e6bb254c82181b85a4cd3a7, type: 3}
+  - {fileID: 9129334957489738022, guid: 1aeaac090ce0f974faed68855c34519a, type: 3}
+  genLvl1Vert: []
+  genLvl2Vert: []
+  chanceToNotSpawn: 0
+  enableRandomNoSpawn: 0

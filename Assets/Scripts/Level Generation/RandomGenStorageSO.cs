@@ -7,27 +7,27 @@ public class RandomGenStorageSO : ScriptableObject
 {
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> middleSection;
+    public List<GameObject> middleSection = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> baseSection;
+    public List<GameObject> baseSection = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> genLvl1;
+    public List<GameObject> genLvl1 = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> genLvl2;
+    public List<GameObject> genLvl2 = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> genLvl1Vert;
+    public List<GameObject> genLvl1Vert = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
-    public List<GameObject> genLvl2Vert;
+    public List<GameObject> genLvl2Vert = new List<GameObject>();
 
     [HideInInspector]
     [SerializeField]
