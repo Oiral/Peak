@@ -12,6 +12,11 @@ public class MultiInputAudioMaster : MonoBehaviour
     float volumeAverage;
     float averageCount;
 
+    private void Start()
+    {
+        source = GetComponent<AudioSource>();
+    }
+
     private void Update()
     {
         if (delayTimer > 0)
