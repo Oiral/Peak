@@ -14,7 +14,7 @@ public class MultiInputAudio : MonoBehaviour
     {
         if (collision.relativeVelocity.magnitude > minHit)
         {
-            audioMaster.PlaySound(Mathf.Clamp(collision.relativeVelocity.magnitude / maxHit, 0, 1));
+            audioMaster.PlaySound(Mathf.Clamp((collision.relativeVelocity.magnitude - minHit) / maxHit , 0, 1));
         }
     }
 }
