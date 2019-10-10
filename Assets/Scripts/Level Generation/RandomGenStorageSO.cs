@@ -36,4 +36,8 @@ public class RandomGenStorageSO : ScriptableObject
     [HideInInspector]
     [SerializeField]
     public bool enableRandomNoSpawn;
+
+    [HideInInspector]
+    [SerializeField]
+    public float GenListMax;
 }

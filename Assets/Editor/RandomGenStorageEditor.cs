@@ -47,6 +47,9 @@ public class RandomGenStorageEditor : Editor
 
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
 
+        GUILayout.Label("To Generate List Max Length : Leave at 0 for none");
+        currentScriptable.GenListMax = EditorGUILayout.FloatField(currentScriptable.GenListMax);
+
         if (currentScriptable.enableRandomNoSpawn = GUILayout.Toggle(currentScriptable.enableRandomNoSpawn, "Random chance To spawn"))
         {
             GUILayout.BeginHorizontal();

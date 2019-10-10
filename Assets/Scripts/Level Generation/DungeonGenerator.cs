@@ -89,6 +89,23 @@ public class DungeonGenerator : MonoBehaviour
 
         for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize-5), maxSize + 1); i++)
         {
+            //if we are using a max
+            if (storagethingy.GenListMax > 0)
+            {
+                //If the current pool of generation is greater than the max
+                if (connectionsToConnect.Count > storagethingy.GenListMax)
+                {
+                    //Remove the first half of the list
+                    for (int c = 0; c < storagethingy.GenListMax/2; c++)
+                    {
+                        connectionsToConnect.RemoveAt(0);
+                    }
+                    //connectionsToConnect.RemoveRange(0, (int)(storagethingy.GenListMax / 2));
+                }
+            }
+
+
+
             //Generate A section
             if (connectionsToConnect.Count > 0)
             {
@@ -96,7 +113,6 @@ public class DungeonGenerator : MonoBehaviour
                 int connectionNumber = randomGenerator.Next(0, connectionsToConnect.Count - 1);
 
                 GenerateSection(connectionsToConnect[connectionNumber]);
-                connectionsToConnect.RemoveAt(connectionNumber);
             }
 
         }
@@ -287,6 +303,8 @@ public class DungeonGenerator : MonoBehaviour
 
         //Add this part to the generated list
         generatedParts.Add(spawnedObject);
+
+        connectionsToConnect.Remove(connectionPoint);
     }
 
      List<DungeonConnection> GetCorrectLevel(List<DungeonConnection> connections, int level)
