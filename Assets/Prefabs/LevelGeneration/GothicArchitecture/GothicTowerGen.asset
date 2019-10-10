@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
+  m_Name: GothicTowerGen
+  m_EditorClassIdentifier: 
+  middleSection:
+  - {fileID: 3703390972599153956, guid: c548291cf0d7e104d8f831446b8f8331, type: 3}
+  baseSection: []
+  genLvl1: []
+  genLvl2:
+  - {fileID: 6773854277038703115, guid: c82081404eb24b1499a541be91c8c899, type: 3}
+  - {fileID: 6773854277038703115, guid: b595b4a91911aa74abea8924a7c22d52, type: 3}
+  - {fileID: 6773854277038703115, guid: 60eb31f379c98b1488dcf597caa7180e, type: 3}
+  genLvl1Vert:
+  - {fileID: 6773854277038703115, guid: da1f09826f81692478350631220a5030, type: 3}
+  - {fileID: 6773854277038703115, guid: 38145835c9dea2841a2ac3d3af0a7c94, type: 3}
+  genLvl2Vert:
+  - {fileID: 6773854277038703115, guid: a3d8f64ea89f6924eaddaac2d5da86ff, type: 3}
+  - {fileID: 6773854277038703115, guid: d74c2c5783378d743a1ca0ddc355ef23, type: 3}
+  - {fileID: 6773854277038703115, guid: 082ed977bc861e74f8b905fb4f22e364, type: 3}
+  - {fileID: 6773854277038703115, guid: 81a9e85ceb59a2545a76b5f34a48bd90, type: 3}
+  - {fileID: 6773854277038703115, guid: f3742275bbe8c8e4cb94b22ff3bd58e0, type: 3}
+  - {fileID: 6773854277038703115, guid: 6df1b37aae8ccc64ea1af4ee9a59b935, type: 3}
+  - {fileID: 6773854277038703115, guid: 10a0346af1103af4d98933b4b1395d47, type: 3}
+  - {fileID: 6773854277038703115, guid: 10a0346af1103af4d98933b4b1395d47, type: 3}
+  chanceToNotSpawn: 0
+  enableRandomNoSpawn: 0
