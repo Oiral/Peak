@@ -32,5 +32,9 @@ MonoBehaviour:
   - {fileID: 6773854277038703115, guid: 6df1b37aae8ccc64ea1af4ee9a59b935, type: 3}
   - {fileID: 6773854277038703115, guid: 10a0346af1103af4d98933b4b1395d47, type: 3}
   - {fileID: 6773854277038703115, guid: 10a0346af1103af4d98933b4b1395d47, type: 3}
+  - {fileID: 6773854277038703115, guid: 1d1f4ac8280723642b107a0044fc6848, type: 3}
+  - {fileID: 6773854277038703115, guid: 674b0d909d703a9408a777684cc1defd, type: 3}
+  - {fileID: 6773854277038703115, guid: 1d1f4ac8280723642b107a0044fc6848, type: 3}
   chanceToNotSpawn: 0
   enableRandomNoSpawn: 0
+  GenListMax: 0
