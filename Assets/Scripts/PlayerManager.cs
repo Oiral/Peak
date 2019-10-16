@@ -11,7 +11,7 @@ public class PlayerManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else if (instance != this)
         {
@@ -26,7 +26,11 @@ public class PlayerManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        Vector3 startingPos = GameObject.FindGameObjectWithTag("Level Start").transform.position;
+        Vector3 startingPos = Vector3.zero;
+        if (GameObject.FindGameObjectWithTag("Level Start") != null)
+        {
+            startingPos = GameObject.FindGameObjectWithTag("Level Start").transform.position;
+        }
 
         foreach (GameObject physicsObject in physicsBits)
         {

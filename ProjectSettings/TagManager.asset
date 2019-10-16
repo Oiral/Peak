@@ -13,6 +13,7 @@ TagManager:
   - Level Transition
   - ExternalCam
   - GenerationEnd
+  - Fingers
   layers:
   - Default
   - TransparentFX

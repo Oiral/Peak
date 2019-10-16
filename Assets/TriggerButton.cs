@@ -17,6 +17,7 @@ public class TriggerButton : MonoBehaviour
     {
         if (taggedNames.Contains(other.tag))
         {
+            Debug.Log("Enter this button");
             buttonEnter.Invoke();
         }
     }
@@ -25,6 +26,7 @@ public class TriggerButton : MonoBehaviour
     {
         if (taggedNames.Contains(other.tag))
         {
+            Debug.Log(" this button");
             buttonStay.Invoke();
         }
     }
@@ -33,6 +35,7 @@ public class TriggerButton : MonoBehaviour
     {
         if (taggedNames.Contains(other.tag))
         {
+            Debug.Log("Leave this button");
             buttonLeave.Invoke();
         }
     }
