@@ -14,6 +14,7 @@ TagManager:
   - ExternalCam
   - GenerationEnd
   - Fingers
+  - Button
   layers:
   - Default
   - TransparentFX
