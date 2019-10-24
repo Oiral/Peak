@@ -24,9 +24,21 @@ public class DungeonGenerator : MonoBehaviour
 
     public int startingLvl = 1;
 
+    public DungeonConnection highestPoint;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GenerateLevelStart();
+        }
+    }
+
+    public bool generating = false;
+
+    public void GenerateLevelStart()
+    {
+        if (generating == false)
         {
             StartCoroutine(GenerateLevelSlowly());
         }
@@ -34,6 +46,7 @@ public class DungeonGenerator : MonoBehaviour
 
     IEnumerator GenerateLevelSlowly()
     {
+        generating = true;
         yield return new WaitForSeconds(0.1f);
         ResetLevel();
 
@@ -76,6 +89,7 @@ public class DungeonGenerator : MonoBehaviour
             }
 
         }
+        generating = false;
     }
     [ContextMenu("Test Function")]
     void TestFunction()
@@ -129,6 +143,8 @@ public class DungeonGenerator : MonoBehaviour
             }
 
         }
+
+        Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
     }
 
     void GenerateBase(List<GameObject> startingList)
@@ -314,6 +330,11 @@ public class DungeonGenerator : MonoBehaviour
         //Add the horiztonal connections to the main list
         connectionsToConnect.AddRange(spawnedConnections);
 
+        foreach (DungeonConnection connection in spawnedConnections)
+        {
+            CheckIfHighestPoint(connection);
+        }
+
         //Add this part to the generated list
         generatedParts.Add(spawnedObject);
 
@@ -346,6 +367,9 @@ public class DungeonGenerator : MonoBehaviour
             if (connection.gameObject.transform.position.y > spawned.transform.position.y)
             {
                 checkedConnections.Add(connection);
+
+                CheckIfHighestPoint(connection); 
+
             }
         }
 
@@ -401,9 +425,21 @@ public class DungeonGenerator : MonoBehaviour
         return isClear;
     }
 
-    
+    void CheckIfHighestPoint(DungeonConnection connection)
+    {
+        if (highestPoint == null)
+        {
+            highestPoint = connection;
+            return;
+        }
 
-void ResetLevel()
+        if (connection.gameObject.transform.position.y > highestPoint.gameObject.transform.position.y)
+        {
+            highestPoint = connection;
+        }
+    }
+
+    void ResetLevel()
     {
         /* 
         foreach (Transform child in transform)
