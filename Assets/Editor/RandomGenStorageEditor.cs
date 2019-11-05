@@ -24,71 +24,61 @@ public class RandomGenStorageEditor : Editor
     {
         base.OnInspectorGUI();
 
-        
-
-        GUILayout.Space(10);
-        /*
-        GUILayout.Label("------Settings------");
-
-
-        BuildingGenerator gen = (BuildingGenerator)target;
-
-        if (GUILayout.Button("Regen Buildings"))
-        {
-            //Remove
-            gen.GenerateStartingBuildings();
-        }
-
-        showPreview = GUILayout.Toggle(showPreview, "Show Previews");
-        */
-
-
-        var centeredStyle = new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter };
-
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
 
-        GUILayout.Label("To Generate List Max Length : Leave at 0 for none");
-        currentScriptable.GenListMax = EditorGUILayout.FloatField(currentScriptable.GenListMax);
-
-        if (currentScriptable.enableRandomNoSpawn = GUILayout.Toggle(currentScriptable.enableRandomNoSpawn, "Random chance To spawn"))
-        {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("0");
-            currentScriptable.chanceToNotSpawn = GUILayout.HorizontalSlider(Mathf.Round(currentScriptable.chanceToNotSpawn * 100) / 100, 0f, 1f);
-            GUILayout.Label("100");
-            GUILayout.EndHorizontal();
-            GUILayout.Label((currentScriptable.chanceToNotSpawn * 100).ToString(), centeredStyle);
-        }
-
-        //BasicBuildingLayout(gen);
-        //basicPrefabDisplay(ref currentScriptable.middleSection, "Middle" , ref showMiddleSection);
-        //RareBuildingLayout(gen);
-
-        //basicPrefabDisplay(ref currentScriptable.baseSection, "Floor", ref showBaseSection);
-
-        if (showLevel1 = GUILayout.Toggle(showLevel1, "Show Level 1"))
-        {
-            
-            basicPrefabDisplay(ref currentScriptable.genLvl1, "Size 1", "Only for things that have horizontal connectors");
-
-            basicPrefabDisplay(ref currentScriptable.genLvl1Vert, "Size 1 Vertical", "Only for things that have a bottom vertical connector");
-
-            GUILayout.Space(10);
-        }
-
-        if (showLevel2 = GUILayout.Toggle(showLevel2, "Show Level 2"))
-        {
-            
-            basicPrefabDisplay(ref currentScriptable.genLvl2, "Size 2", "Only for things that have horizontal connectors");
-            
-            basicPrefabDisplay(ref currentScriptable.genLvl2Vert, "Size 2 Vertical", "Only for things that have a bottom vertical connector");
-
-            GUILayout.Space(10);
-        }
-
         GUILayout.Space(10);
 
+        foreach (sizedSections section in currentScriptable.sections)
+        {
+            //Display the section
+            DisplaySizedSection(section);
+        }
 
+        if (GUILayout.Button("Add New Size"))
+        {
+            currentScriptable.sections.Add(new sizedSections(currentScriptable));
+            EditorUtility.SetDirty(currentScriptable);
+        }
+    }
+
+    public void DisplaySizedSection(sizedSections section)
+    {
+        RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
+
+        //If we actually want to see this section
+        if (section.openInInspector = EditorGUILayout.Foldout(section.openInInspector, "Section " + section.size, true))
+        {
+            EditorGUI.indentLevel++;
+            GUILayout.Label("Size");
+            section.size = EditorGUILayout.IntField(section.size);
+
+            //Show the vertical one
+            //EditorGUILayout.PropertyField(section.vertical);
+            if (section.verticalOpenInInspector = EditorGUILayout.Foldout(section.verticalOpenInInspector, "Vertical Section", true))
+            {
+                EditorGUI.indentLevel++;
+                //GUILayout.Label("Test For Vertical");
+                basicPrefabDisplay(ref section.vertical, "Vertical", "Testing");
+                EditorGUI.indentLevel--;
+            }
+            //Show the horiztonal one
+            if (section.horizontalOpenInInspector = EditorGUILayout.Foldout(section.horizontalOpenInInspector, "Horizontal Section", true))
+            {
+                EditorGUI.indentLevel++;
+                //GUILayout.Label("Test For Horizontal");
+                basicPrefabDisplay(ref section.horizontal, "Horizontal", "Testing");
+                EditorGUI.indentLevel--;
+            }
+            //Show the final vertical
+            //Show the final Horiztonal
+            //Add the option to remove this section
+            if (GUILayout.Button("Remove This Section"))
+            {
+                EditorUtility.SetDirty(currentScriptable);
+                currentScriptable.sections.Remove(section);
+            }
+            EditorGUI.indentLevel--;
+        }
     }
 
 
@@ -147,25 +137,29 @@ public class RandomGenStorageEditor : Editor
             GUILayout.EndVertical();
 
 
+            EditorGUI.indentLevel++;
             if (GUILayout.Button("Add New"))
             {
                 //Remove
                 refList.Add(null);
                 EditorUtility.SetDirty(target);
             }
+            EditorGUI.indentLevel--;
         }
     }
 
     public void basicPrefabDisplay(ref List<GameObject> refList, string name, string comment)
     {
-        GUILayout.Space(10);
-        GUILayout.Label("------" + name + "------");
+        //GUILayout.Space(10);
+        //GUILayout.Label("------" + name + "------");
 
+        /*
         if (comment != "")
         {
             GUILayout.Space(5);
             GUILayout.Label(comment);
         }
+        */
 
         GUILayout.BeginVertical();
 
@@ -207,12 +201,14 @@ public class RandomGenStorageEditor : Editor
         GUILayout.EndVertical();
 
 
+        EditorGUI.indentLevel++;
         if (GUILayout.Button("Add New"))
         {
             //Remove
             refList.Add(null);
             EditorUtility.SetDirty(target);
         }
+        EditorGUI.indentLevel--;
 
     }
 

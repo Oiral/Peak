@@ -12,36 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
   m_Name: Dungeon Gen Info
   m_EditorClassIdentifier: 
-  middleSection:
-  - {fileID: 3703390972599153956, guid: c548291cf0d7e104d8f831446b8f8331, type: 3}
-  baseSection: []
-  genLvl1:
-  - {fileID: 6773854277038703115, guid: 7bcdcf5317a17af46ba8310877a22801, type: 3}
-  - {fileID: 8730867052408730641, guid: e642fe35f6a1f20468dbdc83bc9bce06, type: 3}
-  - {fileID: 2237787832423982697, guid: c40019a1f44edd941ba5023058f3d3ee, type: 3}
-  - {fileID: 580175229527528047, guid: 060872bfbc45fb34dba55d62b5ea2e1d, type: 3}
-  genLvl2:
-  - {fileID: 6773854277038703115, guid: 2fae3deb73894d541ad654642f64ab70, type: 3}
-  - {fileID: 6773854277038703115, guid: 782bb55e71b9cbd44ada3a22738ba06d, type: 3}
-  - {fileID: 6773854277038703115, guid: 447de8dc846a2cb4ea3aee72eab44057, type: 3}
-  - {fileID: 6773854277038703115, guid: b71980aa01546c948b9b2ca92d0f0aaf, type: 3}
-  - {fileID: 6773854277038703115, guid: be3ba4181b77d7b4ba08185d47eaf97f, type: 3}
-  - {fileID: 6773854277038703115, guid: 8f5372740b9a68241b0e555e73c9844b, type: 3}
-  - {fileID: 7206222570423530834, guid: 0b7dacb115989ea41bcc8d876c6c3c7b, type: 3}
-  - {fileID: 5168960008230525019, guid: 0d5ec64a6803bf846b80703e54b7813f, type: 3}
-  genLvl1Vert:
-  - {fileID: 6773854277038703115, guid: 7bcdcf5317a17af46ba8310877a22801, type: 3}
-  - {fileID: 6773854277038703115, guid: 58f6ee7d679c8e7478e42df5d4a229e5, type: 3}
-  - {fileID: 5063079047693154167, guid: cc29fea788911654abbd99469fc15a9c, type: 3}
-  genLvl2Vert:
-  - {fileID: 6773854277038703115, guid: 8f5372740b9a68241b0e555e73c9844b, type: 3}
-  - {fileID: 6773854277038703115, guid: b71980aa01546c948b9b2ca92d0f0aaf, type: 3}
-  - {fileID: 6773854277038703115, guid: db56e0a72fc5edf41ab2b6532797d2e7, type: 3}
-  - {fileID: 6773854277038703115, guid: ffaaa1600b0bb84489cdf8c9022f51b3, type: 3}
-  - {fileID: 6773854277038703115, guid: be3ba4181b77d7b4ba08185d47eaf97f, type: 3}
-  - {fileID: 157679782184081267, guid: 580890baee4191c4ea4c3e42ba0f6f95, type: 3}
-  - {fileID: 7206222570423530834, guid: 0b7dacb115989ea41bcc8d876c6c3c7b, type: 3}
-  - {fileID: 5168960008230525019, guid: 0d5ec64a6803bf846b80703e54b7813f, type: 3}
+  sections:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   chanceToNotSpawn: 0
   enableRandomNoSpawn: 0
   GenListMax: 20

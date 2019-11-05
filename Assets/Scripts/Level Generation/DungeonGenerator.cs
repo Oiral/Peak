@@ -57,7 +57,8 @@ public class DungeonGenerator : MonoBehaviour
         randomGenerator = new SystemRandom(seed);
 
         //Generate the bottom structure
-        GenerateBase(storagethingy.genLvl1);
+        GenerateBase();
+
         yield return new WaitForSeconds(0.1f);
         for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize + 1); i++)
         {
@@ -94,10 +95,10 @@ public class DungeonGenerator : MonoBehaviour
     [ContextMenu("Test Function")]
     void TestFunction()
     {
-        storagethingy.genLvl1[0].GetComponent<DungeonSection>().GetPoints();
+        //storagethingy.genLvl1[0].GetComponent<DungeonSection>().GetPoints();
 
-        Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().horizontalConnectionPoints.Count);
-        Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().verticalConnectionPoints.Count);
+        //Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().horizontalConnectionPoints.Count);
+        //Debug.Log(storagethingy.genLvl1[0].GetComponent<DungeonSection>().verticalConnectionPoints.Count);
     }
 
     [ContextMenu("Generate \"Dungeon\"")]
@@ -112,7 +113,7 @@ public class DungeonGenerator : MonoBehaviour
         randomGenerator = new SystemRandom(seed);
 
         //Generate the bottom structure
-        GenerateBase(storagethingy.genLvl1);
+        GenerateBase();
 
         for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize-5), maxSize + 1); i++)
         {
@@ -147,22 +148,10 @@ public class DungeonGenerator : MonoBehaviour
         Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
     }
 
-    void GenerateBase(List<GameObject> startingList)
+    void GenerateBase()
     {
-        switch (startingLvl)
-        {
-            case 1:
-                startingList = storagethingy.genLvl1;
-                break;
-            case 2:
-                startingList = storagethingy.genLvl2;
-                break;
-            default:
-                startingList = storagethingy.genLvl1;
-                break;
-        }
-
-        
+        //Get the largest size to start with, and make sure that is vertical
+        List<GameObject> startingList = storagethingy.getLargestSize().horizontal;
 
         GameObject spawnedObject = SpawnObject(startingList[randomGenerator.Next(0, startingList.Count - 1)], transform);
         DungeonSection section = spawnedObject.GetComponent<DungeonSection>();
@@ -203,37 +192,13 @@ public class DungeonGenerator : MonoBehaviour
         {
             //If we are connecting horizontally
 
-            //Make sure we are generating from the correct level
-            switch (connectionPoint.level)
-            {
-                case 1:
-                    toSpawnList = storagethingy.genLvl1;
-                    break;
-                case 2:
-                    toSpawnList = storagethingy.genLvl2;
-                    break;
-                default:
-                    toSpawnList = storagethingy.genLvl1;
-                    break;
-            }
+            toSpawnList = storagethingy.getSize(connectionPoint.level).horizontal;
         }
         else
         {
             //If we are connecting vertically
 
-            //Make sure we are generating from the correct level
-            switch (connectionPoint.level)
-            {
-                case 1:
-                    toSpawnList = storagethingy.genLvl1Vert;
-                    break;
-                case 2:
-                    toSpawnList = storagethingy.genLvl2Vert;
-                    break;
-                default:
-                    toSpawnList = storagethingy.genLvl1Vert;
-                    break;
-            }
+            toSpawnList = storagethingy.getSize(connectionPoint.level).vertical;
         }
 
         //Find the correct prefab to spawn
