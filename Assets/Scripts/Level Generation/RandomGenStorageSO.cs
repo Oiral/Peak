@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class sizedSections : MonoBehaviour
+[System.Serializable]
+public class sizedSections
 {
     [SerializeField]
     public int size = 1;
@@ -26,7 +27,7 @@ public class sizedSections : MonoBehaviour
 
     public sizedSections(RandomGenStorageSO storage)
     {
-        if (storage.sections.Count > 1)
+        if (storage.sections.Count >= 1)
         {
             size = storage.getLargestSize().size + 1;
         }
@@ -70,6 +71,7 @@ public List<GameObject> genLvl2Vert = new List<GameObject>();
     [SerializeField]
     public List<sizedSections> sections = new List<sizedSections>();
 
+
     [HideInInspector]
     [SerializeField]
     public float chanceToNotSpawn;
@@ -91,6 +93,7 @@ public List<GameObject> genLvl2Vert = new List<GameObject>();
                 return section;
             }
         }
+        Debug.LogError("Cannot find correct size for end");
         return null;
     }
 

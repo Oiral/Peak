@@ -22,7 +22,8 @@ public class RandomGenStorageEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        //This the basic unity gui
+        //base.OnInspectorGUI();
 
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
 
@@ -45,8 +46,20 @@ public class RandomGenStorageEditor : Editor
     {
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
 
+        EditorGUILayout.BeginHorizontal();
         //If we actually want to see this section
-        if (section.openInInspector = EditorGUILayout.Foldout(section.openInInspector, "Section " + section.size, true))
+        section.openInInspector = EditorGUILayout.Foldout(section.openInInspector, "Section " + section.size, true);
+
+        //Add the option to remove this section
+        if (GUILayout.Button("Remove This Section"))
+        {
+            EditorUtility.SetDirty(currentScriptable);
+            currentScriptable.sections.Remove(section);
+        }
+
+        EditorGUILayout.EndHorizontal();
+
+        if (section.openInInspector)
         {
             EditorGUI.indentLevel++;
             GUILayout.Label("Size");
@@ -70,15 +83,14 @@ public class RandomGenStorageEditor : Editor
                 EditorGUI.indentLevel--;
             }
             //Show the final vertical
+            section.verticalTop = EditorGUILayout.ObjectField("Vertical Top", section.verticalTop, typeof(GameObject), false) as GameObject;
             //Show the final Horiztonal
-            //Add the option to remove this section
-            if (GUILayout.Button("Remove This Section"))
-            {
-                EditorUtility.SetDirty(currentScriptable);
-                currentScriptable.sections.Remove(section);
-            }
+            section.horiztonalTop = EditorGUILayout.ObjectField("Horizontal Top", section.horiztonalTop, typeof(GameObject), false) as GameObject;
+
             EditorGUI.indentLevel--;
         }
+
+        
     }
 
 

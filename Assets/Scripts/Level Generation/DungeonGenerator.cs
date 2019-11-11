@@ -85,7 +85,7 @@ public class DungeonGenerator : MonoBehaviour
                 //Generate a section
                 int connectionNumber = randomGenerator.Next(0, connectionsToConnect.Count - 1);
 
-                GenerateSection(connectionsToConnect[connectionNumber]);
+                GenerateRandomSection(connectionsToConnect[connectionNumber]);
                 yield return new WaitForSeconds(0.1f);
             }
 
@@ -140,12 +140,21 @@ public class DungeonGenerator : MonoBehaviour
                 //Generate a section
                 int connectionNumber = randomGenerator.Next(0, connectionsToConnect.Count - 1);
 
-                GenerateSection(connectionsToConnect[connectionNumber]);
+                GenerateRandomSection(connectionsToConnect[connectionNumber]);
             }
 
         }
 
         Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
+        //Generate "peak"
+        //Find the highest point level
+        sizedSections highestSize = storagethingy.getSize(highestPoint.level);
+
+        if (highestSize != null)
+        {
+            GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
+        }
+        
     }
 
     void GenerateBase()
@@ -164,7 +173,7 @@ public class DungeonGenerator : MonoBehaviour
         connectionsToConnect.AddRange(section.horizontalConnectionPoints);
     }
 
-    void GenerateSection(DungeonConnection connectionPoint)
+    void GenerateRandomSection(DungeonConnection connectionPoint)
     {
         //Find the list to spawn from
         List<GameObject> toSpawnList;
@@ -180,7 +189,7 @@ public class DungeonGenerator : MonoBehaviour
             connectionsToConnect.Remove(connectionPoint);
 
             //Generate another section
-            GenerateSection(connectionsToConnect[0]);
+            GenerateRandomSection(connectionsToConnect[0]);
 
             Debug.Log("Collided with something", connectionPoint.gameObject);
             return;
@@ -266,7 +275,7 @@ public class DungeonGenerator : MonoBehaviour
                 startingConnectionPointNumber = randomGenerator.Next(0, connectionsAtBottom.Count - 1);
 
                 //Give it a random rotation in increments of 90 degrees
-                spawnedObject.transform.rotation = Quaternion.Euler(0, randomGenerator.Next(0, 5) * 90, 0);
+                spawnedObject.transform.rotation = Quaternion.Euler(0, (randomGenerator.Next(0, 5) * 90) + connectionPoint.transform.rotation.eulerAngles.y, 0);
 
                 //Move it to the correct position
                 Vector3 pos = -connectionsAtBottom[startingConnectionPointNumber].gameObject.transform.position;
@@ -306,7 +315,100 @@ public class DungeonGenerator : MonoBehaviour
         connectionsToConnect.Remove(connectionPoint);
     }
 
-     List<DungeonConnection> GetCorrectLevel(List<DungeonConnection> connections, int level)
+    void GenerateEndSection(DungeonConnection connectionPoint, GameObject horiztonalToSpawn, GameObject verticalToSpawn)
+    {
+        bool horizontal = (connectionPoint.type == connectionType.Horizontal);
+
+        //Find the correct prefab to spawn
+
+        //Remove the connection point
+        GameObject toSpawn = null;
+        if (horizontal)
+        {
+            toSpawn = horiztonalToSpawn;
+        }
+        else
+        {
+            toSpawn = verticalToSpawn;
+        }
+
+        GameObject spawnedObject = SpawnObject(toSpawn, transform);
+        //Reset the position of the prefab
+        spawnedObject.transform.position = Vector3.zero;
+
+        DungeonSection section = spawnedObject.GetComponent<DungeonSection>();
+        section.GetPoints();
+
+        List<DungeonConnection> spawnedConnections = section.horizontalConnectionPoints;
+        List<DungeonConnection> spawnedVertConnections = section.verticalConnectionPoints;
+
+        int startingConnectionPointNumber = 0;
+
+        if (horizontal)
+        {
+            if (spawnedConnections.Count > 0)
+            {
+                //Find all connection points that match the correct level to connect to
+                List<DungeonConnection> levelCheckedConnections = GetCorrectLevel(spawnedConnections, connectionPoint.level);
+
+                //If we are connecting horizontally
+                startingConnectionPointNumber = randomGenerator.Next(0, levelCheckedConnections.Count - 1);
+
+                //Rotate to the correct rotation
+                spawnedObject.transform.Rotate(Vector3.up * 180 - levelCheckedConnections[startingConnectionPointNumber].gameObject.transform.localEulerAngles);
+
+                spawnedObject.transform.Rotate(connectionPoint.transform.eulerAngles);
+
+                //Move to the correct position
+                Vector3 pos = -levelCheckedConnections[startingConnectionPointNumber].gameObject.transform.position;
+                pos += connectionPoint.transform.position;
+
+                spawnedObject.transform.position = pos;
+
+                spawnedConnections.Remove(levelCheckedConnections[startingConnectionPointNumber]);
+
+                GenerateEndSection(section.verticalConnectionPoints[0], horiztonalToSpawn, verticalToSpawn);
+            }
+        }
+        else
+        {
+            //If we are connecting vertically
+            List<DungeonConnection> connectionsAtBottom = new List<DungeonConnection>();
+
+            //Check if all of these are below the object to connect to
+            foreach (DungeonConnection connection in spawnedVertConnections)
+            {
+                if (connection.transform.position.y < spawnedObject.transform.position.y)
+                {
+                    connectionsAtBottom.Add(connection);
+                }
+            }
+
+            //Find the correct level
+            connectionsAtBottom = GetCorrectLevel(connectionsAtBottom, connectionPoint.level);
+
+            if (connectionsAtBottom.Count > 0)
+            {
+                //Pick a random connection point to connect to
+                startingConnectionPointNumber = randomGenerator.Next(0, connectionsAtBottom.Count - 1);
+
+                //Give it a random rotation in increments of 90 degrees
+                spawnedObject.transform.rotation = Quaternion.Euler(0, (randomGenerator.Next(0, 5) * 90) + connectionPoint.transform.rotation.eulerAngles.y, 0);
+
+                //Move it to the correct position
+                Vector3 pos = -connectionsAtBottom[startingConnectionPointNumber].gameObject.transform.position;
+                pos += connectionPoint.transform.position;
+
+                spawnedObject.transform.position = pos;
+
+                spawnedVertConnections.Remove(connectionsAtBottom[startingConnectionPointNumber]);
+            }
+        }
+        //Add this part to the generated list
+        generatedParts.Add(spawnedObject);
+    }
+
+    List<DungeonConnection> GetCorrectLevel(List<DungeonConnection> connections, int level)
     {
         List<DungeonConnection> checkedConnections = new List<DungeonConnection>();
 
