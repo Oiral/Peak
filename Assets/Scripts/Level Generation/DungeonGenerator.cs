@@ -191,7 +191,7 @@ public class DungeonGenerator : MonoBehaviour
             //Generate another section
             GenerateRandomSection(connectionsToConnect[0]);
 
-            Debug.Log("Collided with something", connectionPoint.gameObject);
+            //Debug.Log("Collided with something", connectionPoint.gameObject);
             return;
         }
 
@@ -313,6 +313,20 @@ public class DungeonGenerator : MonoBehaviour
         generatedParts.Add(spawnedObject);
 
         connectionsToConnect.Remove(connectionPoint);
+        if (connectionsToConnect.Count <= 0)
+        {
+            Debug.Log("Created a dead end tower, Removing part");
+            connectionsToConnect.Add(connectionPoint);
+
+#if UNITY_EDITOR
+            DestroyImmediate(spawnedObject);
+
+#else
+            Destroy(spawnedObject);
+#endif
+            GenerateRandomSection(connectionPoint);
+
+        }
     }
 
     void GenerateEndSection(DungeonConnection connectionPoint, GameObject horiztonalToSpawn, GameObject verticalToSpawn)
