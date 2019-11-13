@@ -1,5 +1,5 @@
 # Blender MTL File: 'TallSectionColoured.blend'
-# Material Count: 5
+# Material Count: 7
 
 newmtl Base
 Ns 0.000000
@@ -24,7 +24,7 @@ illum 1
 newmtl Base3
 Ns 14.223677
 Ka 0.571429 0.571429 0.571429
-Kd 0.335735 0.748402 0.421233
+Kd 0.748402 0.724717 0.656311
 Ks 0.000000 0.000000 0.000000
 Ke 0.0 0.0 0.0
 Ni 1.450000
@@ -40,6 +40,24 @@ Ke 0.0 0.0 0.0
 Ni 1.450000
 d 1.000000
 illum 1
+
+newmtl Glass
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
 
 newmtl Trim
 Ns 715.180342
