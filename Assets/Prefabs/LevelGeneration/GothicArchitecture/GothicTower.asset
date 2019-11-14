@@ -23,6 +23,8 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: beb0631df49a8a648b3087425b46008b, type: 3}
     - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
     - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
+    - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
+    - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
     horizontal: []
     verticalTop: {fileID: 6773854277038703115, guid: 38145835c9dea2841a2ac3d3af0a7c94,
       type: 3}
@@ -71,11 +73,18 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: 5c6743db5c6e9a14e8a3da6a2f57a5db, type: 3}
     - {fileID: 6773854277038703115, guid: 2ded8c33f98c05d45aaa2935526176a1, type: 3}
     - {fileID: 6773854277038703115, guid: 918c496e7ecbedf4daa6ec84b92bc0a0, type: 3}
+    - {fileID: 6773854277038703115, guid: c302494dc408e9447b20f3758f9a37c7, type: 3}
+    - {fileID: 6773854277038703115, guid: 2ded8c33f98c05d45aaa2935526176a1, type: 3}
     horizontal:
-    - {fileID: 6773854277038703115, guid: 5c6743db5c6e9a14e8a3da6a2f57a5db, type: 3}
     - {fileID: 6773854277038703115, guid: de0c2eef019c9ad40bb4b8a430be8317, type: 3}
-    verticalTop: {fileID: 0}
-    horiztonalTop: {fileID: 0}
+    - {fileID: 6773854277038703115, guid: 06974d2b50095654b9bba29998df73f3, type: 3}
+    - {fileID: 6773854277038703115, guid: 06974d2b50095654b9bba29998df73f3, type: 3}
+    - {fileID: 6773854277038703115, guid: 06974d2b50095654b9bba29998df73f3, type: 3}
+    - {fileID: 6773854277038703115, guid: de0c2eef019c9ad40bb4b8a430be8317, type: 3}
+    verticalTop: {fileID: 6773854277038703115, guid: 2ded8c33f98c05d45aaa2935526176a1,
+      type: 3}
+    horiztonalTop: {fileID: 6773854277038703115, guid: 06974d2b50095654b9bba29998df73f3,
+      type: 3}
     openInInspector: 1
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
