@@ -13,25 +13,19 @@ public class PhysicsHand : MonoBehaviour
     public GameObject Thumb;
     public GameObject FI;
     public GameObject FM;
+
     //public GameObject FR;
     //public GameObject FP;
+    public Transform Head;
 
-    public GameObject nearHand;
-    public GameObject grabbed;
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "ExternalCam")
-        {
-            nearHand = other.gameObject;
-        }
-    }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "ExternalCam")
-        {
-            nearHand = null;
-        }
-    }
+    private GameObject nearHand;
+    private GameObject grabbed;
+
+private float NormalGravity;
+
+private bool Gripping = false;
+
+
     //public SteamVR_Action Squeeze; //Squeeze is the trigger axes, select from inspecter
 
     public SteamVR_Action_Boolean grabPinch; //Grab Pinch is the trigger, select from inspecter
@@ -40,14 +34,59 @@ public class PhysicsHand : MonoBehaviour
                                                                          // Use this for initialization
 
 
-    private void Update()
+    void Start ()
     {
+        NormalGravity = Physics.gravity.y;
+    }
+
+      private void OnTriggerEnter(Collider other)
+      {
+          if (other.tag == "ExternalCam")
+          {
+              nearHand = other.gameObject;
+          }
+      }
+
+      private void OnTriggerExit(Collider other)
+      {
+          if (other.tag == "ExternalCam")
+          {
+              nearHand = null;
+          }
+      }
+
+    private void Update()
+      {
         Thumb.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FI.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FM.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         //FR.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         //FP.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
+
+
+        if (SteamVR_Input.GetState("GrabGrip", inputSource) == true)
+        {
+          //GripButtonHeld();
+
+            if (Gripping == false)
+            {
+              Physics.gravity = new Vector3(0, 0.0F, 0);
+              Gripping = true;
+            //GripButtonDown();
+            }
+        }
+        else if (SteamVR_Input.GetState("GrabGrip", inputSource) == false  && Gripping == true)
+        {
+            Physics.gravity = new Vector3(0, NormalGravity, 0);
+            Gripping = false;
+            //GripButtonUp();
+        }
     }
+
+//void FixedUpdate(){
+//  GetComponent<Rigidbody>().drag = 10F * (Vector3.Distance(Head.position, transform.position)*);
+//}
+
 
     private void OnCollisionEnter(Collision collision)
     {
