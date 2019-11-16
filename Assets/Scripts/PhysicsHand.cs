@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Valve.VR;
+using UnityEngine.Events;
 
 public class PhysicsHand : MonoBehaviour
 {
@@ -21,9 +22,7 @@ public class PhysicsHand : MonoBehaviour
     private GameObject nearHand;
     private GameObject grabbed;
 
-private float NormalGravity;
-
-private bool Gripping = false;
+    private bool Gripping = false;
 
 
     //public SteamVR_Action Squeeze; //Squeeze is the trigger axes, select from inspecter
@@ -33,30 +32,31 @@ private bool Gripping = false;
     public SteamVR_Input_Sources inputSource = SteamVR_Input_Sources.Any;//which controller
                                                                          // Use this for initialization
 
+    [HideInInspector]
+    public UnityEvent gripDown;
+    [HideInInspector]
+    public UnityEvent gripUp;
+    [HideInInspector]
+    public UnityEvent gripHold;
 
-    void Start ()
+    private void OnTriggerEnter(Collider other)
     {
-        NormalGravity = Physics.gravity.y;
+        if (other.tag == "ExternalCam")
+        {
+            nearHand = other.gameObject;
+        }
     }
 
-      private void OnTriggerEnter(Collider other)
-      {
-          if (other.tag == "ExternalCam")
-          {
-              nearHand = other.gameObject;
-          }
-      }
-
-      private void OnTriggerExit(Collider other)
-      {
-          if (other.tag == "ExternalCam")
-          {
-              nearHand = null;
-          }
-      }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "ExternalCam")
+        {
+            nearHand = null;
+        }
+    }
 
     private void Update()
-      {
+    {
         Thumb.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FI.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FM.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
@@ -66,26 +66,27 @@ private bool Gripping = false;
 
         if (SteamVR_Input.GetState("GrabGrip", inputSource) == true)
         {
-          //GripButtonHeld();
+            //GripButtonHeld();
+            gripHold.Invoke();
 
             if (Gripping == false)
             {
-              Physics.gravity = new Vector3(0, 0.0F, 0);
-              Gripping = true;
-            //GripButtonDown();
+                Gripping = true;
+                gripDown.Invoke();
+                //GripButtonDown();
             }
         }
-        else if (SteamVR_Input.GetState("GrabGrip", inputSource) == false  && Gripping == true)
+        else if (SteamVR_Input.GetState("GrabGrip", inputSource) == false && Gripping == true)
         {
-            Physics.gravity = new Vector3(0, NormalGravity, 0);
             Gripping = false;
+            gripUp.Invoke();
             //GripButtonUp();
         }
     }
 
-//void FixedUpdate(){
-//  GetComponent<Rigidbody>().drag = 10F * (Vector3.Distance(Head.position, transform.position)*);
-//}
+    //void FixedUpdate(){
+    //  GetComponent<Rigidbody>().drag = 10F * (Vector3.Distance(Head.position, transform.position)*);
+    //}
 
 
     private void OnCollisionEnter(Collision collision)
