@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: d6cad37c78b133347bb86bbc90c8b492
+guid: 41a8dc066ebf74143a0dbac71f42c284
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - jetPackPrefab: {fileID: 3422623565849227145, guid: bcb2c50979b7c5c42b108aceb103abf7,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
