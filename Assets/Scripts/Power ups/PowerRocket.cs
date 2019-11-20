@@ -50,8 +50,12 @@ public class PowerRocket : MonoBehaviour
         if (basePower.DrainOverTime(10))
         {
             Debug.Log("Testing Rocket");
-            GetComponent<Rigidbody>().AddForce((transform.forward + direction).normalized * force, ForceMode.VelocityChange);
+            GetComponent<Rigidbody>().AddForce((particles[0].transform.forward * -1).normalized * force, ForceMode.VelocityChange);
             toggleParticles(true);
+        }
+        else
+        {
+            toggleParticles(false);
         }
     }
 
