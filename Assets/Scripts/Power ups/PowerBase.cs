@@ -7,6 +7,14 @@ public class PowerBase : MonoBehaviour
     public float maxFuel = 100;
     public float currentFuel;
 
+    PowerBar powerBar;
+    private void Start()
+    {
+        powerBar = GetComponentInChildren<PowerBar>();
+        Debug.Log(powerBar,powerBar.gameObject);
+        powerBar.UpdateFuel(currentFuel, maxFuel);
+    }
+
     public void Charge(float amount)
     {
         currentFuel += amount;
@@ -14,13 +22,16 @@ public class PowerBase : MonoBehaviour
         {
             currentFuel = maxFuel;
         }
+        powerBar.UpdateFuel(currentFuel, maxFuel);
     }
 
     public bool DrainOverTime(float multiplier)
     {
         currentFuel -= Time.deltaTime * multiplier;
+        powerBar.UpdateFuel(currentFuel, maxFuel);
         if (currentFuel <= 0)
         {
+            currentFuel = 0;
             return false;
         }
         else
@@ -39,6 +50,7 @@ public class PowerBase : MonoBehaviour
         else
         {
             currentFuel -= amount;
+            powerBar.UpdateFuel(currentFuel,maxFuel);
             return true;
         }
     }

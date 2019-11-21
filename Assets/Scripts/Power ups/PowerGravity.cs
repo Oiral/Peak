@@ -8,20 +8,25 @@ public class PowerGravity : MonoBehaviour
     #region Power Stuff
     PhysicsHand hand;
 
+    PowerBase basePower;
+
     private void Awake()
     {
         hand = GetComponent<PhysicsHand>();
+        basePower = GetComponent<PowerBase>();
     }
 
     private void OnEnable()
     {
         hand.gripDown.AddListener(setLowGrav);
+        hand.gripHold.AddListener(usingGrav);
         hand.gripUp.AddListener(setNormalGrav);
     }
 
     private void OnDisable()
     {
         hand.gripDown.RemoveListener(setLowGrav);
+        hand.gripHold.RemoveListener(usingGrav);
         hand.gripUp.RemoveListener(setNormalGrav);
     }
     #endregion
@@ -37,6 +42,15 @@ public class PowerGravity : MonoBehaviour
     void setLowGrav()
     {
         Physics.gravity = new Vector3(0, 0.0F, 0);
+    }
+
+    void usingGrav()
+    {
+        //Drain the power usage, If we run out stop the gravity
+        if (!basePower.DrainOverTime(10))
+        {
+            setNormalGrav();
+        }
     }
 
     void setNormalGrav()

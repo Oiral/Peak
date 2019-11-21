@@ -15,6 +15,8 @@ public class PowerRocket : MonoBehaviour
 
     public float force = 1;
 
+    public float drainPerSec = 10f;
+
     private void Awake()
     {
         hand = GetComponent<PhysicsHand>();
@@ -47,7 +49,7 @@ public class PowerRocket : MonoBehaviour
 
     void jetPack()
     {
-        if (basePower.DrainOverTime(10))
+        if (basePower.DrainOverTime(drainPerSec))
         {
             Debug.Log("Testing Rocket");
             GetComponent<Rigidbody>().AddForce((particles[0].transform.forward * -1).normalized * force, ForceMode.VelocityChange);
