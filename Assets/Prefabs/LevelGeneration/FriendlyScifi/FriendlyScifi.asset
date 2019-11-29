@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
+  m_Name: FriendlyScifi
+  m_EditorClassIdentifier: 
+  sections:
+  - size: 2
+    vertical:
+    - {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1, type: 3}
+    - {fileID: 6773854277038703115, guid: 2e13ec72f1c2a8848bfff4e4b64b88a9, type: 3}
+    - {fileID: 6773854277038703115, guid: c78e8eaf7c41a774db73e3b39a3f8a79, type: 3}
+    - {fileID: 6773854277038703115, guid: 9e9494fd14be2ad4d91a334bf532bc56, type: 3}
+    - {fileID: 6773854277038703115, guid: 2bb29a9532f0afb4c87ab06b0b2c26bc, type: 3}
+    - {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1, type: 3}
+    - {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1, type: 3}
+    - {fileID: 6773854277038703115, guid: 7ac337c9ec815594b8086bc89d5b9fc1, type: 3}
+    horizontal:
+    - {fileID: 6773854277038703115, guid: fc49e71b970f0ee4a81d81e0a2729629, type: 3}
+    - {fileID: 6773854277038703115, guid: 82fcedc6bc1f11e43aad48afc12e18c9, type: 3}
+    - {fileID: 6773854277038703115, guid: 1eaa7f28ffd90294da637c78adeb2420, type: 3}
+    verticalTop: {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1,
+      type: 3}
+    horiztonalTop: {fileID: 6773854277038703115, guid: cda4a4eac27f14a43a238161a356e3e9,
+      type: 3}
+    openInInspector: 1
+    verticalOpenInInspector: 1
+    horizontalOpenInInspector: 1
+  chanceToNotSpawn: 0
+  enableRandomNoSpawn: 0
+  GenListMax: 0

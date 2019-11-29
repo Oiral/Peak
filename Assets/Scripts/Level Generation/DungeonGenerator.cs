@@ -154,7 +154,7 @@ public class DungeonGenerator : MonoBehaviour
         {
             GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
         }
-        
+
     }
 
     void GenerateBase()
@@ -223,10 +223,10 @@ public class DungeonGenerator : MonoBehaviour
         List<DungeonConnection> spawnedConnections = section.horizontalConnectionPoints;
         List<DungeonConnection> spawnedVertConnections = section.verticalConnectionPoints;
 
-        
+
 
         int startingConnectionPointNumber = 0;
-        
+
         if (horizontal)
         {
             if (spawnedConnections.Count > 0)
@@ -275,7 +275,7 @@ public class DungeonGenerator : MonoBehaviour
                 startingConnectionPointNumber = randomGenerator.Next(0, connectionsAtBottom.Count - 1);
 
                 //Give it a random rotation in increments of 90 degrees
-                spawnedObject.transform.rotation = Quaternion.Euler(0, (randomGenerator.Next(0, 5) * 90) + connectionPoint.transform.rotation.eulerAngles.y, 0);
+                spawnedObject.transform.rotation = Quaternion.Euler(0, (randomGenerator.Next(0, 3) * 90) + connectionPoint.transform.rotation.eulerAngles.y, 0);
 
                 //Move it to the correct position
                 Vector3 pos = -connectionsAtBottom[startingConnectionPointNumber].gameObject.transform.position;
@@ -286,7 +286,7 @@ public class DungeonGenerator : MonoBehaviour
                 spawnedVertConnections.Remove(connectionsAtBottom[startingConnectionPointNumber]);
             }
         }
-        
+
         //if we want to remove some do so now
         if (storagethingy.enableRandomNoSpawn)
         {
@@ -449,7 +449,7 @@ public class DungeonGenerator : MonoBehaviour
             {
                 checkedConnections.Add(connection);
 
-                CheckIfHighestPoint(connection); 
+                CheckIfHighestPoint(connection);
 
             }
         }
@@ -522,7 +522,7 @@ public class DungeonGenerator : MonoBehaviour
 
     void ResetLevel()
     {
-        /* 
+        /*
         foreach (Transform child in transform)
         {
             if (child != transform)
@@ -556,7 +556,7 @@ public class DungeonGenerator : MonoBehaviour
             {
                 tempList.Add(connection);
             }
-            
+
         }
         return tempList;
     }
@@ -565,7 +565,7 @@ public class DungeonGenerator : MonoBehaviour
     {
         GameObject spawnedObject = null;
 
-        
+
 
         //Only if we are using the editor
 #if UNITY_EDITOR
