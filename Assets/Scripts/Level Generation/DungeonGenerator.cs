@@ -26,6 +26,8 @@ public class DungeonGenerator : MonoBehaviour
 
     public DungeonConnection highestPoint;
 
+    public List<GameObject> nextSelectablePrefabs;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -91,7 +93,15 @@ public class DungeonGenerator : MonoBehaviour
 
         }
         generating = false;
+
+        //Generate the top selection bits
+        if (CollectionManager.instance != null)
+        {
+            //Generate top structures
+            CollectionManager.instance.SpawnSelectionItems();
+        }
     }
+
     [ContextMenu("Test Function")]
     void TestFunction()
     {
@@ -153,6 +163,13 @@ public class DungeonGenerator : MonoBehaviour
         if (highestSize != null)
         {
             GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
+        }
+
+        //Generate the top selection bits
+        if (CollectionManager.instance != null)
+        {
+            //Generate top structures
+            CollectionManager.instance.SpawnSelectionItems();
         }
 
     }

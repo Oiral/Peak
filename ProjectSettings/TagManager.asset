@@ -15,6 +15,7 @@ TagManager:
   - GenerationEnd
   - Fingers
   - Button
+  - Hand
   layers:
   - Default
   - TransparentFX
