@@ -205,22 +205,7 @@ public class DungeonGenerator : MonoBehaviour
         //Find the list to spawn from
         List<GameObject> toSpawnList;
 
-        //Check if we can acutally spawn the item
-        bool isclear = CheckIfClear(connectionPoint);
-
-        if (isclear == false)
-        {
-            //we are not clear
-
-            //Remove the current point from the list to spawn
-            connectionsToConnect.Remove(connectionPoint);
-
-            //Generate another section
-            GenerateRandomSection(connectionsToConnect[0]);
-
-            //Debug.Log("Collided with something", connectionPoint.gameObject);
-            return;
-        }
+        
 
         bool horizontal = (connectionPoint.type == connectionType.Horizontal);
 
@@ -239,8 +224,34 @@ public class DungeonGenerator : MonoBehaviour
 
         //Find the correct prefab to spawn
 
+        GameObject toSpawn = toSpawnList[randomGenerator.Next(0, toSpawnList.Count)];
+
+        //Check if we can acutally spawn the item
+        bool isclear = CheckIfClear(connectionPoint, toSpawn);
+
+        if (isclear == false)
+        {
+            //we are not clear
+
+            //Remove the current point from the list to spawn
+            connectionsToConnect.Remove(connectionPoint);
+
+            if (connectionsToConnect.Count >= 1)
+            {
+                //Generate another section
+                GenerateRandomSection(connectionsToConnect[0]);
+            }
+            else
+            {
+                Debug.LogError("No more pieces to spread too, stopping generation", highestPoint.gameObject);
+            }
+
+            //Debug.Log("Collided with something", connectionPoint.gameObject);
+            return;
+        }
+
         //Remove the connection point
-        GameObject spawnedObject = SpawnObject(toSpawnList[randomGenerator.Next(0, toSpawnList.Count)], transform);
+        GameObject spawnedObject = SpawnObject(toSpawn, transform);
         //Reset the position of the prefab
         spawnedObject.transform.position = Vector3.zero;
 
@@ -484,9 +495,11 @@ public class DungeonGenerator : MonoBehaviour
         connectionsToConnect.AddRange(checkedConnections);
     }
 
-    bool CheckIfClear(DungeonConnection connection)
+    bool CheckIfClear(DungeonConnection connection, GameObject toSpawn)
     {
         bool isClear = false;
+
+        //Bounds bounds = CalculateBounds(toSpawn);
 
         Vector3 direction;
         Vector3 center;
@@ -517,7 +530,8 @@ public class DungeonGenerator : MonoBehaviour
             //If it is a horizontal connection point
             //Check if it is clear in the direction of forward
             direction = connection.transform.forward;
-            center.y -= connection.level / 2;
+            center.y -= connection.level / 4;
+            size.y *= 0.5f;
         }
 
         //Lets acutally do the raycast
@@ -526,11 +540,32 @@ public class DungeonGenerator : MonoBehaviour
 
         //If we hit something anwer will be true, but we want to be false
         //If we dont hit something answer will be false, but we want to be true
-
+        
         //Flip the output of isClear
         isClear = !isClear;
 
-        return isClear;
+        //If we did hit something, We want to know about it
+        if (isClear == false)
+        {
+            //Debug.Log("Hit Something While Generating", hit.transform.gameObject);
+            Debug.DrawLine(connection.transform.position,hit.point, Color.red, 0.5f);
+        }
+
+            return isClear;
+    }
+
+    public Bounds CalculateBounds(GameObject boundsParent)
+    {
+        Bounds bounds = new Bounds();
+
+        bounds.size = Vector3.zero; // reset
+        Collider[] colliders = boundsParent.GetComponentsInChildren<Collider>();
+        foreach (Collider col in colliders)
+        {
+            bounds.Encapsulate(col.bounds);
+        }
+
+        return bounds;
     }
 
     void CheckIfHighestPoint(DungeonConnection connection)
