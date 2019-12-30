@@ -28,6 +28,8 @@ public class DungeonGenerator : MonoBehaviour
 
     public List<GameObject> nextSelectablePrefabs;
 
+    public float towerHeight;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -49,7 +51,6 @@ public class DungeonGenerator : MonoBehaviour
     IEnumerator GenerateLevelSlowly()
     {
         generating = true;
-        yield return new WaitForSeconds(0.1f);
         ResetLevel();
 
         if (randomiseSeed)
@@ -61,9 +62,9 @@ public class DungeonGenerator : MonoBehaviour
         //Generate the bottom structure
         GenerateBase();
 
-        yield return new WaitForSeconds(0.1f);
         for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize + 1); i++)
         {
+            yield return new WaitForSeconds(0);
             //if we are using a max
             if (storagethingy.GenListMax > 0)
             {
@@ -88,11 +89,19 @@ public class DungeonGenerator : MonoBehaviour
                 int connectionNumber = randomGenerator.Next(0, connectionsToConnect.Count - 1);
 
                 GenerateRandomSection(connectionsToConnect[connectionNumber]);
-                yield return new WaitForSeconds(0.1f);
             }
 
         }
-        generating = false;
+        towerHeight = highestPoint.gameObject.transform.position.y;
+        Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
+        //Generate "peak"
+        //Find the highest point level
+        sizedSections highestSize = storagethingy.getSize(highestPoint.level);
+
+        if (highestSize != null)
+        {
+            GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
+        }
 
         //Generate the top selection bits
         if (CollectionManager.instance != null)
@@ -100,6 +109,7 @@ public class DungeonGenerator : MonoBehaviour
             //Generate top structures
             CollectionManager.instance.SpawnSelectionItems();
         }
+        generating = false;
     }
 
     [ContextMenu("Test Function")]
@@ -112,7 +122,7 @@ public class DungeonGenerator : MonoBehaviour
     }
 
     [ContextMenu("Generate \"Dungeon\"")]
-    void GenerateLevel()
+    public void GenerateLevel()
     {
         ResetLevel();
 
@@ -154,7 +164,7 @@ public class DungeonGenerator : MonoBehaviour
             }
 
         }
-
+        towerHeight = highestPoint.gameObject.transform.position.y;
         Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
         //Generate "peak"
         //Find the highest point level
