@@ -9,6 +9,8 @@ public class MoveGenAndPlayer : MonoBehaviour
 
     public float TowerHeight;
 
+    public float extraDropHeight;
+
     private void FixedUpdate()
     {
         if (moving)
@@ -18,7 +20,7 @@ public class MoveGenAndPlayer : MonoBehaviour
 
             transform.position = pos;
 
-            if (pos.y < -TowerHeight)
+            if (pos.y < -(TowerHeight + extraDropHeight))
             {
                 moving = false;
                 pos.y = 0;

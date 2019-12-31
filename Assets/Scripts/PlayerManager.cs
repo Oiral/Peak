@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;
 
+    public float RespawnIfBelow = -50f;
+
     private void Awake()
     {
         if (instance == null)

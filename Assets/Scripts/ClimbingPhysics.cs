@@ -76,7 +76,7 @@ public class ClimbingPhysics : MonoBehaviour
         LeftHandPhysics.GetComponent<Rigidbody>().AddForce(hvl * Strength - (lvp - hv) * Damnping);
         RightHandPhysics.GetComponent<Rigidbody>().AddForce(hvr * Strength - (rvp - hv) * Damnping);
 
-        if (transform.position.y < -10)
+        if (transform.position.y < PlayerManager.instance.RespawnIfBelow)
         {
             //Debug.Log("ghjghj");
             //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

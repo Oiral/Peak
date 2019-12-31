@@ -30,6 +30,9 @@ public class DungeonGenerator : MonoBehaviour
 
     public float towerHeight;
 
+    public bool overideLayer = true;
+    public int layerToSetTowerPieces;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -204,8 +207,6 @@ public class DungeonGenerator : MonoBehaviour
     {
         //Find the list to spawn from
         List<GameObject> toSpawnList;
-
-        
 
         bool horizontal = (connectionPoint.type == connectionType.Horizontal);
 
@@ -637,6 +638,21 @@ public class DungeonGenerator : MonoBehaviour
          spawnedObject = Instantiate(toSpawn, parent);
 #endif
 
+        if (overideLayer)
+        {
+            MoveToLayer(spawnedObject.transform, layerToSetTowerPieces);
+        }
+
         return spawnedObject;
+    }
+
+    //recursive calls
+    void MoveToLayer(Transform root, int layer)
+    {
+        if (root.gameObject.layer == 0)
+            root.gameObject.layer = layer;
+
+        foreach (Transform child in root)
+            MoveToLayer(child, layer);
     }
 }
