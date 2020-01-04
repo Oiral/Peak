@@ -32,8 +32,8 @@ MonoBehaviour:
     horiztonalTop: {fileID: 6773854277038703115, guid: cda4a4eac27f14a43a238161a356e3e9,
       type: 3}
     openInInspector: 1
-    verticalOpenInInspector: 1
-    horizontalOpenInInspector: 1
+    verticalOpenInInspector: 0
+    horizontalOpenInInspector: 0
   chanceToNotSpawn: 0
   enableRandomNoSpawn: 0
   GenListMax: 0

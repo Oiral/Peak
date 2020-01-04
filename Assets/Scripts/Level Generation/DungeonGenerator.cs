@@ -385,6 +385,12 @@ public class DungeonGenerator : MonoBehaviour
             toSpawn = verticalToSpawn;
         }
 
+        if (toSpawn == null)
+        {
+            Debug.LogWarning("Missing Size " + connectionPoint.level + " end point");
+            return;
+        }
+
         GameObject spawnedObject = SpawnObject(toSpawn, transform);
         //Reset the position of the prefab
         spawnedObject.transform.position = Vector3.zero;
@@ -638,7 +644,7 @@ public class DungeonGenerator : MonoBehaviour
          spawnedObject = Instantiate(toSpawn, parent);
 #endif
 
-        if (overideLayer)
+        if (overideLayer && spawnedObject != null)
         {
             MoveToLayer(spawnedObject.transform, layerToSetTowerPieces);
         }

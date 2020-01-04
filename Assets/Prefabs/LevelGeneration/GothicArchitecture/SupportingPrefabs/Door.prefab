@@ -670,8 +670,8 @@ HingeJoint:
     freeSpin: 0
   m_UseLimits: 1
   m_Limits:
-    min: 0
-    max: 88.29865
+    min: -284.82016
+    max: 51.7001
     bounciness: 1
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -708,8 +708,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6539650787651558149}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.799, y: -6.083, z: -2.949}
-  m_LocalScale: {x: 0.99249053, y: 0.9804488, z: 3.3135517}
+  m_LocalPosition: {x: -0.799, y: -5.9006, z: -2.8617}
+  m_LocalScale: {x: 0.96271586, y: 0.9510353, z: 3.2141452}
   m_Children: []
   m_Father: {fileID: 5911433366229422406}
   m_RootOrder: 0

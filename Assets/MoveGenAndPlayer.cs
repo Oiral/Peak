@@ -27,15 +27,17 @@ public class MoveGenAndPlayer : MonoBehaviour
                 transform.position = pos;
                 GetComponent<DungeonGenerator>().GenerateLevelStart();
             }
-
-            
         }
     }
 
     [ContextMenu("Reset Tower")]
     public void ResetTower()
     {
-        TowerHeight = GetComponent<DungeonGenerator>().towerHeight;
-        moving = true;
+        if (GetComponent<DungeonGenerator>().generating == false && moving == false)
+        {
+            TowerHeight = GetComponent<DungeonGenerator>().towerHeight;
+            moving = true;
+        }
+        
     }
 }
