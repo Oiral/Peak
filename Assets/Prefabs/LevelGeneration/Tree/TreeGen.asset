@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bd39472ab693b6428133904b32968fd, type: 3}
+  m_Name: TreeGen
+  m_EditorClassIdentifier: 
+  sections:
+  - size: 3
+    vertical:
+    - {fileID: 6773854277038703115, guid: fc2ddcd99ee7ba246966f1bd4e7bab87, type: 3}
+    - {fileID: 6773854277038703115, guid: d8d9313f6f29a0643b602b35f36d8bb4, type: 3}
+    - {fileID: 6773854277038703115, guid: 4b46bdbbc20ccc34991eadaf55474805, type: 3}
+    - {fileID: 6773854277038703115, guid: 69f1f15294f37964fb878971ddbbf1c1, type: 3}
+    - {fileID: 6773854277038703115, guid: 8546ff0763c69ec41a8949f991d3ce45, type: 3}
+    - {fileID: 6773854277038703115, guid: 69f1f15294f37964fb878971ddbbf1c1, type: 3}
+    - {fileID: 6773854277038703115, guid: 8546ff0763c69ec41a8949f991d3ce45, type: 3}
+    - {fileID: 6773854277038703115, guid: 8546ff0763c69ec41a8949f991d3ce45, type: 3}
+    horizontal:
+    - {fileID: 6773854277038703115, guid: 0c25d0835b68a4747957aa55227682ae, type: 3}
+    - {fileID: 6773854277038703115, guid: 791b5b28cbfd3b04ca421a192756805f, type: 3}
+    - {fileID: 6773854277038703115, guid: 1ae5895b6471ee94eaec0af284c7076d, type: 3}
+    - {fileID: 6773854277038703115, guid: 0c25d0835b68a4747957aa55227682ae, type: 3}
+    verticalTop: {fileID: 6773854277038703115, guid: fc2ddcd99ee7ba246966f1bd4e7bab87,
+      type: 3}
+    horiztonalTop: {fileID: 6773854277038703115, guid: 0c25d0835b68a4747957aa55227682ae,
+      type: 3}
+    openInInspector: 1
+    verticalOpenInInspector: 1
+    horizontalOpenInInspector: 1
+  chanceToNotSpawn: 0
+  enableRandomNoSpawn: 0
+  GenListMax: 0
