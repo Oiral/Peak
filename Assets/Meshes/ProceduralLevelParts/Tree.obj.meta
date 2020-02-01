@@ -14,6 +14,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Leaves
     second: {fileID: 2100000, guid: b9d5741d89d3e8045b62e92f4274df88, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mushroom
+    second: {fileID: 2100000, guid: d0abaf02394f67d4d8d845da81c8a180, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
