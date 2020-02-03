@@ -13,7 +13,9 @@ public class ClimbingPhysics : MonoBehaviour
 
     public float Strength = 1300;
     public float Damnping = 40;
+    public float LocalDrag = 0.01f;
 
+    Vector3 AverageBodyVelocity;
     Vector3 Avp; //Average physics hand position
     Vector3 Avt; //average tracked hand position
     Vector3 lvp; // left hand velocity
@@ -28,7 +30,7 @@ public class ClimbingPhysics : MonoBehaviour
         LeftHandPhysics.transform.position = LeftTrackedHand.position;
         RightHandPhysics.transform.position = RightTrackedHand.position;
         LeftHandPhysics.transform.rotation = LeftTrackedHand.rotation;
-        RightHandPhysics.transform.rotation = RightTrackedHand.rotation;        
+        RightHandPhysics.transform.rotation = RightTrackedHand.rotation;
         LeftHandPhysics.GetComponent<Rigidbody>().freezeRotation = true;
         RightHandPhysics.GetComponent<Rigidbody>().freezeRotation = true;
     }
@@ -75,6 +77,16 @@ public class ClimbingPhysics : MonoBehaviour
         //hvr = Vector3.ClampMagnitude(hvr, 0.1f);
         LeftHandPhysics.GetComponent<Rigidbody>().AddForce(hvl * Strength - (lvp - hv) * Damnping);
         RightHandPhysics.GetComponent<Rigidbody>().AddForce(hvr * Strength - (rvp - hv) * Damnping);
+
+        AverageBodyVelocity = (lvp + rvp + hv) / 3;
+
+      //  LeftHandPhysics.GetComponent<Rigidbody>().velocity = (((lvp - AverageBodyVelocity) * Mathf.Clamp(xValue, xMin, xMax)(1f - LocalDrag / LeftHandPhysics.GetComponent<Rigidbody>().mass)) + AverageBodyVelocity);
+      //  RightHandPhysics.GetComponent<Rigidbody>().velocity = (((rvp - AverageBodyVelocity) * (1f - LocalDrag / RightHandPhysics.GetComponent<Rigidbody>().mass)) + AverageBodyVelocity);
+      //  gameObject.GetComponent<Rigidbody>().velocity = (((hv - AverageBodyVelocity) * (1f - LocalDrag / gameObject.GetComponent<Rigidbody>().mass)) + AverageBodyVelocity);
+
+        LeftHandPhysics.GetComponent<Rigidbody>().AddForce((AverageBodyVelocity - lvp) * LocalDrag);
+        RightHandPhysics.GetComponent<Rigidbody>().AddForce((AverageBodyVelocity - rvp) * LocalDrag);
+        gameObject.GetComponent<Rigidbody>().AddForce((AverageBodyVelocity - hv) * LocalDrag);
 
         if (transform.position.y < PlayerManager.instance.RespawnIfBelow)
         {
