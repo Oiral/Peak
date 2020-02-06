@@ -13,7 +13,7 @@ public class RandomGenStorageEditor : Editor
 
     private bool showBaseSection = true;
 
-    private bool showDungeonStuff = true;
+    private bool showTowerStuff = true;
 
     [SerializeField]
     bool showLevel1 = false;
@@ -26,6 +26,14 @@ public class RandomGenStorageEditor : Editor
         //base.OnInspectorGUI();
 
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
+
+        //The slider for the tower spread
+        //We also want to invert the slider so that 99 on screen is 1 in code
+        EditorGUILayout.BeginHorizontal();
+        EditorGUILayout.PrefixLabel("Tower Spread %");
+        currentScriptable.GenListMax = 100 - EditorGUILayout.IntSlider(100 - currentScriptable.GenListMax, 0, 99);
+        EditorGUILayout.EndHorizontal();
+
 
         GUILayout.Space(10);
 
@@ -45,6 +53,7 @@ public class RandomGenStorageEditor : Editor
     public void DisplaySizedSection(sizedSections section)
     {
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
+        
 
         EditorGUILayout.BeginHorizontal();
         //If we actually want to see this section
@@ -172,7 +181,7 @@ public class RandomGenStorageEditor : Editor
             GUILayout.Label(comment);
         }
         */
-
+        //Display a basic prefab
         GUILayout.BeginVertical();
 
         for (int i = 0; i < refList.Count; i++)
@@ -223,59 +232,5 @@ public class RandomGenStorageEditor : Editor
         EditorGUI.indentLevel--;
 
     }
-
-    /*
-    public void RareBuildingLayout(BuildingGenerator gen)
-    {
-        if (ShowRareBuildings = GUILayout.Toggle(ShowRareBuildings, "Show Rare Buildings"))
-        {
-
-            GUILayout.BeginVertical();
-
-            for (int i = 0; i < gen.rarePrefabs.Count; i++)
-            {
-                GUILayout.BeginHorizontal();
-
-                string prefabName;
-                if (gen.rarePrefabs[i] != null)
-                {
-                    prefabName = gen.rarePrefabs[i].name;
-                }
-                else
-                {
-                    prefabName = "Not Assigned";
-                }
-
-                gen.rarePrefabs[i] = EditorGUILayout.ObjectField(prefabName, gen.rarePrefabs[i], typeof(GameObject), false) as GameObject;
-
-
-                if (GUILayout.Button("Remove", GUILayout.MaxWidth(70)))
-                {
-                    //Remove
-                    gen.rarePrefabs.RemoveAt(i);
-                }
-
-
-                GUILayout.EndHorizontal();
-
-
-                if (showPreview && gen.rarePrefabs[i] != null)
-                {
-                    GUILayout.Label(AssetPreview.GetAssetPreview(gen.rarePrefabs[i]), GUILayout.Height(50));
-                }
-
-            }
-
-            GUILayout.EndVertical();
-
-
-            if (GUILayout.Button("Add New"))
-            {
-                //Remove
-                gen.rarePrefabs.Add(null);
-            }
-        }
-    }
-    */
 
 }

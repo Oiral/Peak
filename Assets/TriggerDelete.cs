@@ -12,7 +12,7 @@ public class TriggerDelete : MonoBehaviour
 
         for (int i = 0; i < loopTimes; i++)
         {
-            if (checkingObject.transform.parent.gameObject.GetComponent<DungeonGenerator>() != null)
+            if (checkingObject.transform.parent.gameObject.GetComponent<TowerGenerator>() != null)
             {
                 Destroy(checkingObject);
             }

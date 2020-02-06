@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(DungeonGenerator))]
+[RequireComponent(typeof(TowerGenerator))]
 public class SwapGenerators : MonoBehaviour
 {
     public List<RandomGenStorageSO> storages;
@@ -18,6 +18,6 @@ public class SwapGenerators : MonoBehaviour
             current = 0;
         }
 
-        GetComponent<DungeonGenerator>().storagethingy = storages[current];
+        GetComponent<TowerGenerator>().towerStorage = storages[current];
     }
 }

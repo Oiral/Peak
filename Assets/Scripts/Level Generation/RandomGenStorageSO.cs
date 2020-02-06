@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class sizedSections
 {
+    //A storage class for each sized section.
+    //This means we can use infinite amount of section and any size that we want
     [SerializeField]
     public int size = 1;
 
@@ -41,51 +43,24 @@ public class sizedSections
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Section Info", order = 1)]
 public class RandomGenStorageSO : ScriptableObject
 {
-    //[HideInInspector]
-    //[SerializeField]
-    //public List<GameObject> middleSection = new List<GameObject>();
-
-    //[HideInInspector]
-    //[SerializeField]
-    //public List<GameObject> baseSection = new List<GameObject>();
-
-    /*
-[HideInInspector]
-[SerializeField]
-public List<GameObject> genLvl1 = new List<GameObject>();
-
-[HideInInspector]
-[SerializeField]
-public List<GameObject> genLvl2 = new List<GameObject>();
-
-[HideInInspector]
-[SerializeField]
-public List<GameObject> genLvl1Vert = new List<GameObject>();
-
-[HideInInspector]
-[SerializeField]
-public List<GameObject> genLvl2Vert = new List<GameObject>();
-
-*/
-
     [SerializeField]
     public List<sizedSections> sections = new List<sizedSections>();
-
-
+    
     [HideInInspector]
     [SerializeField]
-    public float chanceToNotSpawn;
-
-    [HideInInspector]
-    [SerializeField]
-    public bool enableRandomNoSpawn;
-
-    [HideInInspector]
-    [SerializeField]
-    public float GenListMax;
-
+    //The max size for the connections to generate too
+    //If the list gets above this size - removes the first half of the size
+    public int GenListMax;
+    
+    //Get the whole section that fits the right size
     public sizedSections getSize(int num)
     {
+        if (sections.Count == 0)
+        {
+            Debug.LogWarning("There are no sections in the tower storage");
+            return null;
+        }
+
         foreach (sizedSections section in sections)
         {
             if (section.size == num)
@@ -97,20 +72,23 @@ public List<GameObject> genLvl2Vert = new List<GameObject>();
         return null;
     }
 
+    //Get the whole section that is the largest
     public sizedSections getLargestSize()
     {
         if (sections.Count == 0)
         {
+            Debug.LogWarning("There are no sections in the tower storage");
             return null;
         }
 
         sizedSections largest = sections[0];
 
-        foreach (sizedSections section in sections)
+        //Only needs to check array index 1 - length because we have already set the largest to index 0
+        for (int i = 1; i < sections.Count; i++)
         {
-            if (section.size > largest.size)
+            if (sections[i].size > largest.size)
             {
-                largest = section;
+                largest = sections[i];
             }
         }
 
