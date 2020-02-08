@@ -37,7 +37,7 @@ public class TutorialManager : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (drawGizmos == false)
+        if (drawGizmos == false || tutorialPoint == null)
             return;
 
         Gizmos.color = Color.green;
