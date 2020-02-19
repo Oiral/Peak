@@ -9,23 +9,30 @@ public class RandomGenStorageEditor : Editor
 
     private bool showPreview;
 
-    private bool showMiddleSection = true;
-
-    private bool showBaseSection = true;
-
-    private bool showTowerStuff = true;
-
-    [SerializeField]
-    bool showLevel1 = false;
-    [SerializeField]
-    bool showLevel2 = false;
-
     public override void OnInspectorGUI()
     {
         //This the basic unity gui
         //base.OnInspectorGUI();
 
         RandomGenStorageSO currentScriptable = (RandomGenStorageSO)target;
+
+        
+        if (showPreview)
+        {
+            if (GUILayout.Button("Disable Preview"))
+            {
+                showPreview = false;
+            }
+        }
+        else
+        {
+            if (GUILayout.Button("Show Preview"))
+            {
+                showPreview = true;
+            }
+        }
+
+
 
         //The slider for the tower spread
         //We also want to invert the slider so that 99 on screen is 1 in code
