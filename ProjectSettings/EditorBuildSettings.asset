@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 9c6485b754b0b054fbef8eabf85d4e43
   - enabled: 0
-    path: Assets/Prefab Editing scene.unity
+    path: Assets/Scenes/Prefab Editing scene.unity
     guid: fd0667306ffb5bb45a6f5c85b44e731a
   - enabled: 1
     path: Assets/Scenes/Better procedural.unity
