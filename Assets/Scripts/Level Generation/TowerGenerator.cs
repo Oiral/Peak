@@ -115,7 +115,7 @@ public class TowerGenerator : MonoBehaviour
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
 
-            Debug.Log(towerStorage.GenListMax);
+            //Debug.Log(towerStorage.GenListMax);
 
             if (towerStorage.GenListMax > 0 && connectionsToConnect.Count > towerStorage.GenListMax)
             {
@@ -498,4 +498,17 @@ public class TowerGenerator : MonoBehaviour
         foreach (Transform child in root)
             MoveToLayer(child, layer);
     }
+
+#if UNITY_EDITOR
+    private void OnDrawGizmos()
+    {
+        //Debug.Log(generatedParts.Count);
+        if (generatedParts.Count <= 0)
+        {
+            Gizmos.color = Color.blue;
+
+            Gizmos.DrawCube(transform.position + (Vector3.up * 0.5f), new Vector3(2, 1, 3));
+        }
+    }
+#endif
 }
