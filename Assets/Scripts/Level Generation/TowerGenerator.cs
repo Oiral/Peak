@@ -503,7 +503,7 @@ public class TowerGenerator : MonoBehaviour
     private void OnDrawGizmos()
     {
         //Debug.Log(generatedParts.Count);
-        if (generatedParts.Count <= 0)
+        if (generatedParts == null || generatedParts.Count <= 0)
         {
             Gizmos.color = Color.blue;
 
