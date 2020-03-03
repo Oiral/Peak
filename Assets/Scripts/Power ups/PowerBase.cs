@@ -11,7 +11,7 @@ public class PowerBase : MonoBehaviour
     private void Start()
     {
         powerBar = GetComponentInChildren<PowerBar>();
-        Debug.Log(powerBar,powerBar.gameObject);
+        //Debug.Log(powerBar,powerBar.gameObject);
         powerBar.UpdateFuel(currentFuel, maxFuel);
     }
 
