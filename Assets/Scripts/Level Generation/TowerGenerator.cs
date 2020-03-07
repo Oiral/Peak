@@ -125,7 +125,7 @@ public class TowerGenerator : MonoBehaviour
                     connectionsToConnect.RemoveAt(0);
                 }
             }
-            Debug.Log(connectionsToConnect.Count);
+            //Debug.Log(connectionsToConnect.Count);
 
 
             //If we have not run out of availiable places to place the tower
@@ -252,7 +252,9 @@ public class TowerGenerator : MonoBehaviour
     {
         //Spawn in the section
         GameObject spawnedObject = SpawnObject(objectToSpawn, transform);
-        
+
+        spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
+
         //Make sure we get all the connection points of the section
         TowerSection section = spawnedObject.GetComponent<TowerSection>();
         section.GetPoints();
@@ -511,4 +513,12 @@ public class TowerGenerator : MonoBehaviour
         }
     }
 #endif
+
+    public void UnParentAllPieces()
+    {
+        for (int i = 0; i < generatedParts.Count; i++)
+        {
+            generatedParts[i].transform.parent = transform;
+        } 
+    }
 }

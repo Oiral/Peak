@@ -21,6 +21,8 @@ class SteamStatsAndAchievements : MonoBehaviour
         new Achievement_t(Achievement.ACH_TRAVEL_FAR_ACCUM, "Interstellar", ""),
         new Achievement_t(Achievement.ACH_TRAVEL_FAR_SINGLE, "Orbiter", "")
     };
+    
+    public bool showDebug;
 
     // Our GameID
     private CGameID m_GameID;
@@ -148,6 +150,11 @@ class SteamStatsAndAchievements : MonoBehaviour
             // If this failed, we never sent anything to the server, try
             // again later.
             m_bStoreStats = !bSuccess;
+        }
+
+        if (showDebug)
+        {
+            Render();
         }
     }
 
@@ -334,4 +341,5 @@ class SteamStatsAndAchievements : MonoBehaviour
             m_bAchieved = false;
         }
     }
+    
 }
