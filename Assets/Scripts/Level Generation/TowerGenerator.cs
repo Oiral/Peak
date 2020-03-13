@@ -253,7 +253,7 @@ public class TowerGenerator : MonoBehaviour
         //Spawn in the section
         GameObject spawnedObject = SpawnObject(objectToSpawn, transform);
 
-        spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
+        //spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
 
         //Make sure we get all the connection points of the section
         TowerSection section = spawnedObject.GetComponent<TowerSection>();
@@ -320,9 +320,9 @@ public class TowerGenerator : MonoBehaviour
         }
         
         //Position section inline with the connection point it's trying to conenct to
-        sectionPos += connectionPoint.transform.position;
+        sectionPos = connectionPoint.transform.position;
         //Move the spawned Section with the offset of the connection points it's connecing with
-        sectionPos += -connectionUsedToConnect.gameObject.transform.localPosition;
+        sectionPos += transform.position - connectionUsedToConnect.gameObject.transform.position;
 
         spawnedObject.transform.position = sectionPos;
 
