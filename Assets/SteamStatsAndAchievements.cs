@@ -3,25 +3,11 @@ using System.Collections;
 using System.ComponentModel;
 using Steamworks;
 
+public enum AchievementType : int {Climb, Tower ,misc};
+
 // This is a port of StatsAndAchievements.cpp from SpaceWar, the official Steamworks Example.
 class SteamStatsAndAchievements : MonoBehaviour
 {
-    private enum Achievement : int
-    {
-        ACH_WIN_ONE_GAME,
-        ACH_WIN_100_GAMES,
-        ACH_HEAVY_FIRE,
-        ACH_TRAVEL_FAR_ACCUM,
-        ACH_TRAVEL_FAR_SINGLE,
-    };
-
-    private Achievement_t[] m_Achievements = new Achievement_t[] {
-        new Achievement_t(Achievement.ACH_WIN_ONE_GAME, "Winner", ""),
-        new Achievement_t(Achievement.ACH_WIN_100_GAMES, "Champion", ""),
-        new Achievement_t(Achievement.ACH_TRAVEL_FAR_ACCUM, "Interstellar", ""),
-        new Achievement_t(Achievement.ACH_TRAVEL_FAR_SINGLE, "Orbiter", "")
-    };
-    
     public bool showDebug;
 
     // Our GameID
@@ -33,19 +19,6 @@ class SteamStatsAndAchievements : MonoBehaviour
 
     // Should we store stats this frame?
     private bool m_bStoreStats;
-
-    // Current Stat details
-    private float m_flGameFeetTraveled;
-    private float m_ulTickCountGameStart;
-    private double m_flGameDurationSeconds;
-
-    // Persisted Stat details
-    private int m_nTotalGamesPlayed;
-    private int m_nTotalNumWins;
-    private int m_nTotalNumLosses;
-    private float m_flTotalFeetTraveled;
-    private float m_flMaxFeetTraveled;
-    private float m_flAverageSpeed;
 
     protected Callback<UserStatsReceived_t> m_UserStatsReceived;
     protected Callback<UserStatsStored_t> m_UserStatsStored;
@@ -69,6 +42,14 @@ class SteamStatsAndAchievements : MonoBehaviour
     }
 
     private void Update()
+    {
+        CheckSteam();
+        TrackStats();
+    }
+
+    #region STEAM
+
+    private void CheckSteam()
     {
         if (!SteamManager.Initialized)
             return;
@@ -100,34 +81,33 @@ class SteamStatsAndAchievements : MonoBehaviour
         {
             if (achievement.m_bAchieved)
                 continue;
+            //Make a switch for the type
 
-            switch (achievement.m_eAchievementID)
+            /*
+            switch (achievement.m_achievementType)
             {
-                case Achievement.ACH_WIN_ONE_GAME:
+                case AchievementType.Climb:
                     if (m_nTotalNumWins != 0)
                     {
                         UnlockAchievement(achievement);
                     }
                     break;
-                case Achievement.ACH_WIN_100_GAMES:
-                    if (m_nTotalNumWins >= 100)
+
+                case AchievementType.Tower:
+                    if (m_nTotalNumWins != 0)
                     {
                         UnlockAchievement(achievement);
                     }
                     break;
-                case Achievement.ACH_TRAVEL_FAR_ACCUM:
-                    if (m_flTotalFeetTraveled >= 5280)
+
+                case AchievementType.misc:
+                    if (m_nTotalNumWins != 0)
                     {
                         UnlockAchievement(achievement);
                     }
                     break;
-                case Achievement.ACH_TRAVEL_FAR_SINGLE:
-                    if (m_flGameFeetTraveled >= 500)
-                    {
-                        UnlockAchievement(achievement);
-                    }
-                    break;
-            }
+            }*/
+
         }
 
         //Store stats in the Steam database if necessary
@@ -136,15 +116,13 @@ class SteamStatsAndAchievements : MonoBehaviour
             // already set any achievements in UnlockAchievement
 
             // set stats
-            SteamUserStats.SetStat("NumGames", m_nTotalGamesPlayed);
-            SteamUserStats.SetStat("NumWins", m_nTotalNumWins);
-            SteamUserStats.SetStat("NumLosses", m_nTotalNumLosses);
-            SteamUserStats.SetStat("FeetTraveled", m_flTotalFeetTraveled);
-            SteamUserStats.SetStat("MaxFeetTraveled", m_flMaxFeetTraveled);
+            SteamUserStats.SetStat("Height", yClimb);
+            /*
             // Update average feet / second stat
             SteamUserStats.UpdateAvgRateStat("AverageSpeed", m_flGameFeetTraveled, m_flGameDurationSeconds);
             // The averaged result is calculated for us
             SteamUserStats.GetStat("AverageSpeed", out m_flAverageSpeed);
+            */
 
             bool bSuccess = SteamUserStats.StoreStats();
             // If this failed, we never sent anything to the server, try
@@ -163,7 +141,7 @@ class SteamStatsAndAchievements : MonoBehaviour
     //-----------------------------------------------------------------------------
     public void AddDistanceTraveled(float flDistance)
     {
-        m_flGameFeetTraveled += flDistance;
+        //m_flGameFeetTraveled += flDistance;
     }
     
     //-----------------------------------------------------------------------------
@@ -193,6 +171,8 @@ class SteamStatsAndAchievements : MonoBehaviour
             return;
 
         // we may get callbacks for other games' stats arriving, ignore them
+        Debug.Log(m_GameID);
+
         if ((ulong)m_GameID == pCallback.m_nGameID)
         {
             if (EResult.k_EResultOK == pCallback.m_eResult)
@@ -217,12 +197,7 @@ class SteamStatsAndAchievements : MonoBehaviour
                 }
 
                 // load stats
-                SteamUserStats.GetStat("NumGames", out m_nTotalGamesPlayed);
-                SteamUserStats.GetStat("NumWins", out m_nTotalNumWins);
-                SteamUserStats.GetStat("NumLosses", out m_nTotalNumLosses);
-                SteamUserStats.GetStat("FeetTraveled", out m_flTotalFeetTraveled);
-                SteamUserStats.GetStat("MaxFeetTraveled", out m_flMaxFeetTraveled);
-                SteamUserStats.GetStat("AverageSpeed", out m_flAverageSpeed);
+                SteamUserStats.GetStat("Height", out yClimb);
             }
             else
             {
@@ -291,18 +266,12 @@ class SteamStatsAndAchievements : MonoBehaviour
             return;
         }
 
-        GUILayout.Label("m_ulTickCountGameStart: " + m_ulTickCountGameStart);
-        GUILayout.Label("m_flGameDurationSeconds: " + m_flGameDurationSeconds);
-        GUILayout.Label("m_flGameFeetTraveled: " + m_flGameFeetTraveled);
+        GUILayout.Label("Height Climbed: " + yClimb);
+        GUILayout.Label("Horizontal Moved: " + horizontalMovement);
+        GUILayout.Label("Max Speed: " + maxSpeed);
         GUILayout.Space(10);
-        GUILayout.Label("NumGames: " + m_nTotalGamesPlayed);
-        GUILayout.Label("NumWins: " + m_nTotalNumWins);
-        GUILayout.Label("NumLosses: " + m_nTotalNumLosses);
-        GUILayout.Label("FeetTraveled: " + m_flTotalFeetTraveled);
-        GUILayout.Label("MaxFeetTraveled: " + m_flMaxFeetTraveled);
-        GUILayout.Label("AverageSpeed: " + m_flAverageSpeed);
 
-        GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, 800));
+    GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, 800));
         foreach (Achievement_t ach in m_Achievements)
         {
             GUILayout.Label(ach.m_eAchievementID.ToString());
@@ -320,12 +289,53 @@ class SteamStatsAndAchievements : MonoBehaviour
         GUILayout.EndArea();
     }
 
+    #endregion
+
+
+    #region AchievementData
     private class Achievement_t
     {
         public Achievement m_eAchievementID;
         public string m_strName;
         public string m_strDescription;
         public bool m_bAchieved;
+        public AchievementType m_achievementType;
+        public float m_value;
+
+        /// <summary>
+        /// Creates an Achievement. You must also mirror the data provided here in https://partner.steamgames.com/apps/achievements/yourappid
+        /// </summary>
+        /// <param name="achievement">The "API Name Progress Stat" used to uniquely identify the achievement.</param>
+        /// <param name="name">The "Display Name" that will be shown to players in game and on the Steam Community.</param>
+        /// <param name="desc">The "Description" that will be shown to players in game and on the Steam Community.</param>
+        /// <param name="type">The type of achievement</param>
+        /// <param name="value">Only required if this needs to have a value</param>
+        public Achievement_t(Achievement achievementID, string name, string desc, AchievementType type, float value)
+        {
+            m_eAchievementID = achievementID;
+            m_strName = name;
+            m_strDescription = desc;
+            m_achievementType = type;
+            m_value = value;
+            m_bAchieved = false;
+        }
+
+        /// <summary>
+        /// Creates an Achievement. You must also mirror the data provided here in https://partner.steamgames.com/apps/achievements/yourappid
+        /// </summary>
+        /// <param name="achievement">The "API Name Progress Stat" used to uniquely identify the achievement.</param>
+        /// <param name="name">The "Display Name" that will be shown to players in game and on the Steam Community.</param>
+        /// <param name="desc">The "Description" that will be shown to players in game and on the Steam Community.</param>
+        /// <param name="type">The type of achievement</param>
+        public Achievement_t(Achievement achievementID, string name, string desc, AchievementType type)
+        {
+            m_eAchievementID = achievementID;
+            m_strName = name;
+            m_strDescription = desc;
+            m_achievementType = type;
+            m_value = 0;
+            m_bAchieved = false;
+        }
 
         /// <summary>
         /// Creates an Achievement. You must also mirror the data provided here in https://partner.steamgames.com/apps/achievements/yourappid
@@ -338,8 +348,86 @@ class SteamStatsAndAchievements : MonoBehaviour
             m_eAchievementID = achievementID;
             m_strName = name;
             m_strDescription = desc;
+            m_achievementType = AchievementType.misc;
+            m_value = 0;
             m_bAchieved = false;
         }
     }
-    
+
+    private enum Achievement : int
+    {
+        Height_1,
+        Height_2,
+        Height_3,
+        Height_4,
+        Height_5,
+        Tower_Climb_1,
+        Tower_Climb_2,
+        Tower_Climb_3,
+        Tower_Climb_4
+
+    };
+
+    //Defining the achievements
+    private Achievement_t[] m_Achievements = new Achievement_t[] {
+        new Achievement_t(Achievement.Height_1, "Big Ben", "Climbed 96 meters", AchievementType.Climb, 96),
+        new Achievement_t(Achievement.Height_2, "Eiffel Tower", "Climbed 324 meters", AchievementType.Climb, 324),
+        new Achievement_t(Achievement.Height_3, "Buj Khalifa", "Climbed 828 meters", AchievementType.Climb, 828),
+        new Achievement_t(Achievement.Height_4, "Grand Canyon", "Climbed 1857 meters", AchievementType.Climb, 1857),
+        new Achievement_t(Achievement.Height_5, "Mount Everest", "Climbed 8848 meters", AchievementType.Climb, 8848),
+
+        new Achievement_t(Achievement.Tower_Climb_1, "What goes up, must come down", "Reached the top of 1 Tower", AchievementType.Tower, 1),
+        new Achievement_t(Achievement.Tower_Climb_2, "Hat Trick", "Reached the top of 3 Towers", AchievementType.Tower, 3),
+        new Achievement_t(Achievement.Tower_Climb_3, "Bakers Dozen", "Reached the top of 13 Towers", AchievementType.Tower, 13),
+        new Achievement_t(Achievement.Tower_Climb_4, "Spire God", "Reached the top of 20 Towers", AchievementType.Tower, 20)
+    };
+
+    #endregion
+
+    #region trackStats
+    public float yClimb;
+    public float horizontalMovement;
+    public float maxSpeed;
+
+    public Transform trackingObject;
+
+    private Vector3 prevPos = Vector3.zero;
+
+    bool drawGizmo;
+    public float checkDistance = 1f;
+
+    private void TrackStats()
+    {
+        if (Vector3.Distance(trackingObject.position, prevPos) < checkDistance)
+            return;
+
+        Vector3 difference = trackingObject.position - prevPos;
+
+        if (difference.y > 0)
+        {
+            yClimb += difference.y;
+        }
+
+        if (maxSpeed < difference.magnitude)
+        {
+            maxSpeed = difference.magnitude;
+        }
+
+        difference.y = 0;
+        horizontalMovement += difference.magnitude;
+
+
+        prevPos = trackingObject.position;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (Application.isPlaying)
+        {
+
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawWireCube(prevPos, Vector3.one * checkDistance);
+        }
+    }
+    #endregion
 }
