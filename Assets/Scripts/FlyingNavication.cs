@@ -9,21 +9,32 @@ public class FlyingNavication : MonoBehaviour
 
 
 
-
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Rigidbody>().AddTorque(Vector3.up * Input.GetAxis("Mouse X") * LookForce);
-        GetComponent<Rigidbody>().AddRelativeTorque(Vector3.right * Input.GetAxis("Mouse Y") * LookForce *-1);
-        GetComponent<Rigidbody>().AddRelativeForce(Vector3.right * Input.GetAxis("Horizontal") * MovementForce);
-        GetComponent<Rigidbody>().AddRelativeForce(Vector3.forward * Input.GetAxis("Vertical") * MovementForce);
+        rb.AddTorque(Vector3.up * Input.GetAxis("Mouse X") * LookForce);
+        rb.AddRelativeTorque(Vector3.right * Input.GetAxis("Mouse Y") * LookForce *-1);
+        rb.AddRelativeForce(Vector3.right * Input.GetAxis("Horizontal") * MovementForce);
+        rb.AddRelativeForce(Vector3.forward * Input.GetAxis("Vertical") * MovementForce);
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0.0f);
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            rb.AddForce(Vector3.up * MovementForce);
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rb.AddForce(-Vector3.up * MovementForce);
+        }
+
     }
 }

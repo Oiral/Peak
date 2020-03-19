@@ -47,6 +47,14 @@ class SteamStatsAndAchievements : MonoBehaviour
         TrackStats();
     }
 
+    private void OnGUI()
+    {
+        if (showDebug)
+        {
+            Render();
+        }
+    }
+
     #region STEAM
 
     private void CheckSteam()
@@ -82,6 +90,21 @@ class SteamStatsAndAchievements : MonoBehaviour
             if (achievement.m_bAchieved)
                 continue;
             //Make a switch for the type
+            switch (achievement.m_achievementType)
+            {
+                case AchievementType.Climb:
+                    if (yClimb > achievement.m_value)
+                    {
+                        UnlockAchievement(achievement);
+                    }
+
+                    break;
+                case AchievementType.Tower:
+                    break;
+                case AchievementType.misc:
+                    break;
+            }
+
 
             /*
             switch (achievement.m_achievementType)
@@ -129,11 +152,6 @@ class SteamStatsAndAchievements : MonoBehaviour
             // again later.
             m_bStoreStats = !bSuccess;
         }
-
-        if (showDebug)
-        {
-            Render();
-        }
     }
 
     //-----------------------------------------------------------------------------
@@ -171,7 +189,7 @@ class SteamStatsAndAchievements : MonoBehaviour
             return;
 
         // we may get callbacks for other games' stats arriving, ignore them
-        Debug.Log(m_GameID);
+        Debug.Log(pCallback.m_eResult);
 
         if ((ulong)m_GameID == pCallback.m_nGameID)
         {
@@ -270,22 +288,25 @@ class SteamStatsAndAchievements : MonoBehaviour
         GUILayout.Label("Horizontal Moved: " + horizontalMovement);
         GUILayout.Label("Max Speed: " + maxSpeed);
         GUILayout.Space(10);
-
-    GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, 800));
-        foreach (Achievement_t ach in m_Achievements)
-        {
-            GUILayout.Label(ach.m_eAchievementID.ToString());
-            GUILayout.Label(ach.m_strName + " - " + ach.m_strDescription);
-            GUILayout.Label("Achieved: " + ach.m_bAchieved);
-            GUILayout.Space(20);
-        }
-
-        // FOR TESTING PURPOSES ONLY!
         if (GUILayout.Button("RESET STATS AND ACHIEVEMENTS"))
         {
             SteamUserStats.ResetAllStats(true);
             SteamUserStats.RequestCurrentStats();
         }
+
+
+        GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, 800));
+
+            foreach (Achievement_t ach in m_Achievements)
+            {
+                GUILayout.Label(ach.m_eAchievementID.ToString());
+                GUILayout.Label(ach.m_strName + " - " + ach.m_strDescription);
+                GUILayout.Label("Achieved: " + ach.m_bAchieved);
+                GUILayout.Space(20);
+            }
+
+        // FOR TESTING PURPOSES ONLY!
+        
         GUILayout.EndArea();
     }
 
@@ -424,7 +445,6 @@ class SteamStatsAndAchievements : MonoBehaviour
     {
         if (Application.isPlaying)
         {
-
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireCube(prevPos, Vector3.one * checkDistance);
         }

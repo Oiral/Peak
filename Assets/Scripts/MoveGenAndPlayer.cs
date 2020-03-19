@@ -11,10 +11,18 @@ public class MoveGenAndPlayer : MonoBehaviour
 
     public float extraDropHeight;
 
+    public List<GameObject> playerObjects;
+
+    public float playerStopHeight;
+
     private void FixedUpdate()
     {
         if (moving)
         {
+            //Move the player
+
+            DropPlayer();
+
             Vector3 pos = transform.position;
             pos.y -= moveSpeed * Time.fixedDeltaTime;
 
@@ -34,13 +42,47 @@ public class MoveGenAndPlayer : MonoBehaviour
     [ContextMenu("Reset Tower")]
     public void ResetTower()
     {
-        
         //if (GetComponent<TowerGenerator>().generating == false && moving == false)
         //{
             TowerHeight = GetComponent<TowerGenerator>().towerHeight;
             moving = true;
         //}
-        
-        
     }
+
+    void DropPlayer()
+    {
+        foreach (GameObject playerToDrop in playerObjects)
+        {
+            if (playerToDrop.transform.position.y > playerStopHeight)
+            {
+                Vector3 pos = playerToDrop.transform.position;
+                pos.y -= moveSpeed * Time.fixedDeltaTime;
+
+                playerToDrop.transform.position = pos;
+            }
+        }
+    }
+
+#if UNITY_EDITOR
+
+    public bool showDebug;
+
+    private void OnDrawGizmos()
+    {
+        if (showDebug)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawCube(Vector3.one * playerStopHeight, new Vector3(10, 0, 10));
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            ResetTower();
+        }
+    }
+
+#endif
 }
