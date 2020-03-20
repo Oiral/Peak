@@ -8,6 +8,8 @@ public class PhysicsHand : MonoBehaviour
 {
     public GameObject hitCloudPrefab;
 
+    public float GrabStrength = 400;
+
     public float bigHitAmount = 5;
     public float minHitAmount = 2;
 
@@ -21,6 +23,7 @@ public class PhysicsHand : MonoBehaviour
 
     private GameObject nearHand;
     private GameObject grabbed;
+    private FixedJoint grabJoint;
 
     private bool Gripping = false;
 
@@ -39,24 +42,11 @@ public class PhysicsHand : MonoBehaviour
     [HideInInspector]
     public UnityEvent gripHold;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "ExternalCam")
-        {
-            nearHand = other.gameObject;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "ExternalCam")
-        {
-            nearHand = null;
-        }
-    }
 
     private void Update()
     {
+
+        //Physics Finger Grab when trigger is pressed
         Thumb.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FI.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
         FM.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
@@ -64,29 +54,67 @@ public class PhysicsHand : MonoBehaviour
         //FP.GetComponent<SpringJoint>().spring = SteamVR_Input.GetFloat("Squeeze", inputSource) * 5500 - 50;
 
 
+        // grab phisics object
+        if (SteamVR_Input.GetFloat("Squeeze", inputSource) >= 0.5)
+        {
+            //Grab
+            if (nearHand != null)
+            {
+                grabbed = nearHand;
+                grabJoint = grabbed.AddComponent<FixedJoint>() as FixedJoint;
+                grabJoint.connectedBody = GetComponent<Rigidbody>();
+                grabJoint.breakForce = GrabStrength;
+            }
+        }
+        else
+        {
+            //Release
+            if (grabbed != null)
+            {
+                Destroy(grabJoint);
+                grabbed = null;
+            }
+        }
+
+        //Grip input for powerups
         if (SteamVR_Input.GetState("GrabGrip", inputSource) == true)
         {
-            //GripButtonHeld();
             gripHold.Invoke();
 
             if (Gripping == false)
             {
                 Gripping = true;
                 gripDown.Invoke();
-                //GripButtonDown();
             }
         }
         else if (SteamVR_Input.GetState("GrabGrip", inputSource) == false && Gripping == true)
         {
             Gripping = false;
             gripUp.Invoke();
-            //GripButtonUp();
         }
     }
 
-    //void FixedUpdate(){
-    //  GetComponent<Rigidbody>().drag = 10F * (Vector3.Distance(Head.position, transform.position)*);
-    //}
+
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (grabbed == null)
+        {
+            if(other.GetComponentInParent<Rigidbody>() != null)
+            nearHand = other.gameObject;
+        }
+        else
+        {
+            nearHand = null;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        nearHand = null;
+    }
+
 
 
     private void OnCollisionEnter(Collision collision)
@@ -106,7 +134,7 @@ public class PhysicsHand : MonoBehaviour
     {
         if (grabPinch != null)
         {
-            grabPinch.AddOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
+           // grabPinch.AddOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
         }
     }
 
@@ -115,35 +143,7 @@ public class PhysicsHand : MonoBehaviour
     {
         if (grabPinch != null)
         {
-            grabPinch.RemoveOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
-        }
-    }
-
-    private void VRController_OnInteract_ButtonPressed(SteamVR_Action_Boolean action, SteamVR_Input_Sources sources, bool isConnected)
-    {
-        if (isConnected)
-        {
-            Debug.Log("Grab");
-            //Grab
-            if (nearHand != null)
-            {
-                grabbed = nearHand;
-                grabbed.AddComponent<FixedJoint>().connectedBody = GetComponent<Rigidbody>();
-                grabbed.GetComponent<Rigidbody>().drag = 0;
-                grabbed.GetComponent<Rigidbody>().drag = 0;
-            }
-        }
-        else
-        {
-            Debug.Log("Release");
-            //Release
-            if (grabbed != null)
-            {
-                Destroy(grabbed.GetComponent<FixedJoint>());
-                grabbed.GetComponent<Rigidbody>().drag = 5;
-                grabbed.GetComponent<Rigidbody>().angularDrag = 5;
-                grabbed = null;
-            }
+           // grabPinch.RemoveOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
         }
     }
 }
