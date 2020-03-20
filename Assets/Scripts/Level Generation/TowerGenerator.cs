@@ -42,8 +42,6 @@ public class TowerGenerator : MonoBehaviour
     {
         //Reset the level before we start to generate it again
         ResetLevel();
-        
-        
 
         //Get a new seed if needed
         if (randomiseSeed)
@@ -54,14 +52,45 @@ public class TowerGenerator : MonoBehaviour
         //We want this so we can generate the level with a seed
         randomGenerator = new SystemRandom(seed);
 
+        if (Application.isPlaying)
+        {
+            StartCoroutine(generateSlowly());
+        }
+        else
+        {
+            //Generate the bottom structure
+            GenerateBase();
+
+            //Generate the main section of the tower
+            GenerateMiddleSection();
+
+            //Lets get some stats for the tower
+
+            towerHeight = highestPoint.gameObject.transform.position.y;
+            //Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
+            //Generate "topSection"
+            //Find the highest point level
+            sizedSections highestSize = towerStorage.getSize(highestPoint.level);
+
+            if (highestSize != null)
+            {
+                GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
+            }
+
+        }
+    }
+
+    IEnumerator generateSlowly()
+    {
+        yield return 0;
         //Generate the bottom structure
         GenerateBase();
-
-        //Generate the main section of the tower
-        GenerateMiddleSection();
-
-        //Lets get some stats for the tower
         
+        //Generate the main section of the tower
+        yield return StartCoroutine( GenerateMiddleSectionSlowly() );
+        //Lets get some stats for the tower
+
+        yield return 0;
         towerHeight = highestPoint.gameObject.transform.position.y;
         //Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
         //Generate "topSection"
@@ -72,7 +101,6 @@ public class TowerGenerator : MonoBehaviour
         {
             GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
         }
-
     }
 
     void GenerateBase()
@@ -138,6 +166,37 @@ public class TowerGenerator : MonoBehaviour
         }
     }
 
+    IEnumerator GenerateMiddleSectionSlowly()
+    {
+        //Generate at most 1 less that the max as we need to put a topping section on top
+        for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize); i++)
+        {
+            //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
+            //If the current pool of generation is greater than the max
+
+            //Debug.Log(towerStorage.GenListMax);
+
+            if (towerStorage.GenListMax > 0 && connectionsToConnect.Count > towerStorage.GenListMax)
+            {
+                //Remove the first half of the list
+                for (int c = 0; c <= towerStorage.GenListMax / 2; c++)
+                {
+                    connectionsToConnect.RemoveAt(0);
+                }
+            }
+            //Debug.Log(connectionsToConnect.Count);
+
+
+            //If we have not run out of availiable places to place the tower
+            if (connectionsToConnect.Count > 0)
+            {
+                //Generate a section
+                GenerateRandomSection(connectionsToConnect[0]);
+                yield return 0;
+            }
+
+        }
+    }
 
     void GenerateRandomSection(TowerConnection connectionPoint)
     {
@@ -200,7 +259,14 @@ public class TowerGenerator : MonoBehaviour
             connectionsToConnect.Add(connectionPoint);
 
 #if UNITY_EDITOR
-            DestroyImmediate(spawnedSection);
+            if (!Application.isPlaying)
+            {
+                DestroyImmediate(spawnedSection);
+            }
+            else
+            {
+                Destroy(spawnedSection);
+            }
 
 #else
             Destroy(spawnedSection);
@@ -459,7 +525,14 @@ public class TowerGenerator : MonoBehaviour
         //Destroy all children
         var children = new List<GameObject>();
         foreach (Transform child in transform) children.Add(child.gameObject);
-        children.ForEach(child => DestroyImmediate(child));
+        if (!Application.isPlaying)
+        {
+            children.ForEach(child => DestroyImmediate(child));
+        }
+        else
+        {
+            children.ForEach(child => Destroy(child));
+        }
 
         //Reset the connections and generated parts list
         connectionsToConnect = new List<TowerConnection>();
