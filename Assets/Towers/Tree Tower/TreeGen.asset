@@ -62,6 +62,4 @@ MonoBehaviour:
     openInInspector: 1
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
-  chanceToNotSpawn: 0
-  enableRandomNoSpawn: 0
-  GenListMax: 0
+  GenListMax: 1

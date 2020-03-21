@@ -108,14 +108,14 @@ public class TowerGenerator : MonoBehaviour
         //Get the largest size to start with
         List<GameObject> startingList = new List<GameObject>();
 
-        //Check if there is some horizontal points that we can spawn
-        //If not try spawn in vertical
-        if (towerStorage.getLargestSize().horizontal.Count > 0)
-        {
-            startingList = towerStorage.getLargestSize().horizontal;
-        }else if (towerStorage.getLargestSize().vertical.Count > 0)
+        //Try spawn in vertical, If there are none, Spawn in horizontal
+        if (towerStorage.getLargestSize().vertical.Count > 0)
         {
             startingList = towerStorage.getLargestSize().vertical;
+        }
+        else if (towerStorage.getLargestSize().horizontal.Count > 0)
+        {
+            startingList = towerStorage.getLargestSize().horizontal;
         }
         else
         {

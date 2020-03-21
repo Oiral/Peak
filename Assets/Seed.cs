@@ -6,4 +6,6 @@ public class Seed : MonoBehaviour
 {
     public RandomGenStorageSO storage;
     public int towerSeed;
+
+
 }
