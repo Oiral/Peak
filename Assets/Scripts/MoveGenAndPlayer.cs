@@ -5,15 +5,15 @@ using UnityEngine;
 public class MoveGenAndPlayer : MonoBehaviour
 {
     private bool moving;
-    public float moveSpeed = 1f;
+    public float moveSpeed = 50f;
 
     public float TowerHeight;
 
-    public float extraDropHeight;
+    public float extraDropHeight = 50f;
 
-    public List<GameObject> playerObjects;
+    public List<GameObject> playerObjects = new List<GameObject>();
 
-    public float playerStopHeight;
+    public float playerStopHeight = 1f;
 
     private void FixedUpdate()
     {

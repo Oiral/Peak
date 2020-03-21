@@ -9,28 +9,28 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Level Testing.unity
     guid: 268cc272ae179c448898b4a66d4dab9d
   - enabled: 0
-    path: Assets/Scenes/Starting Scene.unity
+    path: Assets/Scenes/Early Levels/Starting Scene.unity
     guid: 525d2f9d02993e94897ee975413ca11c
   - enabled: 0
-    path: Assets/Scenes/Transition.unity
+    path: Assets/Scenes/Early Levels/Transition.unity
     guid: 79796e6371de668419bb68f66546f5f6
   - enabled: 0
-    path: Assets/Scenes/Test Scene.unity
+    path: Assets/Scenes/Early Levels/Test Scene.unity
     guid: fc93627e34c1f8a4baefc7e96c28fac7
   - enabled: 0
-    path: Assets/Scenes/Transition Invisible.unity
+    path: Assets/Scenes/Early Levels/Transition Invisible.unity
     guid: f3bb2dcfddd1ce943a6a61b43ca20cba
   - enabled: 0
-    path: Assets/Scenes/Middle Scene.unity
+    path: Assets/Scenes/Early Levels/Middle Scene.unity
     guid: f71bcfd834f33784da23c7fac6eed567
   - enabled: 0
-    path: Assets/Scenes/Greece Scene.unity
+    path: Assets/Scenes/Early Levels/Greece Scene.unity
     guid: de48c17926789f846a27e516f4e8ba4e
   - enabled: 0
-    path: Assets/Scenes/Tall Towers.unity
+    path: Assets/Scenes/Early Levels/Tall Towers.unity
     guid: b558e9a1dc7a6cc448b4aa0230a73fd3
   - enabled: 0
-    path: Assets/Scenes/Mountain.unity
+    path: Assets/Scenes/Early Levels/Mountain.unity
     guid: 5e36e54b101ff6d4da07f6a4838e7f23
   - enabled: 0
     path: Assets/Scenes/Main Menu.unity
