@@ -16,6 +16,7 @@ TagManager:
   - Fingers
   - Button
   - Hand
+  - Seed Topper
   layers:
   - Default
   - TransparentFX

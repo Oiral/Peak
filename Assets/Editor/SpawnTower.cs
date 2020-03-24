@@ -27,4 +27,34 @@ public static class SpawnTower
 
         Selection.activeObject = go;
     }
+
+    [MenuItem("Tower Menu/Spawn Seed")]
+    static void SpawnSeed()
+    {
+        GameObject go = new GameObject("Seed");
+
+        Seed seed = go.AddComponent<Seed>();
+        seed.towerSeed = Random.Range(10000, 99999);
+
+        if (Selection.activeObject.GetType() == typeof(RandomGenStorageSO))
+        {
+            seed.storage = (RandomGenStorageSO)Selection.activeObject;
+        }
+
+        Undo.RegisterCreatedObjectUndo((Object)go, "Undo Spawn Seed");
+        Selection.activeObject = go;
+    }
+
+    [MenuItem("Tower Menu/Spawn Seed Spot")]
+    static void SpawnSeedSpot()
+    {
+        GameObject go = new GameObject("Seed Spot");
+
+        go.AddComponent<SeedSpot>().showDebug = true;
+
+        go.tag = "Seed Topper";
+
+        Undo.RegisterCreatedObjectUndo((Object)go, "Undo Spawn Seed Spot");
+        Selection.activeObject = go;
+    }
 }

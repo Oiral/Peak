@@ -17,6 +17,7 @@ public class TowerGenerator : MonoBehaviour
     public bool randomiseSeed;
     SystemRandom randomGenerator = new SystemRandom();
     public int seed;
+    public GameObject seedPrefab;
 
     [Header("Tower Info")]
     public int maxSize;
@@ -406,6 +407,21 @@ public class TowerGenerator : MonoBehaviour
         generatedParts.Add(spawnedObject);
 
         return spawnedObject;
+    }
+
+    void GenerateSeed()
+    {
+        //Find the last generated part (this should have the game object correctly attached
+        Transform topper = Helper.FindComponentInChildWithTag<Transform>(generatedParts[generatedParts.Count - 1], "Seed Topper");
+
+        if (topper == null)
+        {
+            Debug.LogError("Found no topper and the top of the tower", gameObject);
+        }
+
+        GameObject spawnedSeed = Instantiate(seedPrefab, pos, Quaternion.identity, null);
+        spawnedSeed
+
     }
 
     List<TowerConnection> GetCorrectSize(List<TowerConnection> connections, int level)
