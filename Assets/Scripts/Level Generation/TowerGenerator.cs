@@ -28,6 +28,7 @@ public class TowerGenerator : MonoBehaviour
 
     [HideInInspector]
     public TowerConnection highestPoint;
+    private GameObject endPoint;
 
     private List<GameObject> nextSelectablePrefabs;
 
@@ -77,7 +78,7 @@ public class TowerGenerator : MonoBehaviour
             {
                 GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
             }
-
+            GenerateSeed();
         }
     }
 
@@ -102,6 +103,7 @@ public class TowerGenerator : MonoBehaviour
         {
             GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
         }
+        GenerateSeed();
     }
 
     void GenerateBase()
@@ -145,16 +147,7 @@ public class TowerGenerator : MonoBehaviour
             //If the current pool of generation is greater than the max
 
             //Debug.Log(towerStorage.GenListMax);
-
-            if (towerStorage.GenListMax > 0 && connectionsToConnect.Count > towerStorage.GenListMax)
-            {
-                //Remove the first half of the list
-                for (int c = 0; c <= towerStorage.GenListMax / 2; c++)
-                {
-                    connectionsToConnect.RemoveAt(0);
-                }
-            }
-            //Debug.Log(connectionsToConnect.Count);
+            //RemoveHalfConnections(towerStorage.GenListMax);
 
 
             //If we have not run out of availiable places to place the tower
@@ -176,17 +169,7 @@ public class TowerGenerator : MonoBehaviour
             //If the current pool of generation is greater than the max
 
             //Debug.Log(towerStorage.GenListMax);
-
-            if (towerStorage.GenListMax > 0 && connectionsToConnect.Count > towerStorage.GenListMax)
-            {
-                //Remove the first half of the list
-                for (int c = 0; c <= towerStorage.GenListMax / 2; c++)
-                {
-                    connectionsToConnect.RemoveAt(0);
-                }
-            }
-            //Debug.Log(connectionsToConnect.Count);
-
+            //RemoveHalfConnections(towerStorage.GenListMax);
 
             //If we have not run out of availiable places to place the tower
             if (connectionsToConnect.Count > 0)
@@ -197,6 +180,19 @@ public class TowerGenerator : MonoBehaviour
             }
 
         }
+    }
+
+    void RemoveHalfConnections(int maxListSize)
+    {
+            if (maxListSize > 0 && connectionsToConnect.Count > maxListSize)
+            {
+                //Remove the first half of the list
+                for (int c = 0; c <= towerStorage.GenListMax / 2; c++)
+                {
+                    connectionsToConnect.RemoveAt(0);
+                }
+            }
+            //Debug.Log(connectionsToConnect.Count);
     }
 
     void GenerateRandomSection(TowerConnection connectionPoint)
@@ -277,7 +273,6 @@ public class TowerGenerator : MonoBehaviour
         }
     }
 
-
     //We want to end generating the top of the tower (the vertical section)
     void GenerateEndSection(TowerConnection connectionPoint, GameObject horiztonalToSpawn, GameObject verticalToSpawn)
     {
@@ -306,7 +301,9 @@ public class TowerGenerator : MonoBehaviour
         }
 
         //Generate the end section Either horizontal or vertical
-        GenerateSection(toSpawn, connectionPoint);
+        endPoint = GenerateSection(toSpawn, connectionPoint);
+
+       
 
         //If its horizontal we want to end on the vertical so create the end section
         if (horizontal)
@@ -388,6 +385,10 @@ public class TowerGenerator : MonoBehaviour
         
         //Position section inline with the connection point it's trying to conenct to
         sectionPos = connectionPoint.transform.position;
+        if (connectionUsedToConnect == null)
+        {
+            Debug.Log("Thingy", connectionPoint.gameObject);
+        }
         //Move the spawned Section with the offset of the connection points it's connecing with
         sectionPos += transform.position - connectionUsedToConnect.gameObject.transform.position;
 
@@ -412,16 +413,18 @@ public class TowerGenerator : MonoBehaviour
     void GenerateSeed()
     {
         //Find the last generated part (this should have the game object correctly attached
-        Transform topper = Helper.FindComponentInChildWithTag<Transform>(generatedParts[generatedParts.Count - 1], "Seed Topper");
+        Transform topper = Helper.FindComponentInChildWithTag<Transform>(endPoint, "Seed Topper");
 
         if (topper == null)
         {
             Debug.LogError("Found no topper and the top of the tower", gameObject);
+            return;
         }
 
-        GameObject spawnedSeed = Instantiate(seedPrefab, pos, Quaternion.identity, null);
-        spawnedSeed
-
+        GameObject spawnedSeed = Instantiate(seedPrefab, topper.position, Quaternion.identity, null);
+        Seed seedComp = spawnedSeed.GetComponent<Seed>();
+        seedComp.towerSeed = seed;
+        seedComp.storage = towerStorage;
     }
 
     List<TowerConnection> GetCorrectSize(List<TowerConnection> connections, int level)

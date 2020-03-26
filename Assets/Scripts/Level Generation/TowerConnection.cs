@@ -28,6 +28,7 @@ public class TowerConnection : MonoBehaviour
                 //pos.z = 1f / 5f;
                 size /= 4;
 
+                //Gizmos.DrawCube(pos, (Vector3.left + Vector3.forward) * (level / 3));
 
                 //Draw the Cube that shows which direction
                 //Show for vertical is we are above or below
@@ -63,5 +64,22 @@ public class TowerConnection : MonoBehaviour
                 break;
         }
         
+    }
+
+    [ContextMenu("Move to collider Below")]
+    private void MoveToBottomCollider()
+    {
+        RaycastHit hit;
+        // Does the ray intersect any objects excluding the player layer
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1f))
+        {
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow, 10f);
+            Debug.Log("Did Hit");
+            transform.position = hit.point;
+        }
+        else
+        {
+            Debug.DrawRay(transform.position, Vector3.down, Color.red, 2f);
+        }
     }
 }

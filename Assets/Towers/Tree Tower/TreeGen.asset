@@ -19,14 +19,12 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: d21269a6fcef59043ad1ddeb50fe9f7c, type: 3}
     - {fileID: 6773854277038703115, guid: 77d7f9cfd0d206c44a7207420ea857c9, type: 3}
     - {fileID: 6773854277038703115, guid: 5f54d4fbc81ad8241b71f83cd43f0a78, type: 3}
-    - {fileID: 6773854277038703115, guid: 2403f6c9a9793194a8e303da93e3a9ad, type: 3}
     horizontal:
     - {fileID: 6773854277038703115, guid: 6953ea810b533254f86bffc0f6c80a32, type: 3}
     - {fileID: 6773854277038703115, guid: e8170252b11116a4a8895b45a23ae84d, type: 3}
     - {fileID: 6773854277038703115, guid: fffaa18288e75df4abba6db4c52d9743, type: 3}
     - {fileID: 6773854277038703115, guid: d83fb6c6935fba1408e3fc193641c33b, type: 3}
     - {fileID: 6773854277038703115, guid: 8760b5bf417fc264584db0accadb2264, type: 3}
-    - {fileID: 6773854277038703115, guid: 7b533839a42f422429cf76330cfc3175, type: 3}
     verticalTop: {fileID: 6773854277038703115, guid: 2403f6c9a9793194a8e303da93e3a9ad,
       type: 3}
     horiztonalTop: {fileID: 6773854277038703115, guid: 7b533839a42f422429cf76330cfc3175,
