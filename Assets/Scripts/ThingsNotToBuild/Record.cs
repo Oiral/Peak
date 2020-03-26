@@ -7,6 +7,8 @@ using UnityEditor.Animations;
 public class Record : MonoBehaviour
 {
     public AnimationClip clip;
+    
+    private float RecordingLength = 0f;
 
     private GameObjectRecorder m_Recorder;
 
@@ -25,7 +27,8 @@ public class Record : MonoBehaviour
             return;
 
         // Take a snapshot and record all the bindings values for this frame.
-        m_Recorder.TakeSnapshot(Time.deltaTime);
+        m_Recorder.TakeSnapshot(Time.fixedDeltaTime);
+        
     }
 
     void OnDisable()
