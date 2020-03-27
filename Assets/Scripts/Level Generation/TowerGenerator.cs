@@ -18,21 +18,22 @@ public class TowerGenerator : MonoBehaviour
     SystemRandom randomGenerator = new SystemRandom();
     public int seed;
     public GameObject seedPrefab;
+    public float seedLengthMultiplier;
 
     [Header("Tower Info")]
     public int maxSize;
 
-    private List<TowerConnection> connectionsToConnect;
+    public List<TowerConnection> connectionsToConnect;
 
     private List<GameObject> generatedParts;
 
-    [HideInInspector]
+    //[HideInInspector]
     public TowerConnection highestPoint;
     private GameObject endPoint;
 
     private List<GameObject> nextSelectablePrefabs;
 
-    [HideInInspector]
+    //[HideInInspector]
     public float towerHeight;
 
     [Header("Layer")]
@@ -141,7 +142,7 @@ public class TowerGenerator : MonoBehaviour
     void GenerateMiddleSection()
     {
         //Generate at most 1 less that the max as we need to put a topping section on top
-        for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize); i++)
+        for (int i = 0; i < Mathf.RoundToInt(seed.ToString().Length * seedLengthMultiplier); i++)
         {
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
@@ -163,7 +164,7 @@ public class TowerGenerator : MonoBehaviour
     IEnumerator GenerateMiddleSectionSlowly()
     {
         //Generate at most 1 less that the max as we need to put a topping section on top
-        for (int i = 0; i < randomGenerator.Next(Mathf.Max(0, maxSize - 5), maxSize); i++)
+        for (int i = 0; i < Mathf.RoundToInt(seed.ToString().Length * seedLengthMultiplier); i++)
         {
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
