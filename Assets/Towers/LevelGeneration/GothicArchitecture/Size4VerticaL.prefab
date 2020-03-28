@@ -1952,6 +1952,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gutter (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2032,7 +2037,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
 --- !u!1001 &2119851029385887089
 PrefabInstance:
@@ -2045,6 +2051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gutter (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
@@ -2126,7 +2137,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
 --- !u!1001 &6468449027546127709
 PrefabInstance:
@@ -2139,6 +2151,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gutter (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
@@ -2220,7 +2237,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
 --- !u!1001 &7067123057331568272
 PrefabInstance:
@@ -2233,6 +2251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gutter (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
@@ -2309,7 +2332,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
 --- !u!1001 &7611177136863098863
 PrefabInstance:
@@ -2322,6 +2346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gutter (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
@@ -2398,7 +2427,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
 --- !u!1001 &7676159570385307915
 PrefabInstance:
@@ -2411,6 +2441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Gutter (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296660748191416815, guid: 7971001a4fda64f4fa7349f8b93515fa,
+        type: 3}
+      propertyPath: m_ConnectedBody
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5060077824736079901, guid: 7971001a4fda64f4fa7349f8b93515fa,
         type: 3}
@@ -2492,5 +2527,6 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1779703905065291152, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7971001a4fda64f4fa7349f8b93515fa, type: 3}
