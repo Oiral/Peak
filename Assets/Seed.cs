@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Seed : MonoBehaviour
 {
@@ -52,7 +52,7 @@ public class Seed : MonoBehaviour
         }
 
         //Change the seed text
-        GetComponentInChildren<Text>().text = internalSeed.ToString();
+        GetComponentInChildren<TextMeshPro>().text = internalSeed.ToString();
     }
 
 
