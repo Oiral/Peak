@@ -34,15 +34,20 @@ public class RandomGenStorageEditor : Editor
             }
         }
 
-
+        currentScriptable.seedVisualPrefab = EditorGUILayout.ObjectField("Seed Visual", currentScriptable.seedVisualPrefab, typeof(GameObject), false) as GameObject;
+        if (currentScriptable.seedVisualPrefab == null)
+        {
+            errorMessages = "Missing seed visual prefab";
+        }
 
         //The slider for the tower spread
         //We also want to invert the slider so that 99 on screen is 1 in code
+        /*
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.PrefixLabel("Tower Spread %");
         currentScriptable.GenListMax = 100 - EditorGUILayout.IntSlider(100 - currentScriptable.GenListMax, 0, 99);
         EditorGUILayout.EndHorizontal();
-
+        */
 
         GUILayout.Space(10);
 

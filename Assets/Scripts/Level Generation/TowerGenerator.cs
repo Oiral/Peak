@@ -20,20 +20,21 @@ public class TowerGenerator : MonoBehaviour
     public GameObject seedPrefab;
     public float seedLengthMultiplier;
 
-    [Header("Tower Info")]
-    public int maxSize;
+    //[Header("Tower Info")]
+    //public int maxSize;
 
+    [HideInInspector]
     public List<TowerConnection> connectionsToConnect;
 
     private List<GameObject> generatedParts;
 
-    //[HideInInspector]
+    [HideInInspector]
     public TowerConnection highestPoint;
     private GameObject endPoint;
 
     private List<GameObject> nextSelectablePrefabs;
 
-    //[HideInInspector]
+    [HideInInspector]
     public float towerHeight;
 
     [Header("Layer")]
@@ -580,6 +581,8 @@ public class TowerGenerator : MonoBehaviour
             MoveToLayer(spawnedObject.transform, layerToSetTowerPieces);
         }
 
+        spawnedObject.transform.localPosition = Vector3.zero;
+        spawnedObject.transform.localRotation = Quaternion.identity;
         return spawnedObject;
     }
 
