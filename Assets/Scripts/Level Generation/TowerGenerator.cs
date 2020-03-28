@@ -40,7 +40,9 @@ public class TowerGenerator : MonoBehaviour
     [Header("Layer")]
     public bool overideLayer = true;
     public int layerToSetTowerPieces;
-    
+
+    public GameObject topTrigger;
+
     [ContextMenu("Generate Tower")]
     public void GenerateTower()
     {
@@ -414,6 +416,7 @@ public class TowerGenerator : MonoBehaviour
 
     void GenerateSeed()
     {
+
         //Find the last generated part (this should have the game object correctly attached
         Transform topper = Helper.FindComponentInChildWithTag<Transform>(endPoint, "Seed Topper");
 
@@ -422,6 +425,12 @@ public class TowerGenerator : MonoBehaviour
             Debug.LogError("Found no topper and the top of the tower", gameObject);
             return;
         }
+
+        if (topTrigger != null)
+        {
+            topTrigger.transform.position = topper.position;
+        }
+
 
         GameObject spawnedSeed = Instantiate(seedPrefab, topper.position, Quaternion.identity, null);
         Seed seedComp = spawnedSeed.GetComponent<Seed>();
