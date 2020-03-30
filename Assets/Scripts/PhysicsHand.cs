@@ -101,8 +101,8 @@ public class PhysicsHand : MonoBehaviour
 
         if (grabbed == null)
         {
-            if(other.GetComponentInParent<Rigidbody>() != null)
-            nearHand = other.gameObject;
+            if(other.GetComponentInParent<Rigidbody>().gameObject.tag == "Pickupable")
+            nearHand = other.GetComponentInParent<Rigidbody>().gameObject;
         }
         else
         {
