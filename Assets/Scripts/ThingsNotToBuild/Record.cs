@@ -8,7 +8,7 @@ public class Record : MonoBehaviour
 {
     public AnimationClip clip;
     
-    private float RecordingLength = 0f;
+   // private float RecordingLength = 0f;
 
     private GameObjectRecorder m_Recorder;
 

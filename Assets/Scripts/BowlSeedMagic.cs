@@ -4,37 +4,54 @@ using UnityEngine;
 
 public class BowlSeedMagic : MonoBehaviour
 {
-
-    public float GrabForce = 20000f;
-    public Transform GrabPoint;
+    public float GrabForce = 10f;
+    public float ChuckForce = 1.5f;
+    // public Transform GrabPoint;
 
     private Rigidbody Seed;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(Seed != null)
+        if (Seed != null)
         {
             Seed.drag = 5;
             Seed.useGravity = false;
-            Seed.AddForce(GrabPoint.position - Seed.transform.position * GrabForce);
+            Seed.AddForce((this.transform.position - Seed.gameObject.transform.position) * GrabForce);            
         }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Rigidbody>().gameObject.tag == "Pickupable")
-            if(Seed != null)
+        if (other.GetComponentInParent<Rigidbody>() != null)
+        {
+            var oterRgedy = other.GetComponentInParent<Rigidbody>();
+            if (oterRgedy.gameObject.tag == "Pickupable")
             {
+                if (Seed != null)
+                {
+                    Seed.drag = 0;
+                    Seed.useGravity = true;
+                    Seed.AddForce(((GameObject.FindGameObjectsWithTag("Head")[0].transform.position + new Vector3(0,1,0)) - Seed.gameObject.transform.position) * ChuckForce, ForceMode.Impulse); 
+                }
+                Seed = oterRgedy;              
+            }
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponentInParent<Rigidbody>() != null)
+        {
+            var oterRgedby = other.GetComponentInParent<Rigidbody>();
+            if (oterRgedby == Seed)
+            { 
                 Seed.drag = 0;
                 Seed.useGravity = true;
+                Seed = null;                       
             }
-            Seed = other.GetComponentInParent<Rigidbody>();
+        }
     }
 }
+
 
