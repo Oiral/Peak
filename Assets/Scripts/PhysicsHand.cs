@@ -101,8 +101,15 @@ public class PhysicsHand : MonoBehaviour
 
         if (grabbed == null)
         {
-            if(other.GetComponentInParent<Rigidbody>().gameObject.tag == "Pickupable")
-            nearHand = other.GetComponentInParent<Rigidbody>().gameObject;
+            if (other != null)
+            {
+                if (other.GetComponentInParent<Rigidbody>() != null)
+                {
+                    var otherRigidbody = other.GetComponentInParent<Rigidbody>();
+                    if (otherRigidbody.gameObject.tag == "Pickupable")
+                        nearHand = otherRigidbody.gameObject;
+                }
+            }
         }
         else
         {
@@ -134,7 +141,7 @@ public class PhysicsHand : MonoBehaviour
     {
         if (grabPinch != null)
         {
-           // grabPinch.AddOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
+            // grabPinch.AddOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
         }
     }
 
@@ -143,7 +150,7 @@ public class PhysicsHand : MonoBehaviour
     {
         if (grabPinch != null)
         {
-           // grabPinch.RemoveOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
+            // grabPinch.RemoveOnChangeListener(VRController_OnInteract_ButtonPressed, inputSource);
         }
     }
 }
