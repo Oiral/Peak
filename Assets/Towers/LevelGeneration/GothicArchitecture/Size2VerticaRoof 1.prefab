@@ -1160,6 +1160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalConnectionPoints: []
   verticalConnectionPoints: []
+  type: 0
+  size: 
 --- !u!1 &3242023012481890219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2622,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6434247074816538142}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c0bdad4900bf6e45b5e6869a90019aa, type: 3}
   m_Name: 
@@ -3111,7 +3113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8137478883430609232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1c0bdad4900bf6e45b5e6869a90019aa, type: 3}
   m_Name: 
