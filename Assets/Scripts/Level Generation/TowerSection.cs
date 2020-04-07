@@ -11,6 +11,9 @@ public class TowerSection : MonoBehaviour
     [HideInInspector]
     public List<TowerConnection> verticalConnectionPoints;
 
+    [HideInInspector]
+    public TowerConnection connectedPiece;
+
     public SectionType type = SectionType.Vertical;
     public List<int> size;
 

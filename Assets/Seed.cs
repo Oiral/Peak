@@ -5,6 +5,8 @@ using TMPro;
 
 public class Seed : MonoBehaviour
 {
+    public GameObject currentSeedVisual;
+
     public RandomGenStorageSO storage {
         get
         {
@@ -55,6 +57,10 @@ public class Seed : MonoBehaviour
         GetComponentInChildren<TextMeshPro>().text = internalSeed.ToString();
     }
 
+    private void Start()
+    {
+        UpdateSeedInfo();
+    }
 
-    public GameObject currentSeedVisual;
+    
 }

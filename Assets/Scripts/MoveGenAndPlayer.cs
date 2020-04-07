@@ -33,7 +33,6 @@ public class MoveGenAndPlayer : MonoBehaviour
                 moving = false;
                 pos.y = 0;
                 transform.position = pos;
-                //GetComponent<TowerGenerator>().GenerateLevelStart();
                 GetComponent<TowerGenerator>().GenerateTower();
             }
         }
@@ -42,11 +41,11 @@ public class MoveGenAndPlayer : MonoBehaviour
     [ContextMenu("Reset Tower")]
     public void ResetTower()
     {
-        //if (GetComponent<TowerGenerator>().generating == false && moving == false)
-        //{
+        if (moving == false)
+        {
             TowerHeight = GetComponent<TowerGenerator>().towerHeight;
             moving = true;
-        //}
+        }
     }
 
     void DropPlayer()

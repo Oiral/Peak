@@ -82,4 +82,26 @@ public class TowerConnection : MonoBehaviour
             Debug.DrawRay(transform.position, Vector3.down, Color.red, 2f);
         }
     }
+
+    public TowerSection GetSection()
+    {
+        //Lets loop through our parent objects until we find the tower connection or we run out of parents
+        //I would say we do this like 10 times. If we have not found it by then lets just return null
+        GameObject currentParent = gameObject;
+
+        for (int i = 0; i < 10; i++)
+        {
+            if (currentParent.GetComponent<TowerSection>() != null)
+            {
+                return currentParent.GetComponent<TowerSection>();
+            }
+            else
+            {
+                currentParent = currentParent.transform.parent.gameObject;
+            }
+        }
+
+
+        return null;
+    }
 }

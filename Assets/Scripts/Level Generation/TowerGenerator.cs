@@ -43,6 +43,10 @@ public class TowerGenerator : MonoBehaviour
 
     public GameObject topTrigger;
 
+    private IEnumerator generatingCoroutine;
+
+    int toGenerate;
+
     [ContextMenu("Generate Tower")]
     public void GenerateTower()
     {
@@ -52,11 +56,13 @@ public class TowerGenerator : MonoBehaviour
         //Get a new seed if needed
         if (randomiseSeed)
         {
-            seed = randomGenerator.Next(0, 90000);
+            seed = randomGenerator.Next(0, 900000);
         }
         //Create a new random generator with the seed
         //We want this so we can generate the level with a seed
         randomGenerator = new SystemRandom(seed);
+
+        toGenerate = Mathf.RoundToInt(seed.ToString().Length * seedLengthMultiplier);
 
         if (Application.isPlaying)
         {
@@ -71,18 +77,8 @@ public class TowerGenerator : MonoBehaviour
             GenerateMiddleSection();
 
             //Lets get some stats for the tower
-
-            towerHeight = highestPoint.gameObject.transform.position.y;
-            //Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
-            //Generate "topSection"
-            //Find the highest point level
-            sizedSections highestSize = towerStorage.getSize(highestPoint.level);
-
-            if (highestSize != null)
-            {
-                GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
-            }
-            GenerateSeed();
+            FinishTowerGen();
+            
         }
     }
 
@@ -97,17 +93,7 @@ public class TowerGenerator : MonoBehaviour
         //Lets get some stats for the tower
 
         yield return 0;
-        towerHeight = highestPoint.gameObject.transform.position.y;
-        //Debug.Log(highestPoint.gameObject.transform.position.y, highestPoint.gameObject);
-        //Generate "topSection"
-        //Find the highest point level
-        sizedSections highestSize = towerStorage.getSize(highestPoint.level);
-
-        if (highestSize != null)
-        {
-            GenerateEndSection(highestPoint, highestSize.horiztonalTop, highestSize.verticalTop);
-        }
-        GenerateSeed();
+        FinishTowerGen();
     }
 
     void GenerateBase()
@@ -145,7 +131,7 @@ public class TowerGenerator : MonoBehaviour
     void GenerateMiddleSection()
     {
         //Generate at most 1 less that the max as we need to put a topping section on top
-        for (int i = 0; i < Mathf.RoundToInt(seed.ToString().Length * seedLengthMultiplier); i++)
+        while (toGenerate > 0)
         {
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
@@ -160,14 +146,12 @@ public class TowerGenerator : MonoBehaviour
                 //Generate a section
                 GenerateRandomSection(connectionsToConnect[0]);
             }
-
         }
     }
 
     IEnumerator GenerateMiddleSectionSlowly()
     {
-        //Generate at most 1 less that the max as we need to put a topping section on top
-        for (int i = 0; i < Mathf.RoundToInt(seed.ToString().Length * seedLengthMultiplier); i++)
+        while (toGenerate > 0)
         {
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
@@ -182,7 +166,6 @@ public class TowerGenerator : MonoBehaviour
                 GenerateRandomSection(connectionsToConnect[0]);
                 yield return 0;
             }
-
         }
     }
 
@@ -277,6 +260,28 @@ public class TowerGenerator : MonoBehaviour
         }
     }
 
+    //We do stuff like set the tower stats and generate the top seciton
+    void FinishTowerGen()
+    {
+        //I think that we should remove the top piece and from there generate the top section as this will mean no matter what even if the top section has no connection points it will work
+
+        //We need to get this highest tower section from the connection point
+
+        TowerConnection connectionPointToEndOn = highestPoint.GetSection().connectedPiece;
+
+        RemoveSection(highestPoint.GetSection());
+
+        
+        sizedSections highestSize = towerStorage.getSize(connectionPointToEndOn.level);
+
+        GenerateEndSection(connectionPointToEndOn, highestSize.horiztonalTop, highestSize.verticalTop);
+
+        //towerHeight = connectionPointToEndOn.transform.position.y;
+        GenerateSeed();
+
+        UnParentAllPieces();
+    }
+
     //We want to end generating the top of the tower (the vertical section)
     void GenerateEndSection(TowerConnection connectionPoint, GameObject horiztonalToSpawn, GameObject verticalToSpawn)
     {
@@ -306,13 +311,16 @@ public class TowerGenerator : MonoBehaviour
 
         //Generate the end section Either horizontal or vertical
         endPoint = GenerateSection(toSpawn, connectionPoint);
-
-       
+        
 
         //If its horizontal we want to end on the vertical so create the end section
         if (horizontal)
         {
             GenerateEndSection(connectionsToConnect[0], horiztonalToSpawn, verticalToSpawn);
+        }
+        else
+        {
+            towerHeight = endPoint.transform.position.y;
         }
     }
 
@@ -321,7 +329,8 @@ public class TowerGenerator : MonoBehaviour
         //Spawn in the section
         GameObject spawnedObject = SpawnObject(objectToSpawn, transform);
 
-        //spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
+        //Assign this objects parent to the piece it is generating too
+        spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
 
         //Make sure we get all the connection points of the section
         TowerSection section = spawnedObject.GetComponent<TowerSection>();
@@ -398,6 +407,8 @@ public class TowerGenerator : MonoBehaviour
 
         spawnedObject.transform.position = sectionPos;
 
+        section.connectedPiece = connectionPoint;
+
         //Add the generated connections to the to be generated list
         connectionsToConnect.AddRange(generatedConnections);
 
@@ -410,6 +421,7 @@ public class TowerGenerator : MonoBehaviour
 
         //Add this part to the generated list
         generatedParts.Add(spawnedObject);
+        toGenerate -= 1;
 
         return spawnedObject;
     }
@@ -606,6 +618,33 @@ public class TowerGenerator : MonoBehaviour
             MoveToLayer(child, layer);
     }
 
+    void RemoveSection(TowerSection section)
+    {
+        //Now we need to remove any sections from our generation lists
+        foreach (TowerSection childSections in section.gameObject.GetComponentsInChildren<TowerSection>())
+        {
+            //When removing a section, we want to add 1 more to the generation per each connection piece we are removing.
+            //Easy way to check is find all TowerSections scripts in child
+            toGenerate += 1;
+            if (generatedParts.Contains(childSections.gameObject))
+            {
+                generatedParts.Remove(childSections.gameObject);
+            }
+
+
+        }
+
+        foreach (TowerConnection connectionPointToRemove in section.gameObject.GetComponentsInChildren<TowerConnection>())
+        {
+            if (connectionsToConnect.Contains(connectionPointToRemove))
+            {
+                connectionsToConnect.Remove(connectionPointToRemove);
+            }
+        }
+
+        DestroyWithCheck(section.gameObject);
+    }
+
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
@@ -625,5 +664,25 @@ public class TowerGenerator : MonoBehaviour
         {
             generatedParts[i].transform.parent = transform;
         } 
+    }
+
+    /// <summary>
+    /// Only call this is the game is running not in the editor
+    /// </summary>
+    public void StopGeneration()
+    {
+        StopAllCoroutines();
+    }
+
+    void DestroyWithCheck(GameObject objectToDestroy)
+    {
+        if (!Application.isPlaying)
+        {
+            DestroyImmediate(objectToDestroy);
+        }
+        else
+        {
+            Destroy(objectToDestroy);
+        }
     }
 }

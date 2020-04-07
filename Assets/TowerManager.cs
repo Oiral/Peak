@@ -23,6 +23,9 @@ public class TowerManager : MonoBehaviour
 
     public TowerGenerator generator;
     public GameObject seedRestingPoint;
+    public MoveGenAndPlayer moveTower;
+
+    Seed currentSeed;
 
     public void GetSeed(Seed seed)
     {
@@ -31,10 +34,42 @@ public class TowerManager : MonoBehaviour
 
         generator.towerStorage = seed.storage;
 
-        generator.GenerateTower();
+        //generator.GenerateTower();
+    }
 
-        seed.gameObject.transform.position = seedRestingPoint.transform.position;
-        seed.GetComponent<Rigidbody>().Sleep();
+    public void SeedEnterSpot(Seed seed)
+    {
+        //We need to check if we are generating a tower already
 
+        //First we need to change some things on the generator
+
+        generator.StopGeneration();
+
+        GetSeed(seed);
+
+        //we might need to replace a seed
+        if (currentSeed != null)
+        {
+            //We need to drop the tower and then generate
+            moveTower.ResetTower();
+        }
+        else
+        {
+            //We just need to generate the tower
+            moveTower.ResetTower();
+        }
+        currentSeed = seed;
+        
+    }
+
+    public void SeedLeftSpot(Seed seed)
+    {
+        if (seed == currentSeed)
+        {
+            //Remove the current seed and destroy the tower.
+            //We don't care if this seed is not the current seed
+            generator.StopGeneration();
+            currentSeed = null;
+        }
     }
 }
