@@ -1,5 +1,5 @@
 # Blender MTL File: 'TallSectionColoured.blend'
-# Material Count: 7
+# Material Count: 9
 
 newmtl Base
 Ns 0.000000
@@ -59,6 +59,16 @@ Ks 0.8 0.8 0.8
 d 1
 illum 2
 
+newmtl Roof
+Ns 375.252242
+Ka 0.925714 0.925714 0.925714
+Kd 0.207917 0.090935 0.064956
+Ks 0.965714 0.965714 0.965714
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 3
+
 newmtl Trim
 Ns 715.180342
 Ka 1.000000 1.000000 1.000000
@@ -68,3 +78,13 @@ Ke 0.0 0.0 0.0
 Ni 1.450000
 d 1.000000
 illum 3
+
+newmtl Wood
+Ns 8.000818
+Ka 1.000000 1.000000 1.000000
+Kd 0.220258 0.189887 0.167610
+Ks 0.277143 0.277143 0.277143
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
