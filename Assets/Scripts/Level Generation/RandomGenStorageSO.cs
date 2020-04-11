@@ -51,7 +51,10 @@ public class RandomGenStorageSO : ScriptableObject
     //The max size for the connections to generate too
     //If the list gets above this size - removes the first half of the size
     public int GenListMax;
-    
+
+    [SerializeField]
+    public GameObject seedVisualPrefab;
+
     //Get the whole section that fits the right size
     public sizedSections getSize(int num)
     {

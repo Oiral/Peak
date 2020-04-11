@@ -131,9 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
   - {fileID: 6713669359613911986}
-  - {fileID: 3642977522009504884}
   - {fileID: -326825624647070998}
-  - {fileID: -5853019748646671989}
   - {fileID: 8261947234957475855}
   - {fileID: -2923800109890680894}
   - {fileID: 7335976365111804539}

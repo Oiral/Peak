@@ -18,7 +18,6 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1, type: 3}
     - {fileID: 6773854277038703115, guid: 2e13ec72f1c2a8848bfff4e4b64b88a9, type: 3}
     - {fileID: 6773854277038703115, guid: c78e8eaf7c41a774db73e3b39a3f8a79, type: 3}
-    - {fileID: 6773854277038703115, guid: 9e9494fd14be2ad4d91a334bf532bc56, type: 3}
     - {fileID: 6773854277038703115, guid: 7ac337c9ec815594b8086bc89d5b9fc1, type: 3}
     - {fileID: 5795990385135924510, guid: 69b4baaed64826542b67c48486bf3f8c, type: 3}
     - {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1, type: 3}
@@ -27,9 +26,9 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: fc49e71b970f0ee4a81d81e0a2729629, type: 3}
     - {fileID: 6773854277038703115, guid: 82fcedc6bc1f11e43aad48afc12e18c9, type: 3}
     - {fileID: 6773854277038703115, guid: cda4a4eac27f14a43a238161a356e3e9, type: 3}
-    verticalTop: {fileID: 6773854277038703115, guid: d46493b3a3fe314489ba5ac64bfae6f1,
+    verticalTop: {fileID: 6773854277038703115, guid: 7fa1080b6d57e6045ba25156bde02c71,
       type: 3}
-    horiztonalTop: {fileID: 6773854277038703115, guid: cda4a4eac27f14a43a238161a356e3e9,
+    horiztonalTop: {fileID: 6773854277038703115, guid: 781eb2ff674357748b5c366de13933ee,
       type: 3}
     openInInspector: 1
     verticalOpenInInspector: 1

@@ -30,7 +30,7 @@ public class TutorialManager : MonoBehaviour
 
     public void StartTutorial()
     {
-        PlayerPrefs.SetInt("Tutorial", 0);
+        //PlayerPrefs.SetInt("Tutorial", 0);
         //We want to send the player to the tutorial point
         player.transform.position = tutorialPoint.position;
     }
@@ -42,6 +42,11 @@ public class TutorialManager : MonoBehaviour
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireCube(tutorialPoint.position + (Vector3.up * 0.5f), Vector3.one);
+    }
+
+    public void CompleteTutorial()
+    {
+        PlayerPrefs.SetInt("Tutorial", 0);
     }
 
 }

@@ -32,13 +32,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Early Levels/Mountain.unity
     guid: 5e36e54b101ff6d4da07f6a4838e7f23
-  - enabled: 0
-    path: Assets/Scenes/Main Menu.unity
-    guid: 9c6485b754b0b054fbef8eabf85d4e43
-  - enabled: 0
-    path: Assets/Scenes/Prefab Editing scene.unity
-    guid: fd0667306ffb5bb45a6f5c85b44e731a
-  - enabled: 0
-    path: Assets/Scenes/Better procedural.unity
-    guid: ff39bc053ec87a24599381854d0db11b
   m_configObjects: {}

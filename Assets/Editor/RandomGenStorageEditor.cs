@@ -9,6 +9,8 @@ public class RandomGenStorageEditor : Editor
 
     private bool showPreview;
 
+    string errorMessages = "";
+
     public override void OnInspectorGUI()
     {
         //This the basic unity gui
@@ -32,15 +34,20 @@ public class RandomGenStorageEditor : Editor
             }
         }
 
-
+        currentScriptable.seedVisualPrefab = EditorGUILayout.ObjectField("Seed Visual", currentScriptable.seedVisualPrefab, typeof(GameObject), false) as GameObject;
+        if (currentScriptable.seedVisualPrefab == null)
+        {
+            errorMessages = "Missing seed visual prefab";
+        }
 
         //The slider for the tower spread
         //We also want to invert the slider so that 99 on screen is 1 in code
+        /*
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.PrefixLabel("Tower Spread %");
         currentScriptable.GenListMax = 100 - EditorGUILayout.IntSlider(100 - currentScriptable.GenListMax, 0, 99);
         EditorGUILayout.EndHorizontal();
-
+        */
 
         GUILayout.Space(10);
 
@@ -54,6 +61,15 @@ public class RandomGenStorageEditor : Editor
         {
             currentScriptable.sections.Add(new sizedSections(currentScriptable));
             EditorUtility.SetDirty(currentScriptable);
+        }
+
+        if (errorMessages != "")
+        {
+            var style = new GUIStyle(GUI.skin.box);
+            style.normal.textColor = Color.red;
+            style.stretchWidth = true;
+            style.alignment = TextAnchor.MiddleCenter;
+            GUILayout.Label(errorMessages, style);
         }
     }
 
@@ -98,17 +114,34 @@ public class RandomGenStorageEditor : Editor
                 basicPrefabDisplay(ref section.horizontal, "Horizontal", "Testing");
                 EditorGUI.indentLevel--;
             }
+
             //Show the final vertical
             section.verticalTop = EditorGUILayout.ObjectField("Vertical Top", section.verticalTop, typeof(GameObject), false) as GameObject;
+            
             //Show the final Horiztonal
             section.horiztonalTop = EditorGUILayout.ObjectField("Horizontal Top", section.horiztonalTop, typeof(GameObject), false) as GameObject;
+
+            //Section Error Checking
+            if (section.vertical == null)
+            {
+                errorMessages = "Section " + section.size.ToString() + "is missing a vertical Section";
+            }
+            else if (Helper.FindComponentInChildWithTag<Transform>(section.verticalTop, "Seed Topper") == null)
+            {
+                //Check if this top point is missing the Seed Topper
+                //If we are here. It is missing a seed topper
+                errorMessages = "Section " + section.size.ToString() + " Is missing a Seed Topper";
+            }
+            if (section.horizontal == null)
+            {
+                errorMessages = "Section " + section.size.ToString() + "is missing a horizontal Section";
+            }
 
             EditorGUI.indentLevel--;
         }
 
         
     }
-
 
     public void basicPrefabDisplay(ref List<GameObject> refList, string name, string comment, ref bool showToggle)
     {
