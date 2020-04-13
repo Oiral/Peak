@@ -16,6 +16,6 @@ public Material[] randomMaterials;
     // Update is called once per frame
     void Awake ()
     {
-       // gameObject.GetComponent<Renderer>().material = randomMaterials[Random.Range(0, randomMaterials.Length)];
+        gameObject.GetComponent<Renderer>().material = randomMaterials[Random.Range(0, randomMaterials.Length)];
     }
 }
