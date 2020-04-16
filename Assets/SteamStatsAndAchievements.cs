@@ -100,6 +100,10 @@ class SteamStatsAndAchievements : MonoBehaviour
 
                     break;
                 case AchievementType.Tower:
+                    if (towersClimbed > achievement.m_value)
+                    {
+                        UnlockAchievement(achievement);
+                    }
                     break;
                 case AchievementType.misc:
                     break;
@@ -140,6 +144,7 @@ class SteamStatsAndAchievements : MonoBehaviour
 
             // set stats
             SteamUserStats.SetStat("Height", yClimb);
+            SteamUserStats.SetStat("Towers", towersClimbed);
             /*
             // Update average feet / second stat
             SteamUserStats.UpdateAvgRateStat("AverageSpeed", m_flGameFeetTraveled, m_flGameDurationSeconds);
@@ -410,6 +415,8 @@ class SteamStatsAndAchievements : MonoBehaviour
     public float horizontalMovement;
     public float maxSpeed;
 
+    public float towersClimbed;
+
     public Transform trackingObject;
 
     private Vector3 prevPos = Vector3.zero;
@@ -448,6 +455,11 @@ class SteamStatsAndAchievements : MonoBehaviour
             Gizmos.color = Color.cyan;
             Gizmos.DrawWireCube(prevPos, Vector3.one * checkDistance);
         }
+    }
+
+    public void ClimbTower()
+    {
+        towersClimbed += 1;
     }
     #endregion
 }
