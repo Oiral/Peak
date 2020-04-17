@@ -22,6 +22,9 @@ public class TowerGenerator : MonoBehaviour
 
     //[Header("Tower Info")]
     //public int maxSize;
+    [Header("Generating")]
+    public List<AudioClip> spawnInSounds;
+    public float timeInSecToSpawn = 0.1f;
 
     [HideInInspector]
     public List<TowerConnection> connectionsToConnect;
@@ -164,7 +167,7 @@ public class TowerGenerator : MonoBehaviour
             {
                 //Generate a section
                 GenerateRandomSection(connectionsToConnect[0]);
-                yield return 0;
+                yield return new WaitForSeconds(timeInSecToSpawn);
             }
         }
     }
@@ -422,6 +425,21 @@ public class TowerGenerator : MonoBehaviour
         //Add this part to the generated list
         generatedParts.Add(spawnedObject);
         toGenerate -= 1;
+        
+        if (Application.isPlaying)
+        {
+            AudioSource source = spawnedObject.AddComponent<AudioSource>();
+            source.playOnAwake = false;
+            source.spatialBlend = 1;
+            source.pitch = Random.Range(0f, 2f);
+            Destroy(source, timeInSecToSpawn * 3);
+            source.minDistance = 2;
+            source.maxDistance = 30;
+            source.loop = false;
+            source.rolloffMode = AudioRolloffMode.Linear;
+            source.clip = spawnInSounds[Random.Range(0, spawnInSounds.Count - 1)];
+            source.Play();
+        }
 
         return spawnedObject;
     }
