@@ -156,6 +156,11 @@ public class TowerGenerator : MonoBehaviour
     {
         while (toGenerate > 0)
         {
+            //We need to check if something is happening
+            //If not drop the togenerate count
+            int toGenerateCheck = toGenerate;
+
+
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
 
@@ -168,6 +173,11 @@ public class TowerGenerator : MonoBehaviour
                 //Generate a section
                 GenerateRandomSection(connectionsToConnect[0]);
                 yield return new WaitForSeconds(timeInSecToSpawn);
+            }
+
+            if (toGenerateCheck == toGenerate)
+            {
+                toGenerate -= 1;
             }
         }
     }
@@ -426,7 +436,7 @@ public class TowerGenerator : MonoBehaviour
         generatedParts.Add(spawnedObject);
         toGenerate -= 1;
         
-        if (Application.isPlaying)
+        if (Application.isPlaying && spawnInSounds.Count > 0)
         {
             AudioSource source = spawnedObject.AddComponent<AudioSource>();
             source.playOnAwake = false;
@@ -462,7 +472,7 @@ public class TowerGenerator : MonoBehaviour
         }
 
 
-        GameObject spawnedSeed = Instantiate(seedPrefab, topper.position, Quaternion.identity, null);
+        GameObject spawnedSeed = Instantiate(seedPrefab, topper.position, Quaternion.identity, endPoint.transform);
         Seed seedComp = spawnedSeed.GetComponent<Seed>();
         seedComp.towerSeed = seed;
         seedComp.storage = towerStorage;
