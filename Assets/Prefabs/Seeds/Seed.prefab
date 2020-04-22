@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4743612725504203895}
   - component: {fileID: 4743612725504203893}
   - component: {fileID: 9128216783125862699}
+  - component: {fileID: 3573559528641501356}
   m_Layer: 0
   m_Name: Seed
   m_TagString: Pickupable
@@ -77,6 +78,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0584375ad2f33ef4da0b276de8507487, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3573559528641501356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4743612725504203896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e200c1ce8e93045bf41dd3423a5af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPickupEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3573559528641501356}
+        m_MethodName: Unparent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2638175451857099330
 PrefabInstance:
   m_ObjectHideFlags: 0

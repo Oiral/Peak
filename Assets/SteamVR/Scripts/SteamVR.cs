@@ -363,7 +363,7 @@ namespace Valve.VR
 
             if (temporarySession)
                 ExitTemporarySession();
-
+            /*
             string bindingurl = "http://localhost:8998/dashboard/controllerbinding.html?app=" + SteamVR_Settings.instance.editorAppKey;
 
 #if UNITY_STANDALONE_WIN
@@ -378,6 +378,7 @@ namespace Valve.VR
             }
 #endif
             Application.OpenURL(bindingurl); //todo: update with the actual api call
+            */
         }
 
 

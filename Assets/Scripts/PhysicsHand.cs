@@ -64,6 +64,12 @@ public class PhysicsHand : MonoBehaviour
                 grabJoint = grabbed.AddComponent<FixedJoint>() as FixedJoint;
                 grabJoint.connectedBody = GetComponent<Rigidbody>();
                 grabJoint.breakForce = GrabStrength;
+                //if the physics object has the do something on grab
+                if (grabbed.GetComponent<OnPickup>())
+                {
+                    grabbed.GetComponent<OnPickup>().Pickup();
+                }
+
             }
         }
         else

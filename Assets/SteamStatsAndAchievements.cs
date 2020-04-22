@@ -100,7 +100,7 @@ class SteamStatsAndAchievements : MonoBehaviour
 
                     break;
                 case AchievementType.Tower:
-                    if (towersClimbed > achievement.m_value)
+                    if (towersClimbed >= achievement.m_value)
                     {
                         UnlockAchievement(achievement);
                     }
@@ -144,7 +144,7 @@ class SteamStatsAndAchievements : MonoBehaviour
 
             // set stats
             SteamUserStats.SetStat("Height", yClimb);
-            SteamUserStats.SetStat("Towers", towersClimbed);
+            SteamUserStats.SetStat("Climb", towersClimbed);
             /*
             // Update average feet / second stat
             SteamUserStats.UpdateAvgRateStat("AverageSpeed", m_flGameFeetTraveled, m_flGameDurationSeconds);
@@ -221,6 +221,7 @@ class SteamStatsAndAchievements : MonoBehaviour
 
                 // load stats
                 SteamUserStats.GetStat("Height", out yClimb);
+                SteamUserStats.GetStat("Climb", out towersClimbed);
             }
             else
             {
@@ -292,6 +293,7 @@ class SteamStatsAndAchievements : MonoBehaviour
         GUILayout.Label("Height Climbed: " + yClimb);
         GUILayout.Label("Horizontal Moved: " + horizontalMovement);
         GUILayout.Label("Max Speed: " + maxSpeed);
+        GUILayout.Label("Towers Climbed: " + towersClimbed);
         GUILayout.Space(10);
         if (GUILayout.Button("RESET STATS AND ACHIEVEMENTS"))
         {
@@ -299,19 +301,25 @@ class SteamStatsAndAchievements : MonoBehaviour
             SteamUserStats.RequestCurrentStats();
         }
 
+        GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, Screen.height));
 
-        GUILayout.BeginArea(new Rect(Screen.width - 300, 0, 300, 800));
+        GUIStyle style = new GUIStyle();
+        style.fontSize = 20;
+        style.margin.bottom = 0;
 
-            foreach (Achievement_t ach in m_Achievements)
-            {
-                GUILayout.Label(ach.m_eAchievementID.ToString());
-                GUILayout.Label(ach.m_strName + " - " + ach.m_strDescription);
-                GUILayout.Label("Achieved: " + ach.m_bAchieved);
-                GUILayout.Space(20);
-            }
+
+        foreach (Achievement_t ach in m_Achievements)
+        {
+
+
+            GUILayout.Label(ach.m_eAchievementID.ToString(), style);
+            GUILayout.Label(ach.m_strName + " - " + ach.m_strDescription, style);
+            GUILayout.Label("Achieved: " + ach.m_bAchieved, style);
+            GUILayout.Label("---------------------");
+        }
 
         // FOR TESTING PURPOSES ONLY!
-        
+
         GUILayout.EndArea();
     }
 
@@ -415,7 +423,7 @@ class SteamStatsAndAchievements : MonoBehaviour
     public float horizontalMovement;
     public float maxSpeed;
 
-    public float towersClimbed;
+    public int towersClimbed;
 
     public Transform trackingObject;
 
@@ -460,6 +468,7 @@ class SteamStatsAndAchievements : MonoBehaviour
     public void ClimbTower()
     {
         towersClimbed += 1;
+        m_bStoreStats = true;
     }
     #endregion
 }
