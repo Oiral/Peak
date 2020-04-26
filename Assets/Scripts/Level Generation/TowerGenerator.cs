@@ -133,21 +133,37 @@ public class TowerGenerator : MonoBehaviour
 
     void GenerateMiddleSection()
     {
-        //Generate at most 1 less that the max as we need to put a topping section on top
         while (toGenerate > 0)
         {
+            //We need to check if something is happening
+            //If not drop the togenerate count
+            int toGenerateCheck = toGenerate;
+
+
             //Check if the genlistmax is greater than 0 as we don't want to remove each section to generate every single time
             //If the current pool of generation is greater than the max
 
             //Debug.Log(towerStorage.GenListMax);
             //RemoveHalfConnections(towerStorage.GenListMax);
 
-
             //If we have not run out of availiable places to place the tower
             if (connectionsToConnect.Count > 0)
             {
                 //Generate a section
                 GenerateRandomSection(connectionsToConnect[0]);
+            }
+
+            if (connectionsToConnect.Count <= 0 && toGenerate > 0)
+            {
+                Debug.LogWarning("Run out of gen room, back tracking and trying again");
+                //If we get here we have run out of space and cannot generate further.
+                //We should back track the generation and then try again
+                BackTrackGeneration();
+                GenerateRandomSection(connectionsToConnect[0]);
+            }
+            if (toGenerateCheck == toGenerate)
+            {
+                toGenerate -= 1;
             }
         }
     }
@@ -175,6 +191,15 @@ public class TowerGenerator : MonoBehaviour
                 yield return new WaitForSeconds(timeInSecToSpawn);
             }
 
+            if (connectionsToConnect.Count <= 0 && toGenerate > 0)
+            {
+                //If we get here we have run out of space and cannot generate further.
+                //We should back track the generation and then try again
+                Debug.LogWarning("Run out of gen room, back tracking and trying again");
+                BackTrackGeneration();
+                GenerateRandomSection(connectionsToConnect[0]);
+                yield return new WaitForSeconds(timeInSecToSpawn);
+            }
             if (toGenerateCheck == toGenerate)
             {
                 toGenerate -= 1;
@@ -233,10 +258,6 @@ public class TowerGenerator : MonoBehaviour
             {
                 //Generate another section
                 GenerateRandomSection(connectionsToConnect[0]);
-            }
-            else
-            {
-                Debug.LogError("No more pieces to spread too, stopping generation", highestPoint.gameObject);
             }
 
             //Debug.Log("Collided with something", connectionPoint.gameObject);
@@ -454,6 +475,15 @@ public class TowerGenerator : MonoBehaviour
         return spawnedObject;
     }
 
+    void BackTrackGeneration()
+    {
+        //We need to remove the last placed piece and then add it's connection point to the to generate
+        //Find the last generated
+        TowerSection lastGenerated = generatedParts[generatedParts.Count - 1].GetComponent<TowerSection>();
+        connectionsToConnect.Add(lastGenerated.connectedPiece);
+        RemoveSection(lastGenerated);
+    }
+
     void GenerateSeed()
     {
 
@@ -659,7 +689,6 @@ public class TowerGenerator : MonoBehaviour
                 generatedParts.Remove(childSections.gameObject);
             }
 
-
         }
 
         foreach (TowerConnection connectionPointToRemove in section.gameObject.GetComponentsInChildren<TowerConnection>())
@@ -668,6 +697,11 @@ public class TowerGenerator : MonoBehaviour
             {
                 connectionsToConnect.Remove(connectionPointToRemove);
             }
+        }
+        //We need to remove this section from the generated list
+        if (generatedParts.Contains(section.gameObject))
+        {
+            generatedParts.Remove(section.gameObject);
         }
 
         DestroyWithCheck(section.gameObject);
@@ -690,7 +724,11 @@ public class TowerGenerator : MonoBehaviour
     {
         for (int i = 0; i < generatedParts.Count; i++)
         {
-            generatedParts[i].transform.parent = transform;
+            if (generatedParts[i] != null)
+            {
+                generatedParts[i].transform.parent = transform;
+            }
+            
         } 
     }
 
@@ -713,4 +751,6 @@ public class TowerGenerator : MonoBehaviour
             Destroy(objectToDestroy);
         }
     }
+
+    
 }
