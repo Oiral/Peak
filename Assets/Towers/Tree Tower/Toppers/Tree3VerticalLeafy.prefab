@@ -234,6 +234,51 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 6405055333489277325, guid: 5f4515f002d25bb4d9ecc17a6b63b537, type: 3}
+--- !u!1 &1758497932972691068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4112090580018335489}
+  - component: {fileID: 2412210672408454638}
+  m_Layer: 0
+  m_Name: Seed Spot (1)
+  m_TagString: Seed Topper
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4112090580018335489
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758497932972691068}
+  m_LocalRotation: {x: 0.12852304, y: -0.60960084, z: 0.10037726, w: -0.7757532}
+  m_LocalPosition: {x: -0.07333334, y: 1.569, z: -0.678}
+  m_LocalScale: {x: 0.6666667, y: 0.6666666, z: 0.66666675}
+  m_Children: []
+  m_Father: {fileID: 7290819107405156129}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2412210672408454638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758497932972691068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875890c986d8cfd4f8ebc7b4b5df0db5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showDebug: 1
+  radius: 0.2
 --- !u!1 &1998802723964322131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1503,7 @@ Transform:
   - {fileID: 4664398586980161347}
   - {fileID: 846950641}
   - {fileID: 3307460324364186432}
+  - {fileID: 4112090580018335489}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1475,5 +1521,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalConnectionPoints: []
   verticalConnectionPoints: []
+  connectedPiece: {fileID: 0}
   type: 0
   size: 
