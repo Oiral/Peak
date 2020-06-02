@@ -29,10 +29,17 @@ public class TowerManager : MonoBehaviour
 
     public void GetSeed(Seed seed)
     {
-        generator.randomiseSeed = false;
+        generator.randomiseSeed = seed.blankSeed;
         generator.seed = seed.towerSeed;
 
-        generator.towerStorage = seed.storage;
+        if (seed.storage != null)
+        {
+            generator.towerStorage = seed.storage;
+        }
+        else
+        {
+            Debug.LogError("Seed placed in has no tower scriptable object", seed.gameObject);
+        }
 
         //generator.GenerateTower();
     }

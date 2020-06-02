@@ -7,6 +7,8 @@ public class Seed : MonoBehaviour
 {
     public GameObject currentSeedVisual;
 
+    public bool blankSeed;
+
     public RandomGenStorageSO storage {
         get
         {
@@ -53,8 +55,17 @@ public class Seed : MonoBehaviour
             }
         }
 
-        //Change the seed text
-        GetComponentInChildren<TextMeshPro>().text = internalSeed.ToString();
+        if (blankSeed)
+        {
+            //Change the seed text
+            GetComponentInChildren<TextMeshPro>().text = "Blank Seed";
+        }
+        else
+        {
+            //Change the seed text
+            GetComponentInChildren<TextMeshPro>().text = internalSeed.ToString();
+        }
+        
     }
 
     private void Start()
