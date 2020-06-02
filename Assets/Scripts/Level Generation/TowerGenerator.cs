@@ -133,6 +133,7 @@ public class TowerGenerator : MonoBehaviour
 
     void GenerateMiddleSection()
     {
+        int backtracks = 0;
         while (toGenerate > 0)
         {
             //We need to check if something is happening
@@ -153,13 +154,14 @@ public class TowerGenerator : MonoBehaviour
                 GenerateRandomSection(connectionsToConnect[0]);
             }
 
-            if (connectionsToConnect.Count <= 0 && toGenerate > 0)
+            if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
             {
                 Debug.LogWarning("Run out of gen room, back tracking and trying again");
                 //If we get here we have run out of space and cannot generate further.
                 //We should back track the generation and then try again
                 BackTrackGeneration();
                 GenerateRandomSection(connectionsToConnect[0]);
+                backtracks += 1;
             }
             if (toGenerateCheck == toGenerate)
             {
@@ -170,6 +172,8 @@ public class TowerGenerator : MonoBehaviour
 
     IEnumerator GenerateMiddleSectionSlowly()
     {
+        int backtracks = 0;
+
         while (toGenerate > 0)
         {
             //We need to check if something is happening
@@ -191,13 +195,14 @@ public class TowerGenerator : MonoBehaviour
                 yield return new WaitForSeconds(timeInSecToSpawn);
             }
 
-            if (connectionsToConnect.Count <= 0 && toGenerate > 0)
+            if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
             {
                 //If we get here we have run out of space and cannot generate further.
                 //We should back track the generation and then try again
                 Debug.LogWarning("Run out of gen room, back tracking and trying again");
                 BackTrackGeneration();
                 GenerateRandomSection(connectionsToConnect[0]);
+                backtracks += 1;
                 yield return new WaitForSeconds(timeInSecToSpawn);
             }
             if (toGenerateCheck == toGenerate)
@@ -384,8 +389,16 @@ public class TowerGenerator : MonoBehaviour
                 //Find all connection points that match the correct level to connect to
                 List<TowerConnection> levelCheckedConnections = GetCorrectSize(spawnedConnections, connectionPoint.level);
 
+                if (levelCheckedConnections.Count <= 0)
+                {
+                    Debug.LogError("This spawned section only has vertical connections but is in horizontal", spawnedObject);
+                }
+                //Debug.Log("------------------");
+                //Debug.Log(levelCheckedConnections.Count);
+                
+
                 //If we are connecting horizontally
-                connectionUsedToConnect = levelCheckedConnections[randomGenerator.Next(0, levelCheckedConnections.Count - 1)];
+                connectionUsedToConnect = levelCheckedConnections[randomGenerator.Next(0, levelCheckedConnections.Count /*- 1*/)];
 
                 //Rotate to the correct rotation
                 //Allign the piece with the connection point we are connecting with
@@ -432,11 +445,16 @@ public class TowerGenerator : MonoBehaviour
         
         //Position section inline with the connection point it's trying to conenct to
         sectionPos = connectionPoint.transform.position;
+
+        /*
         if (connectionUsedToConnect == null)
         {
-            Debug.Log("Thingy", connectionPoint.gameObject);
+            Debug.Log(connectionPoint.type.ToString(), connectionPoint.gameObject);
         }
+        */
+
         //Move the spawned Section with the offset of the connection points it's connecing with
+        
         sectionPos += transform.position - connectionUsedToConnect.gameObject.transform.position;
 
         spawnedObject.transform.position = sectionPos;
