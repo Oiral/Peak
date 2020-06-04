@@ -125,6 +125,9 @@ public class RandomGenStorageEditor : Editor
             if (section.vertical == null)
             {
                 errorMessages = "Section " + section.size.ToString() + "is missing a vertical Section";
+            }else if (section.verticalTop == null)
+            {
+                errorMessages = "Section " + section.size.ToString() + " Vertical Topper is missing";
             }
             else if (Helper.FindComponentInChildWithTag<Transform>(section.verticalTop, "Seed Topper") == null)
             {
