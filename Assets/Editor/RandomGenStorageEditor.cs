@@ -36,7 +36,13 @@ public class RandomGenStorageEditor : Editor
             }
         }
 
+        EditorGUI.BeginChangeCheck();
         currentScriptable.seedVisualPrefab = EditorGUILayout.ObjectField("Seed Visual", currentScriptable.seedVisualPrefab, typeof(GameObject), false) as GameObject;
+        if (EditorGUI.EndChangeCheck())
+        {
+            EditorUtility.SetDirty(currentScriptable);
+        }
+
         if (currentScriptable.seedVisualPrefab == null)
         {
             errorMessages = "Missing seed visual prefab";

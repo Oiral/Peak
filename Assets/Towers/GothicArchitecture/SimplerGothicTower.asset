@@ -69,6 +69,6 @@ MonoBehaviour:
     openInInspector: 1
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
-  chanceToNotSpawn: 0
-  enableRandomNoSpawn: 0
   GenListMax: 0
+  seedVisualPrefab: {fileID: 4658053616402200019, guid: 0ccf03280d0734f4dba5bf1f2b173b26,
+    type: 3}

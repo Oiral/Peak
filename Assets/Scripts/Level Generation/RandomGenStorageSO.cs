@@ -40,6 +40,7 @@ public class sizedSections
     }
 }
 
+[System.Serializable]
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Section Info", order = 1)]
 public class RandomGenStorageSO : ScriptableObject
 {

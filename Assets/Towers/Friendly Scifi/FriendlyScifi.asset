@@ -34,3 +34,5 @@ MonoBehaviour:
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
   GenListMax: 88
+  seedVisualPrefab: {fileID: 1458961675136052120, guid: dc2410c5cd01c1f4bb0852d3760b85e6,
+    type: 3}
