@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
+[System.Serializable]
 [CustomEditor(typeof(RandomGenStorageSO))]
 public class RandomGenStorageEditor : Editor
 {
@@ -13,6 +14,7 @@ public class RandomGenStorageEditor : Editor
 
     public override void OnInspectorGUI()
     {
+        serializedObject.Update();
         //This the basic unity gui
         //base.OnInspectorGUI();
 
@@ -71,6 +73,8 @@ public class RandomGenStorageEditor : Editor
             style.alignment = TextAnchor.MiddleCenter;
             GUILayout.Label(errorMessages, style);
         }
+
+        serializedObject.ApplyModifiedProperties();
     }
 
     public void DisplaySizedSection(sizedSections section)
