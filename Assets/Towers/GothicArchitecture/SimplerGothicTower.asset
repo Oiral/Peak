@@ -22,7 +22,7 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
     - {fileID: 6773854277038703115, guid: c2266c9e928d0cb41a66aa1c8f930949, type: 3}
     horizontal: []
-    verticalTop: {fileID: 6773854277038703115, guid: 38145835c9dea2841a2ac3d3af0a7c94,
+    verticalTop: {fileID: 6773854277038703115, guid: a41be5b53b8635547be4e61648108a3f,
       type: 3}
     horiztonalTop: {fileID: 0}
     openInInspector: 1
@@ -64,8 +64,10 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: 5c6743db5c6e9a14e8a3da6a2f57a5db, type: 3}
     - {fileID: 6773854277038703115, guid: de0c2eef019c9ad40bb4b8a430be8317, type: 3}
     - {fileID: 6773854277038703115, guid: 06974d2b50095654b9bba29998df73f3, type: 3}
-    verticalTop: {fileID: 0}
-    horiztonalTop: {fileID: 0}
+    verticalTop: {fileID: 6773854277038703115, guid: 002468261e467b742808c141057c8b8e,
+      type: 3}
+    horiztonalTop: {fileID: 6773854277038703115, guid: 5a344b4eb0763274b9b2a631924f05af,
+      type: 3}
     openInInspector: 1
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
