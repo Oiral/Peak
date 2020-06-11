@@ -52,6 +52,42 @@ public class AmbientSound : MonoBehaviour
         }
     }
     #endregion
+
+
+    public bool showDebug;
+
+    public int debugLines = 100;
+
+    private void OnDrawGizmos()
+    {
+        //int gizmoTrackingNumber = 0;
+
+        //Draw a box for each colour
+        for (int i = -100; i < debugLines; i++)
+        {
+            for (int a = 0; a < trackedAudio.Count; a++)
+            {
+                Vector3 gizmoSize = new Vector3(1, 0, 1);
+
+                gizmoSize = gizmoSize * trackedAudio[a].volumeOverHeight.Evaluate(i);
+
+                Gizmos.DrawCube(Vector3.up * (i + (a-0.5f) / trackedAudio.Count), gizmoSize);
+
+                Gizmos.color = Color.HSVToRGB((float)a / (float)trackedAudio.Count, 1f, 1f);
+            }
+
+            
+            /*
+            gizmoTrackingNumber += 1;
+            if (gizmoTrackingNumber >= trackedAudio.Count)
+            {
+                gizmoTrackingNumber = 0;
+            }
+            */
+        }
+    }
+
+
 #endif
 
     //Lets update 1 audio on each frame
