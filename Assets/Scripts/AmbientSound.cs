@@ -60,6 +60,7 @@ public class AmbientSound : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if (showDebug == false) return;
         //int gizmoTrackingNumber = 0;
 
         //Draw a box for each colour
