@@ -14,16 +14,18 @@ public class TriggerEvent : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.transform.name + " entered the top section", other.transform);
+        
         if (tagToCheck != "")
         {
             if (checkForPlayer(other.gameObject, tagToCheck))
             {
+                Debug.Log(other.transform.name + " entered the top section", other.transform);
                 onTriggerEnter.Invoke();
             }
         }
         else
         {
+            Debug.Log(other.transform.name + " entered the top section", other.transform);
             onTriggerEnter.Invoke();
         }
     }
