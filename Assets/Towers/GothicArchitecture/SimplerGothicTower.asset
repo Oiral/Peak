@@ -72,5 +72,5 @@ MonoBehaviour:
     verticalOpenInInspector: 1
     horizontalOpenInInspector: 1
   GenListMax: 0
-  seedVisualPrefab: {fileID: 87675320267162991, guid: fba5c032f09a7e24dbabe61ad89a317c,
+  seedVisualPrefab: {fileID: 1458961675136052120, guid: 8352baf7bb277e4489834bfecebc357e,
     type: 3}
