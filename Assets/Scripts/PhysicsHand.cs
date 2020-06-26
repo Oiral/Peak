@@ -35,6 +35,7 @@ public class PhysicsHand : MonoBehaviour
     public SteamVR_Input_Sources inputSource = SteamVR_Input_Sources.Any;//which controller
                                                                          // Use this for initialization
 
+    // Grips
     [HideInInspector]
     public UnityEvent gripDown;
     [HideInInspector]
@@ -42,6 +43,13 @@ public class PhysicsHand : MonoBehaviour
     [HideInInspector]
     public UnityEvent gripHold;
 
+    // Top Button
+    [HideInInspector]
+    public UnityEvent topButtonDown;
+    [HideInInspector]
+    public UnityEvent topButtonUp;
+    [HideInInspector]
+    public UnityEvent topButtonHold;
 
     private void Update()
     {
