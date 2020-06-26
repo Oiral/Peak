@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1662792511784113038, guid: 7882b5fb6df83dd46b78397ce8962f7c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1662792511784113039, guid: 7882b5fb6df83dd46b78397ce8962f7c,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -70,7 +75,12 @@ PrefabInstance:
     - target: {fileID: 2425376038892936767, guid: 7882b5fb6df83dd46b78397ce8962f7c,
         type: 3}
       propertyPath: m_Name
-      value: AllandNothing
+      value: AllandNothingflowers
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804017929216753328, guid: 7882b5fb6df83dd46b78397ce8962f7c,
+        type: 3}
+      propertyPath: m_Mass
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7882b5fb6df83dd46b78397ce8962f7c, type: 3}
