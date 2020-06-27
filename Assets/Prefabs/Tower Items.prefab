@@ -547,7 +547,7 @@ MonoBehaviour:
   towerStorage: {fileID: 11400000, guid: 077b66b9576dfd947a63ab6c2a482265, type: 2}
   randomiseSeed: 1
   seed: 677362
-  seedPrefab: {fileID: 4743612725504203896, guid: 65124f2e293f86f4c814b589d0c886af,
+  seedPrefab: {fileID: 7323798237545146231, guid: 82da4210fe1bb684689d70e4c38a681f,
     type: 3}
   seedLengthMultiplier: 10
   spawnInSounds:
