@@ -61,6 +61,7 @@ MonoBehaviour:
     - {fileID: 6773854277038703115, guid: ec06810923b025e4f853e7d1395c94c4, type: 3}
     - {fileID: 6773854277038703115, guid: 222c50911d173ab44a803e13dfe00239, type: 3}
     - {fileID: 6773854277038703115, guid: e957964b8af51d44aa55996ec9e60304, type: 3}
+    - {fileID: 6773854277038703115, guid: 0736c75a793b4da478988f779405195e, type: 3}
     verticalTop: {fileID: 6773854277038703115, guid: e87767b1d01d9ec4b8d6bfa0f055207d,
       type: 3}
     horiztonalTop: {fileID: 6773854277038703115, guid: 81a9e85ceb59a2545a76b5f34a48bd90,
