@@ -193,9 +193,7 @@ public class TowerGenerator : MonoBehaviour
                 //Generate a section
                 GenerateRandomSection(connectionsToConnect[0]);
                 yield return new WaitForSeconds(timeInSecToSpawn);
-            }
-
-            if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
+            } else if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
             {
                 //If we get here we have run out of space and cannot generate further.
                 //We should back track the generation and then try again
@@ -212,6 +210,7 @@ public class TowerGenerator : MonoBehaviour
         }
     }
 
+    /*
     void RemoveHalfConnections(int maxListSize)
     {
             if (maxListSize > 0 && connectionsToConnect.Count > maxListSize)
@@ -224,6 +223,7 @@ public class TowerGenerator : MonoBehaviour
             }
             //Debug.Log(connectionsToConnect.Count);
     }
+    */
 
     void GenerateRandomSection(TowerConnection connectionPoint)
     {

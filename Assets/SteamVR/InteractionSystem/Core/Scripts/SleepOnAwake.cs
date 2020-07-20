@@ -16,10 +16,28 @@ namespace Valve.VR.InteractionSystem
 		void Awake()
 		{
 			Rigidbody rigidbody = GetComponent<Rigidbody>();
-			if ( rigidbody )
+			if ( rigidbody != null )
 			{
+                rigidbody.velocity = Vector3.zero;
 				rigidbody.Sleep();
 			}
 		}
-	}
+
+        private void FixedUpdate()
+        {
+            Rigidbody rigidbody = GetComponent<Rigidbody>();
+            if (rigidbody)
+            {
+                if (rigidbody.IsSleeping())
+                {
+                    Destroy(this);
+                }
+                else
+                {
+                    rigidbody.velocity = Vector3.zero;
+                    rigidbody.Sleep();
+                }
+            }
+        }
+    }
 }
