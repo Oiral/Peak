@@ -7266,6 +7266,21 @@ MonoBehaviour:
   speedStrength: 1
   emissionStrength: 7
   particle: {fileID: 6073360481890198624}
+--- !u!114 &3148738476219996874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088559649857814579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c4cc56ed39a6554c96694028de87544, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedStrength: 1
+  emissionStrength: 7
+  particle: {fileID: 1938358232}
 --- !u!114 &4088559649857961442
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7285,21 +7300,6 @@ MonoBehaviour:
   Strength: 1000
   Damnping: 48
   LocalDrag: 0
---- !u!114 &3148738476219996874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4088559649857814579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c4cc56ed39a6554c96694028de87544, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedStrength: 1
-  emissionStrength: 7
-  particle: {fileID: 1938358232}
 --- !u!1 &4088559650180138914
 GameObject:
   m_ObjectHideFlags: 0
@@ -14299,6 +14299,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RenderingPath
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000014031267948, guid: 4d293c8e162f3874b982baadd71153d2,
+        type: 3}
+      propertyPath: far clip plane
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 114000010110554832, guid: 4d293c8e162f3874b982baadd71153d2,
         type: 3}
