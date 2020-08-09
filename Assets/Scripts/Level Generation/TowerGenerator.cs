@@ -367,7 +367,7 @@ public class TowerGenerator : MonoBehaviour
     {
         //Spawn in the section
         GameObject spawnedObject = SpawnObject(objectToSpawn, transform);
-
+        toGenerate -= 1;
         //Assign this objects parent to the piece it is generating too
         spawnedObject.transform.SetParent(connectionPoint.gameObject.transform.parent);
 
@@ -473,7 +473,6 @@ public class TowerGenerator : MonoBehaviour
 
         //Add this part to the generated list
         generatedParts.Add(spawnedObject);
-        toGenerate -= 1;
         
         if (Application.isPlaying && spawnInSounds.Count > 0)
         {
