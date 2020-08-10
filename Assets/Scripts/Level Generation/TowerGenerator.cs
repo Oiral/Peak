@@ -19,7 +19,6 @@ public class TowerGenerator : MonoBehaviour
     public int seed;
     public GameObject seedPrefab;
     public float seedLengthMultiplier;
-
     //[Header("Tower Info")]
     //public int maxSize;
     [Header("Generating")]
@@ -154,7 +153,7 @@ public class TowerGenerator : MonoBehaviour
                 GenerateRandomSection(connectionsToConnect[0]);
             }
 
-            if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
+            if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks <= 15)
             {
                 Debug.LogWarning("Run out of gen room, back tracking and trying again");
                 //If we get here we have run out of space and cannot generate further.
@@ -306,6 +305,10 @@ public class TowerGenerator : MonoBehaviour
 
         //We need to get this highest tower section from the connection point
 
+        Debug.Log("Finished building the tower, Doing final bits now");
+
+        UnParentAllPieces();
+
         TowerConnection connectionPointToEndOn = highestPoint.GetSection().connectedPiece;
 
         RemoveSection(highestPoint.GetSection());
@@ -318,7 +321,7 @@ public class TowerGenerator : MonoBehaviour
         //towerHeight = connectionPointToEndOn.transform.position.y;
         GenerateSeed();
 
-        UnParentAllPieces();
+        
     }
 
     //We want to end generating the top of the tower (the vertical section)
