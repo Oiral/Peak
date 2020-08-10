@@ -150,7 +150,7 @@ public class TowerGenerator : MonoBehaviour
             if (connectionsToConnect.Count > 0)
             {
                 //Generate a section
-                GenerateRandomSection(connectionsToConnect[0]);
+                GenerateRandomSection(connectionsToConnect[0], false);
             }
 
             if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks <= 15)
@@ -159,7 +159,7 @@ public class TowerGenerator : MonoBehaviour
                 //If we get here we have run out of space and cannot generate further.
                 //We should back track the generation and then try again
                 BackTrackGeneration();
-                GenerateRandomSection(connectionsToConnect[0]);
+                GenerateRandomSection(connectionsToConnect[0], true);
                 backtracks += 1;
             }
             if (toGenerateCheck == toGenerate)
@@ -190,7 +190,7 @@ public class TowerGenerator : MonoBehaviour
             if (connectionsToConnect.Count > 0)
             {
                 //Generate a section
-                GenerateRandomSection(connectionsToConnect[0]);
+                GenerateRandomSection(connectionsToConnect[0], false);
                 yield return new WaitForSeconds(timeInSecToSpawn);
             } else if (connectionsToConnect.Count <= 0 && toGenerate > 0 && backtracks >= 15)
             {
@@ -198,7 +198,7 @@ public class TowerGenerator : MonoBehaviour
                 //We should back track the generation and then try again
                 Debug.LogWarning("Run out of gen room, back tracking and trying again");
                 BackTrackGeneration();
-                GenerateRandomSection(connectionsToConnect[0]);
+                GenerateRandomSection(connectionsToConnect[0], true);
                 backtracks += 1;
                 yield return new WaitForSeconds(timeInSecToSpawn);
             }
@@ -224,7 +224,7 @@ public class TowerGenerator : MonoBehaviour
     }
     */
 
-    void GenerateRandomSection(TowerConnection connectionPoint)
+    void GenerateRandomSection(TowerConnection connectionPoint, bool forceGeneration)
     {
         //Find the list to spawn from
         List<GameObject> toSpawnList;
@@ -251,7 +251,7 @@ public class TowerGenerator : MonoBehaviour
         //Check if we can acutally spawn the item
         GameObject isClearGameObject = CheckIfClear(connectionPoint);
 
-        if (isClearGameObject != null)
+        if (forceGeneration == false && isClearGameObject != null)
         {
             //we are not clear
 
@@ -261,7 +261,7 @@ public class TowerGenerator : MonoBehaviour
             if (connectionsToConnect.Count >= 1)
             {
                 //Generate another section
-                GenerateRandomSection(connectionsToConnect[0]);
+                GenerateRandomSection(connectionsToConnect[0], false);
             }
 
             //Debug.Log("Collided with something", connectionPoint.gameObject);
@@ -273,6 +273,7 @@ public class TowerGenerator : MonoBehaviour
 
         connectionsToConnect.Remove(connectionPoint);
 
+        /* We are already checking if we have created a dead end tower previously in the generate middle section bit
         //We want to check if we are going to create a dead end tower
         //And if we are, deleted the spawned in piece and regenerate it
         if (connectionsToConnect.Count <= 0)
@@ -293,9 +294,10 @@ public class TowerGenerator : MonoBehaviour
 #else
             Destroy(spawnedSection);
 #endif
-            GenerateRandomSection(connectionPoint);
+            GenerateRandomSection(connectionPoint, true);
 
         }
+        */
     }
 
     //We do stuff like set the tower stats and generate the top seciton
