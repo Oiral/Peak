@@ -162,6 +162,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MovementForce: 220
   LookForce: 0.7
+  shootingBallPrefab: {fileID: 8609261836168444542, guid: 729ad036af1f9624cb476573180fd5da,
+    type: 3}
 --- !u!54 &3290807101162679825
 Rigidbody:
   m_ObjectHideFlags: 0

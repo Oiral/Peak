@@ -7,7 +7,9 @@ public class FlyingNavication : MonoBehaviour
     public float MovementForce = 10000.0f;
     public float LookForce = 10000.0f;
 
+    public GameObject shootingBallPrefab;
 
+    public float shootForce = 10;
 
     Rigidbody rb;
 
@@ -15,6 +17,8 @@ public class FlyingNavication : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -34,6 +38,18 @@ public class FlyingNavication : MonoBehaviour
         if (Input.GetKey(KeyCode.Q))
         {
             rb.AddForce(-Vector3.up * MovementForce);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Lets spawn a ball to shoot
+            Instantiate(shootingBallPrefab, transform.position + (transform.forward / 2), transform.rotation, null).GetComponent<Rigidbody>().AddForce(transform.forward * shootForce);
         }
 
     }

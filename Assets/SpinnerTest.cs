@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class SpinnerTest : MonoBehaviour
 {
+    public int numberPosition;
+
+    public LockManager lockMan;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<SpinnerMarks>() != null)
         {
-            Debug.Log(other.gameObject.GetComponent<SpinnerMarks>().value, other.gameObject);
-            
+            lockMan.UpdateNumber(numberPosition, other.gameObject.GetComponent<SpinnerMarks>().value);
         }
         
+    }
+
+    private void Start()
+    {
+        lockMan.UpdateNumber(numberPosition, 0);
     }
 }
