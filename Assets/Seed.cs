@@ -30,7 +30,7 @@ public class Seed : MonoBehaviour
         }
         set {
             internalSeed = value;
-            UpdateSeedInfo();
+            UpdateSeedText();
         }
     }
 
@@ -57,6 +57,19 @@ public class Seed : MonoBehaviour
             }
         }
 
+        UpdateSeedText();
+        
+        
+    }
+
+    private void Start()
+    {
+        UpdateSeedInfo();
+    }
+    
+
+    public void UpdateSeedText()
+    {
         TextMeshPro displayText = null;
 
         if (currentSeedVisual == null)
@@ -92,13 +105,5 @@ public class Seed : MonoBehaviour
         {
             Debug.LogWarning("Cannot find text mesh pro for seed display", gameObject);
         }
-        
     }
-
-    private void Start()
-    {
-        UpdateSeedInfo();
-    }
-
-    
 }

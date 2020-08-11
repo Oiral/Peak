@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LockManager : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class LockManager : MonoBehaviour
 
     public int number;
 
-    public TextMesh text;
+    public TextMeshPro text;
 
-    public void GetNumber()
+    public int GetNumber()
     {
         number = 0;
 
@@ -19,6 +20,8 @@ public class LockManager : MonoBehaviour
             // do something with entry.Value or entry.Key
             number += Mathf.RoundToInt(Mathf.Pow(10, entry.Key) * entry.Value);
         }
+
+        return number;
     }
 
     public void UpdateNumber(int position, int value)

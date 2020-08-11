@@ -172,6 +172,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6391410578128272821, guid: fdcc9ea5b822eee428b9b18e1d6fc59c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6696884154661238759, guid: fdcc9ea5b822eee428b9b18e1d6fc59c,
         type: 3}
       propertyPath: m_textInfo.characterCount
