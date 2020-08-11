@@ -11359,11 +11359,16 @@ MonoBehaviour:
   towerStorage: {fileID: 11400000, guid: 077b66b9576dfd947a63ab6c2a482265, type: 2}
   randomiseSeed: 1
   seed: 58
-  maxSize: 300
+  seedPrefab: {fileID: 0}
+  seedLengthMultiplier: 0
+  spawnInSounds: []
+  timeInSecToSpawn: 0.1
+  connectionsToConnect: []
   highestPoint: {fileID: 2118766065}
   towerHeight: 118.06268
   overideLayer: 1
   layerToSetTowerPieces: 0
+  topTrigger: {fileID: 0}
 --- !u!4 &651308194
 Transform:
   m_ObjectHideFlags: 0
