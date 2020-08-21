@@ -25,3 +25,7 @@ sysinfo.txt
 KSEditorLogs/
 
 ProjectSettings/
+
+Assets/Scenes/Main Level/OcclusionCullingData.asset
+
+Assets/Scenes/Main Level/OcclusionCullingData.asset.meta
