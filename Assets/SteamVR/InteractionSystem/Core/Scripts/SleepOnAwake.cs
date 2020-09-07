@@ -18,8 +18,7 @@ namespace Valve.VR.InteractionSystem
 			Rigidbody rigidbody = GetComponent<Rigidbody>();
 			if ( rigidbody != null )
 			{
-                rigidbody.velocity = Vector3.zero;
-				rigidbody.Sleep();
+                Sleep(rigidbody);
 			}
 		}
 
@@ -34,10 +33,16 @@ namespace Valve.VR.InteractionSystem
                 }
                 else
                 {
-                    rigidbody.velocity = Vector3.zero;
-                    rigidbody.Sleep();
+                    Sleep(rigidbody);
                 }
             }
+        }
+
+        void Sleep(Rigidbody rigidbody)
+        {
+            rigidbody.angularVelocity = Vector3.zero;
+            rigidbody.velocity = Vector3.zero;
+            rigidbody.Sleep();
         }
     }
 }
