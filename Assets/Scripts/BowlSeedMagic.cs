@@ -33,7 +33,7 @@ public class BowlSeedMagic : MonoBehaviour
                 {
                     Seed.drag = 0;
                     Seed.useGravity = true;
-                    //Seed.AddForce(((GameObject.FindGameObjectsWithTag("Head")[0].transform.position + new Vector3(0,1,0)) - Seed.gameObject.transform.position) * ChuckForce, ForceMode.Impulse); 
+                    //Seed.AddForce(((GameObject.Find("Player/PlayerRigidbody/HeadCamera").transform.position + new Vector3(0,1,0)) - Seed.gameObject.transform.position) * ChuckForce, ForceMode.Impulse); 
                 }
                 Seed = oterRgedy;              
             }
